@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"secondary-fixed":"#acedff","on-primary":"#3c0091","surface-variant":"#323440","tertiary-fixed":"#d8e2ff","inverse-on-surface":"#2e303b","on-secondary-container":"#00424e","on-error-container":"#ffdad6","on-primary-container":"#340080","surface-container-high":"#272935","secondary":"#4cd7f6","inverse-surface":"#e1e1f1","outline-variant":"#494454","surface-container-low":"#191b26","surface-dim":"#11131d","on-tertiary-fixed":"#001a42","on-background":"#e1e1f1","inverse-primary":"#6d3bd7","surface-bright":"#373944","on-surface-variant":"#cbc3d7","surface-container-lowest":"#0b0e18","tertiary-container":"#4d8eff","on-primary-fixed-variant":"#5516be","primary-fixed":"#e9ddff","on-error":"#690005","on-secondary-fixed":"#001f26","primary":"#d0bcff","surface-container-highest":"#323440","on-secondary-fixed-variant":"#004e5c","on-primary-fixed":"#23005c","surface-tint":"#d0bcff","secondary-container":"#03b5d3","error-container":"#93000a","on-tertiary-container":"#00285d","outline":"#958ea0","background":"#11131d","on-tertiary":"#002e6a","surface-container":"#1d1f2a","tertiary":"#adc6ff","error":"#ffb4ab","on-secondary":"#003640","secondary-fixed-dim":"#4cd7f6","on-surface":"#e1e1f1","on-tertiary-fixed-variant":"#004395","primary-fixed-dim":"#d0bcff","primary-container":"#a078ff","tertiary-fixed-dim":"#adc6ff","surface":"#11131d"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin-desktop":"5rem","gutter":"1.5rem","gutter-desktop":"2.5rem","space-xl":"3rem","margin-tablet":"2.5rem","space-sm":"0.5rem","space-lg":"1.75rem","margin":"1.25rem","space-xs":"0.25rem","space-md":"1rem"},"fontFamily":{"label-sm":["Space Grotesk"],"display-hero-mobile":["Syne"],"display-hero":["Syne"],"body-xl":["Plus Jakarta Sans"],"headline-lg-mobile":["Syne"],"label-md":["Space Grotesk"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Syne"],"headline-xl-mobile":["Syne"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-sm":["Syne"],"headline-md":["Syne"],"label-caps":["Space Grotesk"],"headline-xl":["Syne"]},"fontSize":{"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"500"}],"display-hero-mobile":["40px",{"lineHeight":"46px","letterSpacing":"-0.02em","fontWeight":"800"}],"display-hero":["72px",{"lineHeight":"80px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-xl":["20px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"500"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-xl-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"600"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"700"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen relative overflow-x-hidden"><div class="pointer-events-none fixed inset-0 z-0 overflow-hidden"><div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-[radial-gradient(ellipse_at_center,_rgba(160,120,255,0.15)_0%,_rgba(76,215,246,0.06)_40%,_transparent_75%)] blur-[90px]"></div><div class="absolute bottom-0 right-0 w-[600px] h-[500px] bg-[radial-gradient(ellipse_at_center,_rgba(85,22,190,0.12)_0%,_transparent_70%)] blur-[100px]"></div></div><header class="fixed top-0 left-0 w-full z-50 bg-surface/75 backdrop-blur-2xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] border-b border-outline-variant/30"><div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm focus:outline-none" data-path="home" href="#"><img alt="DIGITAL MARKETING Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U1dBTmrQMvwfIVGCkTEFUXzou7IWOx_Rthi-x9a7N4OJdzK8hdxK59CpesLPoVWamqehAydL2vx5iSMBsZIlGrqf9FS9OYzDmx_bcPgK5Z2s7iyPu5XwQK8XbagpgW_ZLD7DT_Hws22zbWrz0t5yPiysLraEHws4LD7xy7d7Caw2sxGwcgtdx5YObgwFQxYtU2-7tV4Y41Do2yY_I1sQDFlWPTqqO2lYJSTMRSS-Su91zRZNAf0X10f14"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">DIGITAL MARKETING</span></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="services" href="#">Services</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="our-creative-work" href="#">Our Creative Work</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="our-results" href="#">Our Results</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="about-us" href="#">About Us</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="insights" href="#">Insights</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a aria-label="Connect on WhatsApp" class="h-10 w-10 rounded-full bg-surface-container-high hover:bg-surface-variant flex items-center justify-center text-secondary hover:text-on-surface transition-all duration-200 border border-outline-variant/30 hover:border-secondary shadow-[0_0_15px_rgba(76,215,246,0.15)]" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">chat</span></a><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-on-primary-container font-label-md text-label-md font-bold tracking-tight shadow-[0_0_25px_rgba(160,120,255,0.45)] hover:shadow-[0_0_35px_rgba(76,215,246,0.6)] hover:scale-105 active:scale-95 transition-all duration-200" data-path="contact" href="#">Let's Talk</a><button aria-label="Toggle Mobile Menu" class="xl:hidden h-10 w-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:text-primary transition-colors focus:outline-none" id="mobile-nav-toggle"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div><div class="hidden xl:hidden w-full bg-surface-container-lowest/95 backdrop-blur-2xl border-b border-outline-variant/30 px-margin py-space-md" id="mobile-menu"><div class="flex flex-col gap-space-xs"><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="services" href="#">Services</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="our-creative-work" href="#">Our Creative Work</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="our-results" href="#">Our Results</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="about-us" href="#">About Us</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="insights" href="#">Insights</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="contact" href="#">Contact</a><div class="pt-space-sm mt-space-xs border-t border-outline-variant/20 flex flex-col gap-space-sm"><a class="w-full text-center py-space-xs rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-on-primary-container font-label-md text-label-md font-bold" data-path="contact" href="#">Let's Talk</a><a class="w-full flex items-center justify-center gap-space-xs py-space-xs rounded-full bg-surface-container-high border border-outline-variant/30 text-secondary font-label-md text-label-md" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span>WhatsApp Us</a></div></div></div></header><main class="w-full pt-20 relative z-10 bg-transparent"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO / EDITORIAL ANTHEM -->
+<section class="relative w-full pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden">
+<!-- Atmospheric Ambient Glows -->
+<div class="pointer-events-none absolute -top-24 left-1/4 w-[600px] h-[450px] bg-gradient-to-tr from-primary-container/20 to-secondary/10 blur-[130px] rounded-full"></div>
+<div class="pointer-events-none absolute top-1/2 right-10 w-[500px] h-[400px] bg-gradient-to-b from-secondary/15 to-transparent blur-[140px] rounded-full"></div>
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop relative z-10">
+<!-- Breadcrumb & Status Telemetry -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-8">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container border border-outline-variant/30 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Autonomous Growth Studio · Est. Global</span>
+</div>
+<div class="hidden md:flex items-center gap-space-sm font-label-sm text-label-sm text-outline">
+<span>SYS.ID // CORE-ABOUT</span>
+<span class="text-outline-variant">/</span>
+<span>LATENCY: 12ms</span>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary">INDEXED: VERIFIED</span>
+</div>
+</div>
+<!-- Main Headline Block -->
+<div class="max-w-5xl">
+<div class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4">The Convergence Engine</div>
+<h1 class="font-display-hero text-headline-xl md:text-display-hero text-on-surface tracking-tight leading-[1.05] mb-8 uppercase">
+          Creativity Meets <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-fixed via-primary to-secondary">Digital Growth</span>
+</h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-3xl leading-relaxed">
+          We reject the false dichotomy between artistic brilliance and raw mathematical rigor. DIGITAL MARKETING is the nexus where autonomous computational infrastructure fuses with cinematic storytelling—engineered to turn your boldest vision into hyper-scalable market dominance.
+        </p>
+</div>
+<!-- Quick Metrics Strip / Asymmetric Bar -->
+<div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-gutter">
+<div class="p-space-md md:p-space-lg rounded-xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/20 shadow-lg relative overflow-hidden group hover:border-primary/40 transition-all duration-300">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-primary/10 rounded-full blur-xl group-hover:bg-primary/20 transition-all"></div>
+<span class="font-label-caps text-label-caps text-outline block mb-1">EXECUTION VELOCITY</span>
+<div class="font-headline-lg text-headline-lg text-secondary font-bold tracking-tight">48 Hours</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Diagnostic to live deployment</span>
+</div>
+<div class="p-space-md md:p-space-lg rounded-xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/20 shadow-lg relative overflow-hidden group hover:border-secondary/40 transition-all duration-300">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/10 rounded-full blur-xl group-hover:bg-secondary/20 transition-all"></div>
+<span class="font-label-caps text-label-caps text-outline block mb-1">ATTRIBUTION INTEGRITY</span>
+<div class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">100% CAPI</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Zero reliance on cookied vanity</span>
+</div>
+<div class="p-space-md md:p-space-lg rounded-xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/20 shadow-lg relative overflow-hidden group hover:border-primary/40 transition-all duration-300">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-primary/10 rounded-full blur-xl group-hover:bg-primary/20 transition-all"></div>
+<span class="font-label-caps text-label-caps text-outline block mb-1">CLIENT CONTROL</span>
+<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">Zero Lock-In</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Full asset &amp; pipeline ownership</span>
+</div>
+<div class="p-space-md md:p-space-lg rounded-xl bg-surface-container/60 backdrop-blur-xl border border-outline-variant/20 shadow-lg relative overflow-hidden group hover:border-secondary/40 transition-all duration-300">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-secondary/10 rounded-full blur-xl group-hover:bg-secondary/20 transition-all"></div>
+<span class="font-label-caps text-label-caps text-outline block mb-1">CORE METHODOLOGY</span>
+<div class="font-headline-lg text-headline-lg text-secondary-fixed font-bold tracking-tight">Multivariate</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant block mt-1">Psychological hook sequencing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: AGENCY ORIGIN & HYBRID DNA -->
+<section class="relative w-full py-20 bg-surface-container-lowest/80 border-y border-outline-variant/20">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Visual Story Mosaic -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-2xl overflow-hidden border border-outline-variant/30 shadow-2xl">
+<img class="w-full h-[480px] object-cover filter brightness-90 hover:scale-105 transition-transform duration-700 ease-out" data-alt="Futuristic digital creative laboratory with ultra-wide glowing monitors displaying deep violet and neon cyan algorithmic performance graphs, motion design renders, and neural network data streams in high fidelity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3B5MrGjldVHZPRQPj2_nS7vsDxizdg9nTaaJ0YL26CUHEzNb9a2xc4zouTrg09_xSoa-QHnCxO3z70YartmPe-wigrsTYwA8FeY5AI8Dy7cMYXq2ABbM8_R6Nij0GqWqzWrymmLBVJSLrtnChPgh5E_DsxTQ3I0O1BFRgaEUkc5aSO9kkgVbDdSAvNXqIXc6UrVtlpy_DCNrQexG3YaKn2BpP5bHRsKcsAYM4hyxsrJJy8INvJzOI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<!-- Glassmorphic floating card -->
+<div class="absolute bottom-6 left-6 right-6 p-space-md rounded-xl bg-surface-container-high/90 backdrop-blur-xl border border-outline-variant/40 shadow-xl">
+<div class="flex items-center gap-space-sm mb-2">
+<span class="material-symbols-outlined text-secondary text-xl">bolt</span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase">The Hybrid Protocol</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                "We turn your vision into digital growth" isn't a slogan. It is an algorithmic blueprint balancing data science with cinematic awe.
+              </p>
+</div>
+</div>
+<!-- Decorative Background Accent -->
+<div class="absolute -bottom-8 -right-8 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+</div>
+<!-- Narrative Content -->
+<div class="lg:col-span-7 flex flex-col justify-center mt-8 lg:mt-0">
+<div class="flex items-center gap-2 mb-4">
+<span class="h-px w-8 bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Our Genesis &amp; Identity</span>
+</div>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface tracking-tight mb-6 uppercase">
+            Forged at the Brink of the <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-primary to-primary-fixed">Algorithmic Shift</span>
+</h2>
+<div class="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed mb-8">
+<p>
+              Traditional agencies broke when modern advertising platforms became probabilistic algorithmic black boxes. Old-school media buyers relied on manual gut instinct, while creative boutiques produced aesthetically pleasing commercials that hemorrhaged capital without verifiable conversion.
+            </p>
+<p>
+              We established <strong class="text-on-surface font-semibold">DIGITAL MARKETING</strong> to bridge this exact schism. By constructing a collective of quantitative data scientists, full-stack engineers, and high-concept creative directors, we built an engine capable of feeding machine learning recommendation algorithms the high-density signals they require to win.
+            </p>
+</div>
+<!-- Hybrid DNA 3-Pillars Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-space-md rounded-xl bg-surface-container border border-outline-variant/30 hover:border-primary/50 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3">
+<span class="material-symbols-outlined">query_stats</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Performance Engineers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Server-side telemetry, custom bidding scripts, and unit-economic discipline.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container border border-outline-variant/30 hover:border-secondary/50 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-3">
+<span class="material-symbols-outlined">movie_filter</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Cinematic Storytellers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hypnotic thumb-stop sequencing, narrative pacing, and authentic brand equity.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container border border-outline-variant/30 hover:border-tertiary/50 transition-colors">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary mb-3">
+<span class="material-symbols-outlined">neurology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">AI Technologists</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Autonomous generative pipelines scaling hyper-personalized variants at lightning speed.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: MISSION, VISION & CORE VALUES -->
+<section class="relative w-full py-24 bg-surface">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-3 block">North Star Declarations</span>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface tracking-tight uppercase">
+          Engineering the Future of Scale
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">
+          A definitive commitment to mathematical transparency and magnetic storytelling.
+        </p>
+</div>
+<!-- Split Mission & Vision Banners -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop mb-16">
+<div class="relative p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low border border-outline-variant/30 shadow-xl overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-container"></div>
+<div class="flex items-center gap-space-sm mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+<span class="font-label-caps text-label-caps text-primary uppercase">Our Mission</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Verifiable Scale via High-Velocity Creative</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            To engineer verifiable, scalable digital growth for visionary brands using high-velocity creative and algorithmic marketing precision. We dismantle black-box inefficiencies, aligning client capital directly with provable economic expansion.
+          </p>
+</div>
+<div class="relative p-space-lg md:p-space-xl rounded-2xl bg-surface-container-low border border-outline-variant/30 shadow-xl overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-secondary-container"></div>
+<div class="flex items-center gap-space-sm mb-4">
+<span class="material-symbols-outlined text-secondary text-3xl">visibility</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Our Vision</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">A Universe Devoid of Vanity Metrics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            A world where digital growth is fully transparent, mathematically grounded, and powered by cinematic narrative resonance—where founders and leaders make capital allocation decisions on real-time empirical truth, never agency hyperbole.
+          </p>
+</div>
+</div>
+<!-- 4 Core Pillars Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-md rounded-xl bg-surface-container border border-outline-variant/20 hover:border-primary/40 transition-all duration-300">
+<div class="font-label-caps text-label-caps text-primary/80 mb-2">PILLAR 01</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Attribution Transparency</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Zero reliance on modeled guesswork. Server-side event parity and direct pipeline views allow you to audit every dollar spent and earned.
+          </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container border border-outline-variant/20 hover:border-secondary/40 transition-all duration-300">
+<div class="font-label-caps text-label-caps text-secondary/80 mb-2">PILLAR 02</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Algorithmic Craft</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Creative isn't subjective; it's modular code. We calibrate framerates, hook timing, and visual tension to feed machine intelligence.
+          </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container border border-outline-variant/20 hover:border-primary/40 transition-all duration-300">
+<div class="font-label-caps text-label-caps text-primary/80 mb-2">PILLAR 03</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Velocity Without Burnout</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Automated generative pipelines eliminate agency inertia, shipping production-grade multivariates within 48 hours without compromising finish.
+          </p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container border border-outline-variant/20 hover:border-secondary/40 transition-all duration-300">
+<div class="font-label-caps text-label-caps text-secondary/80 mb-2">PILLAR 04</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface mb-2">Relentless Testing</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            No dogma. We relentlessly pit hypotheses against the market, rapidly scaling decisive winners and mercilessly cutting marginal assets.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: CREATIVE & ALGORITHMIC PHILOSOPHY + COMPARISON -->
+<section class="relative w-full py-24 bg-surface-container-lowest/90 border-t border-outline-variant/20">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center mb-20">
+<div class="lg:col-span-6">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-3">Our Core Thesis</span>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface uppercase tracking-tight mb-6">
+            Engineered Resonance: <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">The Death of Vanity Metrics</span>
+</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-6">
+            Impressions and shallow clicks do not build enterprise enterprise value. Modern algorithms prioritize active attention and economic conversion. When an ad provokes authentic human curiosity within the first 1.8 seconds, advertising engines reward the campaign with lower CPMs and priority audience distribution.
+          </p>
+<div class="p-space-md rounded-xl bg-surface-container border-l-4 border-l-secondary border-outline-variant/30">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "We sequence psychological tension into every microsecond of motion design, creating a self-reinforcing flywheel between consumer attention and algorithmic placement."
+            </p>
+</div>
+</div>
+<!-- Telemetry Graphic / Visual Proof Card -->
+<div class="lg:col-span-6">
+<div class="p-space-lg rounded-2xl bg-surface-container/70 border border-outline-variant/30 shadow-2xl relative">
+<div class="flex items-center justify-between pb-4 mb-6 border-b border-outline-variant/20">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-outline ml-2">HOOK ATTENTION DECAY CURVE</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase">LIVE ATTRIBUTION</span>
+</div>
+<!-- Inline Telemetry SVG Graph -->
+<div class="w-full h-48 relative mb-6">
+<svg class="w-full h-full overflow-visible" fill="none" preserveaspectratio="none" viewbox="0 0 500 180">
+<!-- Grid Lines -->
+<line class="text-outline-variant/20" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="500" y1="30" y2="30"></line>
+<line class="text-outline-variant/20" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="500" y1="80" y2="80"></line>
+<line class="text-outline-variant/20" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="500" y1="130" y2="130"></line>
+<!-- Traditional Ad Dropoff (Dashed Gray) -->
+<path class="text-outline/50" d="M 0 40 Q 60 140 180 160 T 500 170" fill="none" stroke="currentColor" stroke-dasharray="6 6" stroke-width="2.5"></path>
+<!-- DIGITAL MARKETING Engineered Hook Curve (Neon Cyan/Violet) -->
+<path d="M 0 20 C 50 15 100 25 200 45 C 320 60 400 50 500 55" fill="none" stroke="url(#cyanVioletGrad)" stroke-width="3.5"></path>
+<!-- Underglow Gradient for Engineered Curve -->
+<path d="M 0 20 C 50 15 100 25 200 45 C 320 60 400 50 500 55 L 500 180 L 0 180 Z" fill="url(#areaGlow)" opacity="0.25"></path>
+<defs>
+<lineargradient id="cyanVioletGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#4cd7f6"></stop>
+<stop offset="100%" stop-color="#d0bcff"></stop>
+</lineargradient>
+<lineargradient id="areaGlow" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4cd7f6"></stop>
+<stop offset="100%" stop-color="transparent"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+<!-- Graph Legend & Stats -->
+<div class="grid grid-cols-2 gap-4 pt-4 border-t border-outline-variant/20 font-label-sm text-label-sm">
+<div>
+<span class="text-outline block">DIGITAL MARKETING Retention:</span>
+<span class="text-secondary font-bold text-headline-sm">+318% at 3.0s Hook Point</span>
+</div>
+<div>
+<span class="text-outline block">Traditional Agency Retention:</span>
+<span class="text-outline-variant font-bold text-headline-sm">74% Early Drop-off</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Comparison Matrix: Legacy vs DIGITAL MARKETING -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Legacy Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high/40 border border-outline-variant/20 backdrop-blur-md">
+<div class="flex items-center justify-between mb-6 pb-4 border-b border-outline-variant/20">
+<div>
+<span class="font-label-caps text-label-caps text-outline block">LEGACY DYNAMICS</span>
+<h3 class="font-headline-md text-headline-md text-on-surface-variant line-through opacity-80">The Traditional Agency</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-3xl">cancel</span>
+</div>
+<ul class="space-y-4 font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-base mt-0.5">close</span>
+<span><strong>6 to 12-Month Lock-In Retainers:</strong> Financial hostage clauses designed to guarantee agency revenue regardless of client performance.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-base mt-0.5">close</span>
+<span><strong>Vanity Metric Dashboards:</strong> Bloated reports highlighting clicks, impressions, and video starts instead of blended revenue or CAC.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-base mt-0.5">close</span>
+<span><strong>Sluggish 4-Week Turnarounds:</strong> Lengthy bureaucratic committee sign-offs causing creative fatigue before campaigns even ramp.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-error text-base mt-0.5">close</span>
+<span><strong>Black Box Ad Accounts:</strong> Agencies holding ad accounts and intellectual creative hostage upon contract termination.</span>
+</li>
+</ul>
+</div>
+<!-- DIGITAL MARKETING Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high/80 border border-secondary/40 shadow-[0_0_40px_rgba(76,215,246,0.12)] relative overflow-hidden backdrop-blur-xl">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary/15 rounded-full blur-2xl"></div>
+<div class="flex items-center justify-between mb-6 pb-4 border-b border-outline-variant/30">
+<div>
+<span class="font-label-caps text-label-caps text-secondary block">NEXT-GEN STANDARD</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">The DIGITAL MARKETING Model</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl">check_circle</span>
+</div>
+<ul class="space-y-4 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check</span>
+<span><strong>Zero Long-Term Lock-in Contracts:</strong> We earn our retention month over month based on mathematical performance and clear ROAS.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check</span>
+<span><strong>Cryptographic Server-Side Telemetry:</strong> Meta Conversions API (CAPI) &amp; Cloudflare routing for pure attribution accuracy.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check</span>
+<span><strong>48-Hour Campaign Velocity:</strong> Rapid AI-augmented creative sprints and deployment that outpace competitor fatigue cycles.</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check</span>
+<span><strong>100% Client Asset Ownership:</strong> You retain complete, unrestricted access to your pixel data, audiences, and video source files forever.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: MARKETING & TECH STACK (INTERACTIVE / ARCHITECTURAL BREAKDOWN) -->
+<section class="relative w-full py-24 bg-surface">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-2">Computational Infrastructure</span>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface uppercase tracking-tight">
+            Our Proprietary Tech Stack
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          A weaponized ensemble of server-side data infrastructure and generative neural networks engineered for enterprise-grade growth.
+        </p>
+</div>
+<!-- Tech Stack Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Stack Card 1 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between hover:border-secondary/50 transition-all duration-300">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-6 border border-outline-variant/40">
+<span class="material-symbols-outlined text-2xl">dns</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary block mb-1">DATA TELEMETRY</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Meta CAPI &amp; Cloudflare Workers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              First-party server-side event tracking bypassing browser cookie degradation, ad-blockers, and iOS tracking restrictions with 99.8% match rate accuracy.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-sm">
+<span>Latency &lt; 40ms</span>
+<span class="text-secondary">First-Party</span>
+</div>
+</div>
+<!-- Stack Card 2 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between hover:border-primary/50 transition-all duration-300">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-6 border border-outline-variant/40">
+<span class="material-symbols-outlined text-2xl">auto_videocam</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary block mb-1">GENERATIVE VIDEO</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Runway Gen-3, Midjourney &amp; Topaz</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Autonomous cinematic workflows generating ultra-high-definition 9:16 reels, variable hook iterations, and localized visual variants at unprecedented scale.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-sm">
+<span>4K 60fps Native</span>
+<span class="text-primary">Hyper-Velocity</span>
+</div>
+</div>
+<!-- Stack Card 3 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between hover:border-tertiary/50 transition-all duration-300">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-tertiary mb-6 border border-outline-variant/40">
+<span class="material-symbols-outlined text-2xl">account_tree</span>
+</div>
+<span class="font-label-caps text-label-caps text-tertiary block mb-1">SEMANTIC SEARCH</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Entity Graph &amp; Vector Indexing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Programmatic schema architecture, semantic entity graphs, and Local Map-Pack indexing to dominate AI-driven search engines and Google Gemini surfaces.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-sm">
+<span>Knowledge Graph</span>
+<span class="text-tertiary">Direct Dominance</span>
+</div>
+</div>
+<!-- Stack Card 4 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low border border-outline-variant/30 flex flex-col justify-between hover:border-secondary/50 transition-all duration-300">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary-fixed mb-6 border border-outline-variant/40">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary-fixed block mb-1">ATTRIBUTION PLATFORM</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">Google BigQuery &amp; Live Looker</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Centralized enterprise data warehousing uniting Shopify, CRM data, and Meta ad-spend into real-time blended ROAS dashboards with zero latency.
+            </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant/20 flex items-center justify-between text-outline font-label-sm">
+<span>Live Sync</span>
+<span class="text-secondary-fixed">Granular CAC</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: 6-STEP WORKFLOW / PRODUCTION PROTOCOL -->
+<section class="relative w-full py-24 bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="max-w-2xl mb-16">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Standard Operating Procedure</span>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface uppercase tracking-tight">
+          The 6-Step Growth Protocol
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">
+          A disciplined, linear operational framework executed with ruthless precision from initial funnel audit to real-time client verification.
+        </p>
+</div>
+<!-- Linear Stepper Grid (3x2 Desktop) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Step 01 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high/60 border border-outline-variant/30 relative overflow-hidden group hover:border-primary/50 transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-headline-lg text-primary/40 font-bold">01</span>
+<span class="material-symbols-outlined text-primary">radar</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Discover &amp; Diagnostic Telemetry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Full audit of existing ad accounts, conversion tracking leaks, unit economics, cohort LTV, and historical creative fatigue points.
+          </p>
+</div>
+<!-- Step 02 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high/60 border border-outline-variant/30 relative overflow-hidden group hover:border-secondary/50 transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-headline-lg text-secondary/40 font-bold">02</span>
+<span class="material-symbols-outlined text-secondary">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Strategize &amp; Blueprint</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Construction of algorithmic media mix, custom bidding protocols, target acquisition thresholds, and competitive angle dissection.
+          </p>
+</div>
+<!-- Step 03 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high/60 border border-outline-variant/30 relative overflow-hidden group hover:border-primary/50 transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-headline-lg text-primary/40 font-bold">03</span>
+<span class="material-symbols-outlined text-primary">draw</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Create &amp; Asset Synthesis</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Rapid synthesis of cinematic 9:16 reels, modular UGC hook matrices, high-converting copy angles, and high-CTR static visuals.
+          </p>
+</div>
+<!-- Step 04 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high/60 border border-outline-variant/30 relative overflow-hidden group hover:border-secondary/50 transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-headline-lg text-secondary/40 font-bold">04</span>
+<span class="material-symbols-outlined text-secondary">rocket</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Launch &amp; Full-Stack Deployment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Deployment under strict CAPI server-side event tracking, automated budget safety pacing, and hyper-targeted geo-location grids.
+          </p>
+</div>
+<!-- Step 05 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high/60 border border-outline-variant/30 relative overflow-hidden group hover:border-primary/50 transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-headline-lg text-primary/40 font-bold">05</span>
+<span class="material-symbols-outlined text-primary">tune</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Optimize &amp; Multivariate Slicing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Continuous algorithmic pruning: reallocation of ad spend toward lowest blended CAC hooks and systematic elimination of ad decay.
+          </p>
+</div>
+<!-- Step 06 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-high/60 border border-outline-variant/30 relative overflow-hidden group hover:border-secondary/50 transition-all">
+<div class="flex items-center justify-between mb-4">
+<span class="font-display-hero text-headline-lg text-secondary/40 font-bold">06</span>
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Report &amp; Real-Time Verification</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Unfiltered 24/7 Looker Studio portal access displaying bottom-line contributions, true ROAS, and predictive roadmap adjustments.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: THE TEAM / GROWTH ARCHITECTS & LEADERSHIP (PRD EDITABLE PLACEHOLDERS) -->
+<section class="relative w-full py-24 bg-surface">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<div class="inline-flex items-center gap-space-xs px-2.5 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 mb-3">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">LEADERSHIP POD // VERIFIED ARCHITECTS</span>
+</div>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface uppercase tracking-tight">
+            The Growth Architects
+          </h2>
+</div>
+<!-- PRD Transparency Disclaimer -->
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 border border-outline-variant/20 max-w-sm">
+<p class="font-label-sm text-label-sm text-outline flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">info</span>
+<span>Editable placeholder profiles as required by PRD rules prior to formal credential upload.</span>
+</p>
+</div>
+</div>
+<!-- Team Members Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Leader 1 -->
+<div class="rounded-2xl bg-surface-container-low border border-outline-variant/25 overflow-hidden group hover:border-primary/50 transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 group-hover:filter-none transition-all duration-500" data-alt="Editorial portrait of a visionary digital marketing agency founder wearing modern dark minimalist apparel, lit with cool cyan rim lighting and deep obsidian studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzOtndH4mpqFSnmQJ0njXbWtTwXrSJRBEDTqceuG_0Ij_PjZovGUWfplONuERclLw81BaIbt9hVu5x90mtRSEdZ_RBY3LdPmHj17HmEFp-NGz5LwC3RE-rJe15al7LZo_LVKH2LOgCKcmoTjmKfPoovPKgo5CvLev2YK34mhpBgdyz-Gsbm5m8bWReT88n5zdBZsH_gkPnbh55lABwZj9-M5xrPM6PeGLXZSUcTY42Zq64OWmxTP2e"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 font-label-caps text-[10px] text-secondary">
+              FOUNDER
+            </div>
+</div>
+<div class="p-space-md">
+<span class="font-label-caps text-label-caps text-primary block mb-1">FOUNDER &amp; CHIEF STRATEGIST</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Principal Growth Architect</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Directing macro capital deployment, asymmetric market positioning, and client portfolio scaling infrastructure.
+            </p>
+<div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 font-label-sm text-label-sm text-outline">
+<span>POD: CORE STEERING</span>
+<span class="text-secondary">[EDITABLE PROFILE]</span>
+</div>
+</div>
+</div>
+<!-- Leader 2 -->
+<div class="rounded-2xl bg-surface-container-low border border-outline-variant/25 overflow-hidden group hover:border-secondary/50 transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 group-hover:filter-none transition-all duration-500" data-alt="Editorial portrait of a creative technology director working with generative AI visual models, subtle purple illumination, futuristic dark aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpep64NH7t2uTvxEm-HYvafUdr5UJMAUCMxBu8IYvqr3_-_OmlmU5xoch_zyDTokYqFg95AXPn8Yr0P8xghgVETpmbR9glOPogN2FKvlLpkRbl1VoXrd73Xq7nNlUivqfYia-a6ltzEcMO-fT2NighNZuJVtPgTGezozo_uxosiOC4nE7bXf3o6CfVw5F56bJzL1RvWUd8I44RQfkdwd3WEiSzIAbA0vm-v06Ziz7k5UedmwbiauI4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 font-label-caps text-[10px] text-primary">
+              AI CREATIVE
+            </div>
+</div>
+<div class="p-space-md">
+<span class="font-label-caps text-label-caps text-secondary block mb-1">SYNTHESIS &amp; 3D DIRECTING</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Head of Generative AI &amp; Cinema</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Overseeing high-velocity video pipelines, Midjourney/Runway integration, and next-gen visual narrative design.
+            </p>
+<div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 font-label-sm text-label-sm text-outline">
+<span>POD: AI PRODUCTION</span>
+<span class="text-secondary">[EDITABLE PROFILE]</span>
+</div>
+</div>
+</div>
+<!-- Leader 3 -->
+<div class="rounded-2xl bg-surface-container-low border border-outline-variant/25 overflow-hidden group hover:border-primary/50 transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 group-hover:filter-none transition-all duration-500" data-alt="Editorial portrait of a high-frequency performance marketing quantitative trader looking forward, sharp high contrast lighting, dark tech ambience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA1Mw3_-d9I9jL4wWAsS57a-oZnvXqmL2cwi-cL0tz0uZORxBS4C9CyeMOkLCMBwaC_5lrj3UECHr6y00kp9rYhN20dCK-xcLLm1-cbGNTEusqaHcLv2xeMMfZGHfhHz68NMQ8SNFw7PDhcN5xPQHdN8q-ujuPGnaKq4sfNhBJQhNaOkOyvlO8yQZ-rt8el4WcA_qL5X2f_6OWAfzpqEDDGzTpzyxdradzWWfAg3IK5g_AWvA8vR23"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 font-label-caps text-[10px] text-secondary">
+              MEDIA BUYING
+            </div>
+</div>
+<div class="p-space-md">
+<span class="font-label-caps text-label-caps text-primary block mb-1">QUANT PERFORMANCE</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">VP of Performance &amp; Media</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Calibrating multivariate testing matrices, real-time bid pacing, and algorithmic conversion attribution on Meta and Google.
+            </p>
+<div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 font-label-sm text-label-sm text-outline">
+<span>POD: QUANT ENGINE</span>
+<span class="text-secondary">[EDITABLE PROFILE]</span>
+</div>
+</div>
+</div>
+<!-- Leader 4 -->
+<div class="rounded-2xl bg-surface-container-low border border-outline-variant/25 overflow-hidden group hover:border-secondary/50 transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover filter grayscale contrast-125 group-hover:scale-105 group-hover:filter-none transition-all duration-500" data-alt="Editorial portrait of a female software engineer and technical SEO architect in a dark glass office, illuminated by violet and cyan screen glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvjErin-levd3dLhZfYXE8L3nwUHZQpgbY0s5Q04Vk5zOOrTFwdN3rbK9l_zNQqg3AVQRQ6NE7l5ZrwXFqH2D-wiSwCTpClHJLlJwkTnNnlqAMvkly1_uPtnxtcXScDfFdnnRzKj6DVJ1Nk_6DG41qBqht2geDxUitxHZJcCnHX2dvU7GsKpP1_kzfXFLnxGc5SvVnQ0l1VKkp40LixvJvUfl0Hx1ZYrC7k1P8VGok-uE3yORNPbHM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 font-label-caps text-[10px] text-tertiary">
+              TECHNICAL SEO
+            </div>
+</div>
+<div class="p-space-md">
+<span class="font-label-caps text-label-caps text-secondary block mb-1">KNOWLEDGE GRAPH &amp; CODE</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Lead Full-Stack SEO Engineer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Engineering schema markup, web vital latency optimization, and semantic entity architecture for automated dominance.
+            </p>
+<div class="flex items-center justify-between pt-3 border-t border-outline-variant/20 font-label-sm text-label-sm text-outline">
+<span>POD: WEB SYSTEMS</span>
+<span class="text-secondary">[EDITABLE PROFILE]</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: WHY VISIONARY BRANDS CHOOSE US (4 VALUE PILLARS) -->
+<section class="relative w-full py-24 bg-surface-container-lowest/70 border-t border-outline-variant/20">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-2">Competitive Edge</span>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface uppercase tracking-tight">
+          Why Visionary Brands Choose Us
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">
+          Built from the ground up for founders who require accountability, extreme velocity, and uncompromised craftsmanship.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-desktop">
+<!-- Prop 1 -->
+<div class="flex items-start gap-space-md p-space-lg rounded-2xl bg-surface-container border border-outline-variant/25">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">lock_open</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">No Hostage Contracts</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              We operate without predatory multi-quarter lock-in agreements. We earn your mandate every single month based on verified bottom-line growth.
+            </p>
+</div>
+</div>
+<!-- Prop 2 -->
+<div class="flex items-start gap-space-md p-space-lg rounded-2xl bg-surface-container border border-outline-variant/25">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl">sync_alt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Real-Time Direct Telemetry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              No sanitized monthly PDF reports designed to mask underperformance. You receive direct access to live Looker Studio data streams synced with your actual bank deposits.
+            </p>
+</div>
+</div>
+<!-- Prop 3 -->
+<div class="flex items-start gap-space-md p-space-lg rounded-2xl bg-surface-container border border-outline-variant/25">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-tertiary/10 border border-tertiary/30 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-2xl">speed</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">48-Hour Campaign Velocity</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Speed is our primary moat. While legacy competitors spend six weeks discussing color theory, our AI-assisted generative pipeline launches verified assets within 48 hours.
+            </p>
+</div>
+</div>
+<!-- Prop 4 -->
+<div class="flex items-start gap-space-md p-space-lg rounded-2xl bg-surface-container border border-outline-variant/25">
+<div class="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-container/20 border border-primary-container/40 flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-2xl">verified</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">100% Client Creative Ownership</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Every single 3D render, raw 9:16 asset, Figma canvas, and copy document belongs to your company irrevocably from the moment of conception.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: CALL TO ACTION (CTA) CONVERSION COMMAND -->
+<section class="relative w-full py-24 md:py-32 bg-surface-container-lowest overflow-hidden border-t border-outline-variant/25">
+<!-- Concentrated Atmospheric Ray Glow -->
+<div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+<div class="w-[700px] h-[350px] bg-gradient-to-r from-primary/20 via-secondary/15 to-transparent blur-[120px] rounded-full"></div>
+</div>
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop relative z-10 text-center max-w-4xl mx-auto">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-surface-container border border-outline-variant/30 mb-6 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest">Q3 Growth Cohort Now Open</span>
+</div>
+<h2 class="font-display-hero text-headline-xl md:text-headline-xl text-on-surface tracking-tight uppercase mb-6 leading-tight">
+        Ready to Build Something <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-fixed via-primary to-secondary">Extraordinary Together?</span>
+</h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+        Let’s analyze your current funnel bottlenecks, engineer high-performing creative assets, and build a mathematically verifiable path to market leadership.
+      </p>
+<!-- Action Cluster -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md mb-12">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-on-primary-container font-label-md text-label-md font-bold tracking-tight shadow-[0_0_30px_rgba(160,120,255,0.4)] hover:shadow-[0_0_45px_rgba(76,215,246,0.65)] hover:scale-105 active:scale-95 transition-all duration-300" data-path="contact" href="#">
+<span>Get Free Consultation</span>
+<span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-surface-container-high border border-outline-variant/30 text-secondary hover:border-secondary hover:bg-surface-variant font-label-md text-label-md font-semibold transition-all duration-300 shadow-md" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined mr-2 text-xl">chat</span>
+<span>Chat on WhatsApp (+91 9305856475)</span>
+</a>
+</div>
+<!-- Trust Reassurance Badges -->
+<div class="flex flex-wrap items-center justify-center gap-space-md text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">check_circle</span>
+<span>Zero sales pressure</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">lock</span>
+<span>100% confidential NDA</span>
+</div>
+<span class="text-outline-variant hidden sm:inline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">bolt</span>
+<span>48-hour strategy blueprint</span>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full relative z-10 bg-surface-container-lowest border-t border-outline-variant/25 pt-space-xl pb-space-lg"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop mb-space-xl"><div class="lg:col-span-4 flex flex-col items-start"><div class="flex items-center gap-space-sm mb-space-sm"><img alt="DIGITAL MARKETING Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U1dBTmrQMvwfIVGCkTEFUXzou7IWOx_Rthi-x9a7N4OJdzK8hdxK59CpesLPoVWamqehAydL2vx5iSMBsZIlGrqf9FS9OYzDmx_bcPgK5Z2s7iyPu5XwQK8XbagpgW_ZLD7DT_Hws22zbWrz0t5yPiysLraEHws4LD7xy7d7Caw2sxGwcgtdx5YObgwFQxYtU2-7tV4Y41Do2yY_I1sQDFlWPTqqO2lYJSTMRSS-Su91zRZNAf0X10f14"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">DIGITAL MARKETING</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-md">We turn your vision into digital growth through high-velocity performance, bespoke algorithmic creative, and engineered brand dominance.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container border border-outline-variant/30 text-secondary font-label-caps text-label-caps"><span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Global Digital Growth Engine</div></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase mb-space-md">Navigation</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors duration-150" data-path="home" href="#">Home</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Services</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="our-creative-work" href="#">Our Creative Work</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="our-results" href="#">Our Results</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="about-us" href="#">About Us</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="insights" href="#">Insights</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="contact" href="#">Contact</a></li></ul></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase mb-space-md">Services</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Meta Ads</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">SEO &amp; Local SEO</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Google Business Profile</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Website Development</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Social Media Marketing</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">AI Video Creation</a></li></ul></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase mb-space-md">Portfolio &amp; Legal</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors duration-150" data-path="our-creative-work" href="#">Case Studies</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="our-results" href="#">Verified Results</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="privacy-policy" href="#">Privacy Policy</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="terms-of-service" href="#">Terms of Service</a></li></ul></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase mb-space-md">Direct Contact</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Schedule a free consultation or chat live:</p><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-150 mb-space-sm" href="mailto:contact@digitalmarketing.agency">contact@digitalmarketing.agency</a><a aria-label="WhatsApp +91 9305856475" class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl bg-surface-container border border-outline-variant/30 text-secondary hover:border-secondary hover:bg-surface-container-high transition-all mb-space-sm" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-label-sm text-label-sm">+91 9305856475</span></a><a aria-label="Official Instagram Account" class="inline-flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="https://instagram.com/digitalmarketing.agency" id="instagram-link" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">photo_camera</span><span>Instagram @digitalmarketing.agency</span></a></div></div><div class="pt-space-md border-t border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="text-left"><p class="font-body-sm text-body-sm text-outline mb-space-xs">Free Strategy Consultation &amp; Growth Analysis available for qualified brands worldwide.</p><p class="font-body-sm text-body-sm text-outline">© <span id="copyright-year">2025</span> DIGITAL MARKETING. All rights reserved.</p></div><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps text-outline">Consultation Desk Online</span><div class="w-2 h-2 rounded-full bg-secondary"></div></div></div></div></footer><script>const toggleBtn=document.getElementById('mobile-nav-toggle');const mobileMenu=document.getElementById('mobile-menu');if(toggleBtn&&mobileMenu){toggleBtn.addEventListener('click',()=>{mobileMenu.classList.toggle('hidden');});}const yearSpan=document.getElementById('copyright-year');if(yearSpan){yearSpan.textContent=new Date().getFullYear();}</script></body></html>

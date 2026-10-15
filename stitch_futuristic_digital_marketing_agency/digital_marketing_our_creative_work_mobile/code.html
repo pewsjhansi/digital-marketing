@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#11131d;color:#e1e1f1;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#ffdad6","on-primary-fixed":"#23005c","outline":"#958ea0","inverse-surface":"#e1e1f1","on-primary":"#3c0091","outline-variant":"#494454","inverse-on-surface":"#2e303b","surface":"#11131d","on-tertiary-fixed":"#001a42","on-primary-fixed-variant":"#5516be","surface-container-highest":"#323440","primary":"#d0bcff","secondary-fixed-dim":"#4cd7f6","background":"#11131d","tertiary":"#adc6ff","on-background":"#e1e1f1","tertiary-fixed":"#d8e2ff","on-error":"#690005","surface-tint":"#d0bcff","error":"#ffb4ab","surface-bright":"#373944","inverse-primary":"#6d3bd7","surface-dim":"#11131d","primary-fixed-dim":"#d0bcff","on-primary-container":"#340080","primary-fixed":"#e9ddff","on-secondary-container":"#00424e","on-tertiary":"#002e6a","surface-variant":"#323440","on-tertiary-fixed-variant":"#004395","secondary":"#4cd7f6","secondary-fixed":"#acedff","on-secondary":"#003640","tertiary-container":"#4d8eff","secondary-container":"#03b5d3","surface-container":"#1d1f2a","surface-container-high":"#272935","tertiary-fixed-dim":"#adc6ff","surface-container-low":"#191b26","on-tertiary-container":"#00285d","on-surface-variant":"#cbc3d7","primary-container":"#a078ff","error-container":"#93000a","on-secondary-fixed-variant":"#004e5c","on-surface":"#e1e1f1","on-secondary-fixed":"#001f26","surface-container-lowest":"#0b0e18"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem","margin-desktop":"5rem","space-md":"1rem","gutter-desktop":"2.5rem",gutter:"1.5rem","space-lg":"1.75rem","space-sm":"0.5rem",margin:"1.25rem","space-xl":"3rem","margin-tablet":"2.5rem"},fontFamily:{"headline-md":["Syne"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Space Grotesk"],"headline-xl-mobile":["Syne"],"headline-lg-mobile":["Syne"],"body-sm":["Plus Jakarta Sans"],"display-hero-mobile":["Syne"],"headline-xl":["Syne"],"body-md":["Plus Jakarta Sans"],"label-caps":["Space Grotesk"],"display-hero":["Syne"],"headline-sm":["Syne"],"body-xl":["Plus Jakarta Sans"],"label-md":["Space Grotesk"],"headline-lg":["Syne"]},fontSize:{"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.03em",fontWeight:"500"}],"headline-xl-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"display-hero-mobile":["40px",{lineHeight:"46px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-xl":["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"display-hero":["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-xl":["20px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-md":["14px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface active:scale-95 transition-all" id="menu-open"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm tracking-tight font-extrabold text-on-surface">DIGITAL</span><span class="font-headline-sm text-headline-sm tracking-tight font-extrabold text-secondary drop-shadow-[0_0_12px_rgba(76,215,246,0.6)]">MARKETING</span></div><span class="text-[9px] font-label-caps text-on-surface-variant tracking-widest uppercase">Growth Architecture</span></div></div><div class="flex items-center gap-space-sm"><a class="h-9 px-3.5 flex items-center justify-center rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-sm text-label-sm font-bold shadow-[0_0_16px_rgba(160,120,255,0.4)] active:scale-95 transition-all" data-path="contact" href="#">Let's Talk</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300 opacity-0" id="drawer"><div class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-md" id="drawer-backdrop"></div><div class="absolute top-0 left-0 bottom-0 w-4/5 max-w-xs bg-surface-container-low p-margin flex flex-col justify-between overflow-y-auto transform -translate-x-full transition-transform duration-300 shadow-[0_0_40px_rgba(0,0,0,0.8)]" id="drawer-panel"><div class="flex flex-col gap-space-lg"><div class="flex items-center justify-between pt-safe"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">DIGITAL <span class="text-secondary">MKTG</span></span><span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-wider">Navigation Node</span></div><button class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-on-surface" id="menu-close"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="flex flex-col gap-space-xs"><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">home</span><span class="font-label-md text-label-md">Home</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="services" href="#"><span class="material-symbols-outlined text-primary text-[20px]">hub</span><span class="font-label-md text-label-md">Services</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="our-creative-work" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">palette</span><span class="font-label-md text-label-md">Our Creative Work</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="our-results" href="#"><span class="material-symbols-outlined text-primary text-[20px]">trending_up</span><span class="font-label-md text-label-md">Our Results</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="about-us" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">corporate_fare</span><span class="font-label-md text-label-md">About Us</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="insights" href="#"><span class="material-symbols-outlined text-primary text-[20px]">insights</span><span class="font-label-md text-label-md">Insights</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="contact" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">chat</span><span class="font-label-md text-label-md">Contact</span></a></div></div><div class="flex flex-col gap-space-sm pt-space-lg pb-safe"><a class="h-12 w-full flex items-center justify-center gap-2 rounded-xl bg-surface-container-high text-secondary font-label-md text-label-md shadow-[0_0_20px_rgba(76,215,246,0.15)]" href="https://wa.me/919305856475" target="_blank"><span class="material-symbols-outlined text-[20px]">forum</span>WhatsApp: +91 9305856475</a><span class="text-[11px] font-label-sm text-outline text-center">We turn vision into digital growth.</span></div></div></div><main class="flex flex-col relative w-full pt-16 bg-surface min-h-[calc(100vh-5rem)]"><div class="hidden">Our Creative Work</div><div class="flex flex-col w-full">
+<!-- Portfolio Hero Intro -->
+<section class="flex flex-col px-margin pt-space-md pb-space-lg">
+<!-- Live Production Signal -->
+<div class="inline-flex items-center gap-space-xs self-start px-3 py-1 rounded-full bg-surface-container-high shadow-sm mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">&lt; 4h Turnaround • 9:16 &amp; 16:9 4K • 8 Active Pipelines</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-extrabold text-on-surface tracking-tight mt-1">
+      OUR CREATIVE <span class="text-secondary drop-shadow-[0_0_16px_rgba(76,215,246,0.5)]">WORK</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+      Creative ideas. Powerful videos. Content that makes brands stand out in saturated algorithmic feeds.
+    </p>
+<!-- Production Meta Metric Strip -->
+<div class="grid grid-cols-3 gap-2 mt- space-md mt-space-md pt-space-xs">
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low shadow-sm">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">89.4%</span>
+<span class="font-label-sm text-label-sm text-outline">3s Hook Rate</span>
+</div>
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low shadow-sm">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">4.8x</span>
+<span class="font-label-sm text-label-sm text-outline">ROAS Multiplier</span>
+</div>
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low shadow-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">142M+</span>
+<span class="font-label-sm text-label-sm text-outline">Tracked Views</span>
+</div>
+</div>
+</section>
+<!-- Horizontal Scrollable Filter Pills -->
+<section class="w-full pb-space-md overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 px-margin w-max">
+<button class="filter-btn active-filter px-4 py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-primary text-on-primary shadow-[0_0_18px_rgba(208,188,255,0.4)]" data-filter="all">
+<span>All</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-on-primary text-primary font-bold">18</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-filter="ai-videos">
+<span>AI Videos</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-surface-container text-outline font-bold">5</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-filter="promotional">
+<span>Promotional</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-surface-container text-outline font-bold">4</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-filter="product-ads">
+<span>Product Ads</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-surface-container text-outline font-bold">3</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-filter="business-reels">
+<span>Business Reels</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-surface-container text-outline font-bold">3</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all flex items-center gap-1.5 bg-surface-container-high text-on-surface hover:bg-surface-container-highest" data-filter="social-creatives">
+<span>Social Creatives</span>
+<span class="px-1.5 py-0.2 rounded-full text-[10px] bg-surface-container text-outline font-bold">3</span>
+</button>
+</div>
+</section>
+<!-- Featured Showpiece Card (Autonomous Brand Film) -->
+<section class="px-margin mb-space-lg">
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container-low shadow-xl">
+<!-- Media Aspect Holder -->
+<div class="relative w-full aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Futuristic cybernetic human head with glowing neural fiber cables, cinematic moody lighting with electric violet and cyan neon accents, ultra realistic 8k octane render with dark cinematic aesthetic and atmospheric volumetric fog" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNnGaUENRzC6QvM6eQCBoXNeTwzlhBWu1nirEyMfLO_mlKgkWbVwoT2Dx6uJv8P-e_-HlKfgaeVht-9_13Ewfnkdikf-h_uIfPO1w55Fapxapmsnj79mM4qP8ZaV14aM_HQlMtLl5hCC99PWZnguYBccGmp9-VRs3mrH9v8_H94HqWHtWR3jMkRqKhCbuxQOu1cehpPmj9IaN05-4gy5NjPAFgCTdUoJouiN5KfeoQIX1DtvacaArz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-surface-container-low/40 to-transparent"></div>
+<!-- Badges on Preview -->
+<div class="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md font-label-caps text-label-caps text-secondary font-bold tracking-wider">
+            FEATURED SHOWPIECE
+          </span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest/90 text-on-surface-variant font-label-sm text-label-sm">
+            01:14 • 4K UHD
+          </span>
+</div>
+<!-- Center Play Trigger -->
+<button class="modal-open-btn absolute inset-0 m-auto w-14 h-14 rounded-full bg-gradient-to-tr from-primary to-secondary text-surface flex items-center justify-center shadow-[0_0_24px_rgba(76,215,246,0.8)] active:scale-95 transition-all" data-category="AI Brand Film" data-duration="01:14" data-retention="94.2%" data-title="NEO-SYNTHESIS: Autonomous Cybernetic Brand Film">
+<span class="material-symbols-outlined text-[32px] translate-x-0.5">play_arrow</span>
+</button>
+</div>
+<!-- Showpiece Card Details -->
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Generative Masterwork</span>
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">DEMO ASSET • NOT CLIENT WORK</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+          NEO-SYNTHESIS: Autonomous Cybernetic Brand Film
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Pioneering neural-synthesized generative cinematography with real-time dynamic soundscaping built for next-generation hardware launches.
+        </p>
+<!-- Simulated Hook Retention Telemetry -->
+<div class="mt-2 p-3 rounded-xl bg-surface-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[16px]">show_chart</span>
+              Simulated Feed Retention
+            </span>
+<span class="text-secondary font-bold">94.2% @ 15s Mark</span>
+</div>
+<!-- Retention Bar Chart Micro Graphic -->
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary to-primary w-[94%]"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline font-label-sm pt-0.5">
+<span>Hook Index: 9.8/10</span>
+<span>Est. Viral Velocity: Top 1%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9:16 Vertical Reels Grid (Mobile 2-column masonry layout) -->
+<section class="px-margin flex flex-col gap-space-md mb-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">Algorithmic Weaponry</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">High-Impact Vertical Reels</h3>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-medium">9:16 Optimized</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm" id="reels-grid">
+<!-- Reel 1: Neural Engine 4.0 -->
+<div class="reel-item flex flex-col rounded-xl overflow-hidden bg-surface-container-low shadow-md transition-transform active:scale-[0.98]" data-category="ai-videos">
+<div class="relative w-full aspect-[9/16] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Vertical mobile frame showing glowing blue and violet neural synaptic network processor node floating in space, glossy holographic UI elements, dark moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEalJigTlo9gf8MxHNbcK-BDSu14k0dEnsdTKaCxrfsFe81t6PMz9kBgs9Cz9ocx-zvh1hTf2t0JroEHR0PDnHTeNJA0lmjm0PtxLLESOf68qUiFZLt0GtGg_Il4nNlIVssWgnwIADn-DDVFFPS_fNpbN_GphlVIlIWrD17eAt7g_9WArLH0CZcnp9pezhRLKCKX9mWbKzTb8Z8xwgw0RhMwglrf8Hj2zHEFau_3xouiPJlmVQ3YLP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/30"></div>
+<!-- Category & Duration Pill -->
+<div class="absolute top-2 left-2 right-2 flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-caps uppercase font-bold bg-primary-container text-on-primary">AI Video</span>
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-sm bg-surface-container-lowest/80 text-on-surface">0:24</span>
+</div>
+<!-- Play Action Trigger -->
+<button class="modal-open-btn absolute inset-0 m-auto w-11 h-11 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_0_16px_rgba(76,215,246,0.7)]" data-category="AI Videos" data-duration="0:24" data-retention="92.1%" data-title="Neural Engine 4.0">
+<span class="material-symbols-outlined text-[24px] translate-x-0.5">play_arrow</span>
+</button>
+<!-- Disclaimer & Title Over Scrim -->
+<div class="absolute bottom-2 left-2 right-2 flex flex-col gap-0.5">
+<span class="text-[8px] font-label-caps text-secondary tracking-tight">DEMO ASSET • NOT CLIENT WORK</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface line-clamp-1">Neural Engine 4.0</h4>
+<span class="text-[10px] font-label-sm text-outline">Simulated CTR: 6.4%</span>
+</div>
+</div>
+</div>
+<!-- Reel 2: Obsidian Sound -->
+<div class="reel-item flex flex-col rounded-xl overflow-hidden bg-surface-container-low shadow-md transition-transform active:scale-[0.98]" data-category="product-ads">
+<div class="relative w-full aspect-[9/16] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Minimalist matte black over-ear high fidelity headphones suspended in mid-air with deep neon cyan rim lighting, dark studio setting, liquid sound waves visual effect" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmQwCu5-oc6HA3lbuXENm6MjD_7uYTUVal5raE1rXKZCU0FE5MeDq2kCu4LnRMKuPia5uet4icai34juoDptTs3jgt0U3woLpdSOwd94WGfM684PNodRU4g8nwuO9BxxKvYEV8fIY3qRlbv2mKsmdgkA9ElnqSYgSyMzWcAlXEQEz8kQNjtKOhnudKtDh3-73VJcOZVr3GsV7vA8h1FkvwHrgtOF-ixYSITTNCCn1hGT1ApVQffgP9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/30"></div>
+<div class="absolute top-2 left-2 right-2 flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-caps uppercase font-bold bg-secondary-container text-on-secondary-container">Product Ad</span>
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-sm bg-surface-container-lowest/80 text-on-surface">0:18</span>
+</div>
+<button class="modal-open-btn absolute inset-0 m-auto w-11 h-11 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_0_16px_rgba(76,215,246,0.7)]" data-category="Product Ads" data-duration="0:18" data-retention="88.7%" data-title="Obsidian Sound">
+<span class="material-symbols-outlined text-[24px] translate-x-0.5">play_arrow</span>
+</button>
+<div class="absolute bottom-2 left-2 right-2 flex flex-col gap-0.5">
+<span class="text-[8px] font-label-caps text-secondary tracking-tight">DEMO ASSET • NOT CLIENT WORK</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface line-clamp-1">Obsidian Sound</h4>
+<span class="text-[10px] font-label-sm text-outline">ROAS: 5.1x</span>
+</div>
+</div>
+</div>
+<!-- Reel 3: Founder Insight: 0 to 10M MRR -->
+<div class="reel-item flex flex-col rounded-xl overflow-hidden bg-surface-container-low shadow-md transition-transform active:scale-[0.98]" data-category="business-reels">
+<div class="relative w-full aspect-[9/16] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High contrast portrait of confident tech founder speaking into a broadcast microphone, cinematic dark office background, warm rim lighting and subtle kinetic typography overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuZSMHGqRsXJIsHs4dl8zsgmab2auiasREqttZebbQMbjF4UKDc7jdMu-TXCPZrsLlPH12ZWA7mN3C9Z6ocOXGRLf7h_VRSRPSkQmATtgeVnmtgz1Z-yFZqeux1wAC7FotOd6DFHxCpfNmPRNI-MhIXluzEFvV6H3Y_O8FdRivsQ7F-ooHAO5j4oNaKs1KSzlZd05Gz2nVIqXm6fDZoBFdMXh-Zvi1ndUMmGrQgNh-ybOjLwyo9Srs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/30"></div>
+<div class="absolute top-2 left-2 right-2 flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-caps uppercase font-bold bg-surface-container-highest text-primary">Business Reel</span>
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-sm bg-surface-container-lowest/80 text-on-surface">0:45</span>
+</div>
+<button class="modal-open-btn absolute inset-0 m-auto w-11 h-11 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_0_16px_rgba(76,215,246,0.7)]" data-category="Business Reels" data-duration="0:45" data-retention="91.5%" data-title="Founder Insight: 0 to 10M MRR">
+<span class="material-symbols-outlined text-[24px] translate-x-0.5">play_arrow</span>
+</button>
+<div class="absolute bottom-2 left-2 right-2 flex flex-col gap-0.5">
+<span class="text-[8px] font-label-caps text-secondary tracking-tight">DEMO ASSET • NOT CLIENT WORK</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface line-clamp-1">0 to 10M MRR</h4>
+<span class="text-[10px] font-label-sm text-outline">Avg Watch: 84%</span>
+</div>
+</div>
+</div>
+<!-- Reel 4: AeroDynamics Hypercar -->
+<div class="reel-item flex flex-col rounded-xl overflow-hidden bg-surface-container-low shadow-md transition-transform active:scale-[0.98]" data-category="promotional">
+<div class="relative w-full aspect-[9/16] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Futuristic carbon fiber electric hypercar drifting through wet city streets at night with purple neon light trails and ultra detailed kinetic reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5NXs5TxnIAGUsiTaA2dMZbaomwGZCcHf9DAmqXxrrTBPDl0mqtEiQ1mjhrVZsrQ8Xuli9gqnyeZytLB--1_Ib_2jcMnQ1w5WGMGN44mwVy2X1sWAlQ1B5GeJjrhOu2u4yy7yJopHtJiRik__7sg-SWmRYcoKMerQOdoafkS4U3vVXJ537-Yj6_4gi1dPd6shsFoX2vrJ5NCwjqxro8bQmuN6r1gKxjZrSh7CYRvjem_VJrrwm-KjP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/30"></div>
+<div class="absolute top-2 left-2 right-2 flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-caps uppercase font-bold bg-primary-container text-on-primary">Promotional</span>
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-sm bg-surface-container-lowest/80 text-on-surface">0:30</span>
+</div>
+<button class="modal-open-btn absolute inset-0 m-auto w-11 h-11 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_0_16px_rgba(76,215,246,0.7)]" data-category="Promotional" data-duration="0:30" data-retention="96.4%" data-title="AeroDynamics Hypercar">
+<span class="material-symbols-outlined text-[24px] translate-x-0.5">play_arrow</span>
+</button>
+<div class="absolute bottom-2 left-2 right-2 flex flex-col gap-0.5">
+<span class="text-[8px] font-label-caps text-secondary tracking-tight">DEMO ASSET • NOT CLIENT WORK</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface line-clamp-1">Aero Hypercar</h4>
+<span class="text-[10px] font-label-sm text-outline">Engagement: 11.2%</span>
+</div>
+</div>
+</div>
+<!-- Reel 5: Why 99% of Ads Fail -->
+<div class="reel-item flex flex-col rounded-xl overflow-hidden bg-surface-container-low shadow-md transition-transform active:scale-[0.98]" data-category="social-creatives">
+<div class="relative w-full aspect-[9/16] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Dynamic split screen video graphic showing ad conversion funnel graph exploding with fiery neon particles on dark canvas, glitch text overlay '99% OF ADS DIE HERE'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKpvGh4gad-wFdy8TWNZQ13UPGwHkDK_kAXueHLUz-bLRdpscrO5s3RYoc-AugvzyJvvF7BXkG38CisE_p8XJxJxTxBDkkrzcQ4hQ4L_yRRCGpACk91vrV6MaPvlj0U-gguzaasK0U0dpfD91VA_xHW9uKad17noOu64TzV3goLaEYUdQ54w--Ulnovk0U69V-LmTJbxkqLHijHUlK_6YOE400iBmNhvFvsn7Bt6jiT7cRZDDVMJ4n"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/30"></div>
+<div class="absolute top-2 left-2 right-2 flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-caps uppercase font-bold bg-surface-container-highest text-secondary">Social Creative</span>
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-sm bg-surface-container-lowest/80 text-on-surface">0:35</span>
+</div>
+<button class="modal-open-btn absolute inset-0 m-auto w-11 h-11 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_0_16px_rgba(76,215,246,0.7)]" data-category="Social Creatives" data-duration="0:35" data-retention="89.8%" data-title="Why 99% of Ads Fail">
+<span class="material-symbols-outlined text-[24px] translate-x-0.5">play_arrow</span>
+</button>
+<div class="absolute bottom-2 left-2 right-2 flex flex-col gap-0.5">
+<span class="text-[8px] font-label-caps text-secondary tracking-tight">DEMO ASSET • NOT CLIENT WORK</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface line-clamp-1">Why Ads Fail</h4>
+<span class="text-[10px] font-label-sm text-outline">Scroll-Stop: 93%</span>
+</div>
+</div>
+</div>
+<!-- Reel 6: Lumina Skincare -->
+<div class="reel-item flex flex-col rounded-xl overflow-hidden bg-surface-container-low shadow-md transition-transform active:scale-[0.98]" data-category="product-ads">
+<div class="relative w-full aspect-[9/16] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Premium glowing serum bottle submerged in crystal-clear water with floating bioluminescent micro-pearls and subtle purple light dispersion, luxury cosmetic commercial still" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCspFc_80z9A4c-zclyAkdRkqphERlQFEWkPvEh_uCa80LaTBZWa2wkWYhlA_-a6MTlaZUXDWwaOCvWGBpKiJSUvw8hIzIx2zlT2n7QuJPVR5lwjBraZcnulZkASAcAdIqBJYmS2Xg1big3cNo8-dM053olDdZK-UFox8kochcSmJoJrFoJtlao_Osr69Yi0A9ZOVLCtNqZtMZm9vqHpPVLbt_5kMqj9MqrSYMZnKG0_qOUjeJpPgld"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-transparent to-surface-container-lowest/30"></div>
+<div class="absolute top-2 left-2 right-2 flex items-center justify-between">
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-caps uppercase font-bold bg-secondary-container text-on-secondary-container">Product Ad</span>
+<span class="px-1.5 py-0.5 rounded text-[9px] font-label-sm bg-surface-container-lowest/80 text-on-surface">0:20</span>
+</div>
+<button class="modal-open-btn absolute inset-0 m-auto w-11 h-11 rounded-full bg-secondary text-on-secondary flex items-center justify-center shadow-[0_0_16px_rgba(76,215,246,0.7)]" data-category="Product Ads" data-duration="0:20" data-retention="95.1%" data-title="Lumina Skincare">
+<span class="material-symbols-outlined text-[24px] translate-x-0.5">play_arrow</span>
+</button>
+<div class="absolute bottom-2 left-2 right-2 flex flex-col gap-0.5">
+<span class="text-[8px] font-label-caps text-secondary tracking-tight">DEMO ASSET • NOT CLIENT WORK</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface line-clamp-1">Lumina Skincare</h4>
+<span class="text-[10px] font-label-sm text-outline">Conv Rate: +38%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4-Pillar Methodology Cards -->
+<section class="px-margin flex flex-col gap-space-md mb-space-xl">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Our Scientific Process</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface mt-1">
+        How We Engineer High-Retention Creative
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Every millisecond is mapped to subconscious conversion psychology, algorithmic retention curves, and narrative tension.
+      </p>
+</div>
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Pillar 1 -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-2 shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+</div>
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">1. Hook Engineering</h4>
+<span class="font-label-caps text-label-caps text-secondary font-bold">0.0s – 1.8s</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Neurological thumb-stopping visual patterns, negative constraints, and cognitive dissonance triggers that halt doom-scrolling instantly.
+        </p>
+</div>
+<!-- Pillar 2 -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-2 shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">view_in_ar</span>
+</div>
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">2. Generative 3D</h4>
+<span class="font-label-caps text-label-caps text-primary font-bold">Spatial Immersion</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Photorealistic volumetric rendering, floating hardware exploded-views, and liquid physics that elevate ordinary consumer items into luxury artifacts.
+        </p>
+</div>
+<!-- Pillar 3 -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-2 shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">graphic_eq</span>
+</div>
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">3. AI Voice &amp; Soundscapes</h4>
+<span class="font-label-caps text-label-caps text-secondary font-bold">Binaural Pacing</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Custom cloned timbre vocal tracks paired with ASMR micro-foley transients to maintain peak attention even during low-attention listening moments.
+        </p>
+</div>
+<!-- Pillar 4 -->
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-2 shadow-sm">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<div class="flex items-center justify-between">
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">4. Kinetic Micro-VFX</h4>
+<span class="font-label-caps text-label-caps text-primary font-bold">Conversion Climax</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Rhythmic kinetic text overlays, optical tracking lines, and high-velocity CTA payoffs designed to maximize downstream organic shareability.
+        </p>
+</div>
+</div>
+</section>
+<!-- Interactive Creative Video Modal (Simulated Playback) -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-surface-container-lowest/90 backdrop-blur-xl opacity-0 pointer-events-none transition-all duration-300" id="video-preview-modal">
+<div class="relative w-full max-w-sm rounded-2xl bg-surface-container-low shadow-[0_0_50px_rgba(0,0,0,0.9)] overflow-hidden flex flex-col">
+<!-- Modal Top Bar -->
+<div class="p-4 flex items-center justify-between bg-surface-container">
+<div class="flex flex-col">
+<span class="text-[10px] font-label-caps text-secondary uppercase font-bold tracking-wider" id="modal-category-text">AI Video</span>
+<h4 class="font-label-md text-label-md font-bold text-on-surface truncate max-w-[200px]" id="modal-title-text">Asset Preview</h4>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface active:scale-90" id="modal-close-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Video Player Viewport -->
+<div class="relative w-full aspect-[9/14] bg-surface-container-lowest flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Dark high-tech cinematic studio playback frame with vibrant cyan and violet glowing sound wave animations, digital telemetry graphs, and modern video timeline UI" id="modal-cover-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2FY05Ayrl19kwkWIb_PTIEhKDQQkKzkigxHy6TE15BHEpYAmhVks4hKeEyQB-ZOJmtmobA_nySvTrABtXeovnodbMpYx7GV61hF5GBXs41QlyPW5hoiQVCo4zI4izUHPiXz76pvKhjsh3EPa1J8ghSmWi7OoDIKrF7U8x7CoXTnYyXv8nr7gZ7i0CKZunqZUlyc42FvNsGzwt323IhNa76nyX9MUeJRbz_85E396afdyf29JIqOby"/>
+<div class="absolute inset-0 bg-surface/40 flex items-center justify-center">
+<button class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_0_30px_rgba(208,188,255,0.7)] active:scale-95 transition-all" id="modal-play-toggle">
+<span class="material-symbols-outlined text-[36px]" id="modal-play-icon">pause</span>
+</button>
+</div>
+<!-- Watermark / Demo Badge -->
+<div class="absolute top-3 left-3 px-2 py-0.5 rounded bg-surface/80 backdrop-blur-md text-[9px] font-label-caps text-outline tracking-wider">
+          SIMULATED REEL ENGINE
+        </div>
+</div>
+<!-- Player Controls & Retention Metrics -->
+<div class="p-4 bg-surface-container flex flex-col gap-3">
+<!-- Scrubber Progress Bar -->
+<div class="flex flex-col gap-1">
+<div class="relative w-full h-2 rounded-full bg-surface-container-highest cursor-pointer">
+<div class="h-full rounded-full bg-gradient-to-r from-secondary to-primary w-[45%]" id="modal-scrubber-fill"></div>
+</div>
+<div class="flex justify-between items-center text-[11px] font-label-sm text-outline">
+<span id="modal-elapsed-time">0:08</span>
+<span id="modal-total-time">0:24</span>
+</div>
+</div>
+<!-- Controls Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="w-9 h-9 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center active:scale-95" id="modal-audio-toggle">
+<span class="material-symbols-outlined text-[20px]" id="modal-audio-icon">volume_up</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Binaural 3D Audio</span>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span id="modal-retention-stat">92.1% Hook</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Conversion Consultation Block -->
+<section class="px-margin mb-space-lg">
+<div class="p-space-lg rounded-3xl bg-surface-container-low shadow-xl flex flex-col gap-space-md relative overflow-hidden">
+<!-- Glow Accent Underlay -->
+<div class="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-secondary/10 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-1 relative z-10">
+<span class="font-label-caps text-label-caps text-secondary font-bold uppercase tracking-widest">Ignite Your Brand</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-surface">
+          Ready to scale with high-converting creative?
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Let’s build bespoke performance video assets designed to crush client acquisition targets and dominate organic feeds.
+        </p>
+</div>
+<div class="flex flex-col gap-2 relative z-10">
+<a class="h-13 py-3 px-4 rounded-xl bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(160,120,255,0.4)] active:scale-98 transition-all" data-path="contact" href="#">
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+          Book Creative Consultation
+        </a>
+<a class="h-12 py-3 px-4 rounded-xl bg-surface-container-high text-secondary font-label-md text-label-md font-bold flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all" href="https://wa.me/919305856475" target="_blank">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+          Chat on WhatsApp (+91 9305856475)
+        </a>
+</div>
+<div class="flex items-center justify-center gap-2 text-[11px] font-label-sm text-outline relative z-10 pt-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Avg response time under 15 minutes</span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Filter Interactive State
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const reelCards = document.querySelectorAll('.reel-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'shadow-[0_0_18px_rgba(208,188,255,0.4)]');
+        b.classList.add('bg-surface-container-high', 'text-on-surface');
+      });
+
+      btn.classList.add('bg-primary', 'text-on-primary', 'shadow-[0_0_18px_rgba(208,188,255,0.4)]');
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface');
+
+      const filterVal = btn.getAttribute('data-filter');
+      reelCards.forEach(card => {
+        if (filterVal === 'all' || card.getAttribute('data-category') === filterVal) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Video Modal Interactivity
+  const modal = document.getElementById('video-preview-modal');
+  const modalOpenBtns = document.querySelectorAll('.modal-open-btn');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+  const titleText = document.getElementById('modal-title-text');
+  const categoryText = document.getElementById('modal-category-text');
+  const totalTime = document.getElementById('modal-total-time');
+  const retentionStat = document.getElementById('modal-retention-stat');
+  const playToggle = document.getElementById('modal-play-toggle');
+  const playIcon = document.getElementById('modal-play-icon');
+  const audioToggle = document.getElementById('modal-audio-toggle');
+  const audioIcon = document.getElementById('modal-audio-icon');
+
+  let isPlaying = true;
+  let isMuted = false;
+
+  modalOpenBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      titleText.textContent = btn.getAttribute('data-title') || 'Reel Preview';
+      categoryText.textContent = btn.getAttribute('data-category') || 'Creative Reel';
+      totalTime.textContent = btn.getAttribute('data-duration') || '0:30';
+      retentionStat.textContent = (btn.getAttribute('data-retention') || '91%') + ' Hook';
+      
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100', 'pointer-events-auto');
+      isPlaying = true;
+      playIcon.textContent = 'pause';
+    });
+  });
+
+  const closeModal = () => {
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100', 'pointer-events-auto');
+  };
+
+  modalCloseBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  playToggle.addEventListener('click', () => {
+    isPlaying = !isPlaying;
+    playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+  });
+
+  audioToggle.addEventListener('click', () => {
+    isMuted = !isMuted;
+    audioIcon.textContent = isMuted ? 'volume_off' : 'volume_up';
+  });
+</script><footer class="w-full bg-surface-container-lowest px-margin pt-space-xl pb-32 flex flex-col gap-space-lg mt-space-xl"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-1"><span class="font-headline-md text-headline-md font-bold text-on-surface">DIGITAL</span><span class="font-headline-md text-headline-md font-bold text-secondary drop-shadow-[0_0_8px_rgba(76,215,246,0.4)]">MARKETING</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">We turn your vision into digital growth. Engineering luminous conversion-focused growth systems for exponential brands.</p></div><div class="grid grid-cols-2 gap-space-md"><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps text-secondary uppercase">Quick Nav</span><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="home" href="#">Home</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="our-creative-work" href="#">Creative Work</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="our-results" href="#">Results</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="about-us" href="#">About Us</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="insights" href="#">Insights</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps text-primary uppercase">Services</span><span class="font-body-sm text-body-sm text-outline">Paid Acquisition</span><span class="font-body-sm text-body-sm text-outline">SEO Dominance</span><span class="font-body-sm text-body-sm text-outline">Creative Strategy</span><span class="font-body-sm text-body-sm text-outline">Growth Funnels</span><span class="font-body-sm text-body-sm text-outline">Lifecycle &amp; CRM</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps text-on-surface uppercase">Direct Connection</span><a class="flex items-center gap-2 text-secondary font-label-md text-label-md" href="https://wa.me/919305856475" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span>WhatsApp: +91 9305856475</a><a class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md" href="tel:+919305856475"><span class="material-symbols-outlined text-[18px]">call</span>+91 9305856475</a><a class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md" href="mailto:growth@digitalmarketing.ai"><span class="material-symbols-outlined text-[18px]">mail</span>growth@digitalmarketing.ai</a><a class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md" href="https://instagram.com" target="_blank"><span class="material-symbols-outlined text-[18px]">photo_camera</span>@digitalmarketing.growth</a></div><div class="pt-space-md flex flex-col gap-1"><span class="font-label-sm text-label-sm text-outline">© 2025 DIGITAL MARKETING Inc. All rights reserved.</span><span class="text-[11px] font-label-sm text-outline-variant">Architected for digital velocity &amp; hyper-scale.</span></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_16px_rgba(0,0,0,0.4)]" data-active-classes="text-secondary"><div class="flex justify-around items-center h-20 px-2"><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">hub</span><span class="font-label-sm text-label-sm">Services</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-16 transition-all text-secondary" data-path="our-creative-work" href="#"><span class="material-symbols-outlined text-[22px]">work</span><span class="font-label-sm text-label-sm">Work</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="our-results" href="#"><span class="material-symbols-outlined text-[22px]">monitoring</span><span class="font-label-sm text-label-sm">Results</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="insights" href="#"><span class="material-symbols-outlined text-[22px]">newspaper</span><span class="font-label-sm text-label-sm">Insights</span></a></div></nav><script>const openBtn=document.getElementById('menu-open');const closeBtn=document.getElementById('menu-close');const drawer=document.getElementById('drawer');const backdrop=document.getElementById('drawer-backdrop');const panel=document.getElementById('drawer-panel');function toggleDrawer(open){if(open){drawer.classList.remove('pointer-events-none','opacity-0');drawer.classList.add('pointer-events-auto','opacity-100');panel.classList.remove('-translate-x-full');panel.classList.add('translate-x-0');}else{drawer.classList.add('pointer-events-none','opacity-0');drawer.classList.remove('pointer-events-auto','opacity-100');panel.classList.add('-translate-x-full');panel.classList.remove('translate-x-0');}}if(openBtn)openBtn.addEventListener('click',()=>toggleDrawer(true));if(closeBtn)closeBtn.addEventListener('click',()=>toggleDrawer(false));if(backdrop)backdrop.addEventListener('click',()=>toggleDrawer(false));</script></body></html>

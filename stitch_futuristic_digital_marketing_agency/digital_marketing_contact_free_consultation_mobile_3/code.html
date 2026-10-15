@@ -1,0 +1,867 @@
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#11131d;color:#e1e1f1;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#ffdad6","on-primary-fixed":"#23005c","outline":"#958ea0","inverse-surface":"#e1e1f1","on-primary":"#3c0091","outline-variant":"#494454","inverse-on-surface":"#2e303b","surface":"#11131d","on-tertiary-fixed":"#001a42","on-primary-fixed-variant":"#5516be","surface-container-highest":"#323440","primary":"#d0bcff","secondary-fixed-dim":"#4cd7f6","background":"#11131d","tertiary":"#adc6ff","on-background":"#e1e1f1","tertiary-fixed":"#d8e2ff","on-error":"#690005","surface-tint":"#d0bcff","error":"#ffb4ab","surface-bright":"#373944","inverse-primary":"#6d3bd7","surface-dim":"#11131d","primary-fixed-dim":"#d0bcff","on-primary-container":"#340080","primary-fixed":"#e9ddff","on-secondary-container":"#00424e","on-tertiary":"#002e6a","surface-variant":"#323440","on-tertiary-fixed-variant":"#004395","secondary":"#4cd7f6","secondary-fixed":"#acedff","on-secondary":"#003640","tertiary-container":"#4d8eff","secondary-container":"#03b5d3","surface-container":"#1d1f2a","surface-container-high":"#272935","tertiary-fixed-dim":"#adc6ff","surface-container-low":"#191b26","on-tertiary-container":"#00285d","on-surface-variant":"#cbc3d7","primary-container":"#a078ff","error-container":"#93000a","on-secondary-fixed-variant":"#004e5c","on-surface":"#e1e1f1","on-secondary-fixed":"#001f26","surface-container-lowest":"#0b0e18"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem","margin-desktop":"5rem","space-md":"1rem","gutter-desktop":"2.5rem",gutter:"1.5rem","space-lg":"1.75rem","space-sm":"0.5rem",margin:"1.25rem","space-xl":"3rem","margin-tablet":"2.5rem"},fontFamily:{"headline-md":["Syne"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Space Grotesk"],"headline-xl-mobile":["Syne"],"headline-lg-mobile":["Syne"],"body-sm":["Plus Jakarta Sans"],"display-hero-mobile":["Syne"],"headline-xl":["Syne"],"body-md":["Plus Jakarta Sans"],"label-caps":["Space Grotesk"],"display-hero":["Syne"],"headline-sm":["Syne"],"body-xl":["Plus Jakarta Sans"],"label-md":["Space Grotesk"],"headline-lg":["Syne"]},fontSize:{"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.03em",fontWeight:"500"}],"headline-xl-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"display-hero-mobile":["40px",{lineHeight:"46px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-xl":["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"display-hero":["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-xl":["20px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-md":["14px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    @keyframes toastProgress {
+      from { width: 100%; }
+      to { width: 0%; }
+    }
+    .toast-timer-bar {
+      animation: toastProgress 6000ms linear forwards;
+    }
+    .input-field-error {
+      border-color: rgba(244, 63, 94, 0.85) !important;
+      box-shadow: 0 0 16px rgba(244, 63, 94, 0.35), inset 0 0 4px rgba(244, 63, 94, 0.2) !important;
+    }
+  </style>
+</head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface active:scale-95 transition-all" id="menu-open"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm tracking-tight font-extrabold text-on-surface">DIGITAL</span><span class="font-headline-sm text-headline-sm tracking-tight font-extrabold text-secondary drop-shadow-[0_0_12px_rgba(76,215,246,0.6)]">MARKETING</span></div><span class="text-[9px] font-label-caps text-on-surface-variant tracking-widest uppercase">Growth Architecture</span></div></div><div class="flex items-center gap-space-sm"><a class="h-9 px-3.5 flex items-center justify-center rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-sm text-label-sm font-bold shadow-[0_0_16px_rgba(160,120,255,0.4)] active:scale-95 transition-all" data-path="contact" href="#">Let's Talk</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300 opacity-0" id="drawer"><div class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-md" id="drawer-backdrop"></div><div class="absolute top-0 left-0 bottom-0 w-4/5 max-w-xs bg-surface-container-low p-margin flex flex-col justify-between overflow-y-auto transform -translate-x-full transition-transform duration-300 shadow-[0_0_40px_rgba(0,0,0,0.8)]" id="drawer-panel"><div class="flex flex-col gap-space-lg"><div class="flex items-center justify-between pt-safe"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">DIGITAL <span class="text-secondary">MKTG</span></span><span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-wider">Navigation Node</span></div><button class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-on-surface" id="menu-close"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="flex flex-col gap-space-xs"><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">home</span><span class="font-label-md text-label-md">Home</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="services" href="#"><span class="material-symbols-outlined text-primary text-[20px]">hub</span><span class="font-label-md text-label-md">Services</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="our-creative-work" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">palette</span><span class="font-label-md text-label-md">Our Creative Work</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="our-results" href="#"><span class="material-symbols-outlined text-primary text-[20px]">trending_up</span><span class="font-label-md text-label-md">Our Results</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="about-us" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">corporate_fare</span><span class="font-label-md text-label-md">About Us</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="insights" href="#"><span class="material-symbols-outlined text-primary text-[20px]">insights</span><span class="font-label-md text-label-md">Insights</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="contact" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">chat</span><span class="font-label-md text-label-md">Contact</span></a></div></div><div class="flex flex-col gap-space-sm pt-space-lg pb-safe"><a class="h-12 w-full flex items-center justify-center gap-2 rounded-xl bg-surface-container-high text-secondary font-label-md text-label-md shadow-[0_0_20px_rgba(76,215,246,0.15)]" href="https://wa.me/919305856475" target="_blank"><span class="material-symbols-outlined text-[20px]">forum</span>WhatsApp: +91 9305856475</a><span class="text-[11px] font-label-sm text-outline text-center">We turn vision into digital growth.</span></div></div></div><!-- Interactive Floating Obsidian Confirmation Toast Container --><div aria-live="polite" class="fixed top-20 left-0 right-0 z-50 px-4 pointer-events-none flex justify-center" id="toast-wrapper"><div class="pointer-events-auto w-full max-w-sm rounded-2xl bg-surface-container-low/95 border border-secondary/40 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_24px_rgba(76,215,246,0.25)] p-4 flex flex-col gap-3 transition-all duration-300 transform -translate-y-6 opacity-0 scale-95 invisible" id="submission-toast" role="status"><div class="flex items-start justify-between gap-3"><div class="flex items-center gap-2.5"><div class="relative w-9 h-9 rounded-xl bg-secondary/15 border border-secondary/30 flex items-center justify-center shrink-0 shadow-[0_0_12px_rgba(76,215,246,0.3)]"><span class="w-2 h-2 rounded-full bg-secondary absolute -top-0.5 -right-0.5 animate-ping"></span><span class="material-symbols-outlined text-secondary text-[20px]">verified</span></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-[15px] font-bold text-on-surface">Strategy Audit Dispatched!</span></div><span class="font-label-caps text-[10px] text-secondary tracking-wider font-semibold uppercase">Cryptographic Transmission Logged</span></div></div><button aria-label="Dismiss Notification" class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container-high transition-all active:scale-90 shrink-0" id="toast-dismiss-btn" type="button"><span class="material-symbols-outlined text-[18px]">close</span></button></div><p class="font-body-sm text-[12.5px] leading-relaxed text-on-surface-variant pl-0.5" id="toast-body-text">Dossier routing to Senior Growth Architect pod. Expect preliminary SERP analysis &amp; 48h turnaround to <span class="text-secondary font-medium" id="toast-target-email">elena@enterprise.io</span>.</p><div class="flex items-center gap-2 pt-0.5"><a class="flex-1 h-9 px-3 rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-primary-container text-on-secondary font-label-sm text-[12px] font-bold flex items-center justify-center gap-1.5 shadow-[0_0_14px_rgba(76,215,246,0.25)] active:scale-95 transition-all" href="https://wa.me/919305856475?text=Hello%2C%20I%20just%20submitted%20my%20growth%20audit%20request%20online." target="_blank"><span class="material-symbols-outlined text-[16px]">forum</span><span class="">Open WhatsApp</span></a><button class="h-9 px-3 rounded-xl bg-surface-container border border-surface-container-high text-on-surface font-label-sm text-[12px] font-semibold hover:bg-surface-container-high active:scale-95 transition-all flex items-center gap-1" id="toast-status-btn" type="button"><span class="material-symbols-outlined text-[15px] text-primary">insights</span><span class="">View Status</span></button></div><!-- Progress bar timer --><div class="w-full h-1 bg-surface-container rounded-full overflow-hidden mt-0.5"><div class="h-full bg-gradient-to-r from-secondary via-primary to-secondary rounded-full" id="toast-progress-bar" style="width: 100%;"></div></div></div></div><main class="flex flex-col relative w-full pt-16 bg-surface min-h-[calc(100vh-5rem)]"><div class="flex flex-col w-full pb-28 space-y-8">
+<!-- Top Ambient Glow Field -->
+<div class="relative px-margin pt-4 flex flex-col gap-6">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-44 bg-gradient-to-br from-primary/20 via-secondary/15 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<!-- Section 1: Hero Header -->
+<div class="flex flex-col gap-3 relative z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/80 backdrop-blur-md w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(76,215,246,0.9)] animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase text-[10px]">48-HOUR GROWTH AUDIT • FREE CONSULTATION</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-extrabold uppercase tracking-tight text-on-surface leading-tight">
+        Let's Grow <br>
+<span class="bg-gradient-to-r from-primary via-secondary to-secondary-fixed bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(208,188,255,0.35)]">Your Business</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant font-normal leading-relaxed">
+        Get an uncompromising, data-backed consultation and uncover how algorithmic marketing scales your unit economics and outpaces competitors.
+      </p>
+<!-- Trust Badges Wrap -->
+<div class="grid grid-cols-1 gap-2 pt-1">
+<div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-surface-container-low/70 backdrop-blur-md">
+<div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Zero Sales Pressure</span>
+<span class="font-body-sm text-body-sm text-outline text-[12px]">Audited by senior growth architects, not salespeople.</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-surface-container-low/70 backdrop-blur-md">
+<div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[16px]">lock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">100% Confidential NDA</span>
+<span class="font-body-sm text-body-sm text-outline text-[12px]">Your ad metrics and business margins stay entirely yours.</span>
+</div>
+</div>
+<div class="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-surface-container-low/70 backdrop-blur-md">
+<div class="w-6 h-6 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[16px]">electric_bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Actionable Blueprint in 48h</span>
+<span class="font-body-sm text-body-sm text-outline text-[12px]">Immediate SERP and conversion quick-wins you can test right away.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Priority Fast-Track WhatsApp Escalation Card -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-b from-surface-container-high/90 to-surface-container-low/95 p-5 shadow-[0_12px_36px_rgba(0,0,0,0.45)]">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary/15 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-3 relative z-10 mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-secondary text-[24px]">chat_bubble</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Need an Immediate Answer?</h2>
+<p class="font-label-sm text-label-sm text-outline">Direct strategist pod hotline</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary/15 text-secondary font-label-caps text-label-caps text-[11px] whitespace-nowrap">&lt; 15 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant relative z-10 mb-4 leading-normal">
+        Skip the form entirely if you have immediate deadlines or need quick feasibility answers from our strategist pod.
+      </p>
+<div class="flex flex-col gap-2 relative z-10">
+<a class="w-full h-12 flex items-center justify-center gap-2.5 rounded-xl bg-gradient-to-r from-secondary-container via-secondary to-primary-container text-on-secondary font-label-md text-label-md font-bold shadow-[0_0_20px_rgba(76,215,246,0.3)] active:scale-[0.98] transition-all" href="https://wa.me/919305856475?text=Hello%2C%20I%20would%20like%20a%20free%20digital%20marketing%20consultation%20for%20my%20business." target="_blank">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+<span class="">Chat on WhatsApp</span>
+</a>
+<div class="flex items-center justify-between px-3 py-2 rounded-lg bg-surface-container-lowest/60"><span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-secondary">phone_in_talk</span>Direct Desk:</span><div class="flex items-center gap-2"><div class="flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all"><a class="flex items-center gap-2.5 flex-1" href="tel:+919305856475"><span class="material-symbols-outlined text-secondary text-[18px]">phone</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline text-[11px]">Voice Dispatch</span><span class="font-body-sm text-body-sm text-on-surface font-semibold">+91 9305856475</span></div></a><div class="flex items-center gap-1.5 shrink-0"><button aria-label="Copy WhatsApp number" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container border border-surface-container-high text-secondary hover:text-on-surface flex items-center justify-center transition-all active:scale-90 relative" onclick="(function(btn){navigator.clipboard.writeText('+91 9305856475').then(function(){const icon=btn.querySelector('.copy-icon-desk');const tip=btn.querySelector('.copy-tip-desk');if(icon)icon.textContent='check';btn.classList.add('border-secondary/40','bg-secondary/15');if(tip){tip.classList.remove('opacity-0','pointer-events-none');tip.classList.add('opacity-100');}setTimeout(function(){if(icon)icon.textContent='content_copy';btn.classList.remove('border-secondary/40','bg-secondary/15');if(tip){tip.classList.remove('opacity-100');tip.classList.add('opacity-0','pointer-events-none');}},2000);});})(this);" type="button"><span class="material-symbols-outlined text-[16px] copy-icon-desk">content_copy</span><span class="copy-tip-desk absolute -top-8 right-0 bg-surface-container-high border border-secondary/30 text-secondary text-[10px] font-label-caps px-2 py-0.5 rounded shadow-lg pointer-events-none opacity-0 transition-opacity duration-200 whitespace-nowrap">Copied!</span></button><a aria-label="Call Voice Dispatch" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-on-surface transition-colors" href="tel:+919305856475"><span class="material-symbols-outlined text-[18px]">north_east</span></a></div></div><button aria-label="Copy WhatsApp number" class="w-8 h-8 rounded-lg bg-surface-container hover:bg-surface-container-high border border-surface-container-high text-secondary hover:text-on-surface flex items-center justify-center transition-all active:scale-90 relative group" onclick="(function(btn){navigator.clipboard.writeText('+91 9305856475').then(function(){const icon=btn.querySelector('.copy-icon');const tip=btn.querySelector('.copy-tip');if(icon)icon.textContent='check';btn.classList.add('border-secondary/40','bg-secondary/15');if(tip){tip.classList.remove('opacity-0','pointer-events-none');tip.classList.add('opacity-100');}setTimeout(function(){if(icon)icon.textContent='content_copy';btn.classList.remove('border-secondary/40','bg-secondary/15');if(tip){tip.classList.remove('opacity-100');tip.classList.add('opacity-0','pointer-events-none');}},2000);});})(this);" type="button"><span class="material-symbols-outlined text-[16px] copy-icon">content_copy</span><span class="copy-tip absolute -top-8 right-0 bg-surface-container-high border border-secondary/30 text-secondary text-[10px] font-label-caps px-2 py-0.5 rounded shadow-lg pointer-events-none opacity-0 transition-opacity duration-200 whitespace-nowrap">Copied!</span></button></div></div>
+</div>
+</div>
+</div>
+<!-- Section 3: Consultation Form Card -->
+<section class="px-margin flex flex-col gap-3"><div class="rounded-2xl bg-surface-container-low/95 p-5 shadow-[0_16px_40px_rgba(0,0,0,0.5)] border border-surface-container flex flex-col gap-5 relative overflow-hidden">
+<!-- Ambient background glow -->
+<div class="absolute -top-12 -right-8 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Form Header & Progress / Urgency -->
+<div class="flex flex-col gap-2 relative z-10">
+<div class="flex items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-surface-container-high">
+<span class="material-symbols-outlined text-secondary text-[14px]">speed</span>
+<span class="font-label-caps text-[10px] text-secondary font-bold tracking-wider uppercase">Quick 2-Min Audit</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary/15 border border-secondary/30 shadow-[0_0_12px_rgba(76,215,246,0.2)]">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse shadow-[0_0_8px_rgba(76,215,246,0.9)]"></span>
+<span class="font-label-caps text-secondary font-bold text-[10px] tracking-wide uppercase">Slots: 3 Left Today</span>
+</div>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">Request Free Strategy Audit</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tell us about your brand and scale milestones. Senior architects dissect your growth math within 48h.</p>
+</div>
+</div>
+<!-- Interactive Form Container -->
+<form class="flex flex-col gap-4 relative z-10" id="growth-consultation-form" novalidate="" onsubmit="event.preventDefault(); handleConsultationSubmit();">
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5" id="group-contact-name">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between" for="contact-name">
+<span class="flex items-center gap-1">Full Name <span class="text-secondary text-[14px]">*</span></span>
+<span class="text-outline text-[11px] font-normal">Direct contact lead</span>
+</label>
+<div class="relative flex items-center rounded-xl bg-surface-container-lowest/80 border border-surface-container focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/40 transition-all" id="wrap-contact-name">
+<span class="material-symbols-outlined absolute left-3.5 text-secondary text-[18px] pointer-events-none">badge</span>
+<input class="w-full h-12 pl-10 pr-3.5 bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 focus:outline-none" id="contact-name" placeholder="Elena Rostova" required="" type="text" value="Elena Rostova">
+</div>
+<div class="hidden items-center gap-1.5 px-2 py-1 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 font-label-sm text-[11px] mt-0.5" id="error-contact-name">
+<span class="material-symbols-outlined text-[14px] text-rose-400 shrink-0">error</span>
+<span class="">Valid full name required (at least 2 characters)</span>
+</div>
+</div>
+<!-- Business Email -->
+<div class="flex flex-col gap-1.5" id="group-contact-email">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between" for="contact-email">
+<span class="flex items-center gap-1">Business Email <span class="text-secondary text-[14px]">*</span></span>
+<span class="text-outline text-[11px] font-normal">Dossier delivery node</span>
+</label>
+<div class="relative flex items-center rounded-xl bg-surface-container-lowest/80 border border-surface-container focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/40 transition-all" id="wrap-contact-email">
+<span class="material-symbols-outlined absolute left-3.5 text-secondary text-[18px] pointer-events-none">mark_email_read</span>
+<input class="w-full h-12 pl-10 pr-3.5 bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 focus:outline-none" id="contact-email" placeholder="elena@enterprise.io" required="" type="email" value="elena@enterprise.io">
+</div>
+<div class="hidden items-center gap-1.5 px-2 py-1 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 font-label-sm text-[11px] mt-0.5" id="error-contact-email">
+<span class="material-symbols-outlined text-[14px] text-rose-400 shrink-0">error</span>
+<span class="">Enter a valid corporate email address</span>
+</div>
+</div>
+<!-- Phone / WhatsApp with Tactical Country Selector -->
+<div class="flex flex-col gap-1.5" id="group-contact-phone">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between" for="contact-phone">
+<span class="flex items-center gap-1">Phone / WhatsApp <span class="text-secondary text-[14px]">*</span></span>
+<span class="text-outline text-[11px] font-normal">Instant pod connection</span>
+</label>
+<div class="flex gap-2">
+<button class="h-12 px-3 rounded-xl bg-surface-container border border-surface-container-high flex items-center gap-1.5 shrink-0 active:scale-95 transition-all" type="button">
+<span class="text-[14px]">🇮🇳</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">+91</span>
+<span class="material-symbols-outlined text-outline text-[16px]">expand_more</span>
+</button>
+<div class="relative flex-1 flex items-center rounded-xl bg-surface-container-lowest/80 border border-surface-container focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/40 transition-all" id="wrap-contact-phone">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[18px] pointer-events-none">phone_iphone</span>
+<input class="w-full h-12 pl-9 pr-3 bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 focus:outline-none" id="contact-phone" placeholder="93058 56475" required="" type="tel" value="93058 56475">
+</div>
+</div>
+<div class="hidden items-center gap-1.5 px-2 py-1 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 font-label-sm text-[11px] mt-0.5" id="error-contact-phone">
+<span class="material-symbols-outlined text-[14px] text-rose-400 shrink-0">error</span>
+<span class="">Valid phone or WhatsApp number required (min. 7 digits)</span>
+</div>
+</div>
+<!-- Brand & Current Website -->
+<div class="grid grid-cols-1 gap-3">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between" for="contact-company">
+<span class="">Brand / Company</span>
+<span class="text-outline text-[11px]">Optional</span>
+</label>
+<div class="relative flex items-center rounded-xl bg-surface-container-lowest/80 border border-surface-container focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/40 transition-all">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[18px] pointer-events-none">apartment</span>
+<input class="w-full h-12 pl-10 pr-3.5 bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 focus:outline-none" id="contact-company" placeholder="HyperScale Media" type="text" value="HyperScale Media">
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between" for="contact-url">
+<span class="">Current Website / Store URL</span>
+<span class="text-outline text-[11px]">Optional</span>
+</label>
+<div class="relative flex items-center rounded-xl bg-surface-container-lowest/80 border border-surface-container focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/40 transition-all">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[18px] pointer-events-none">link</span>
+<input class="w-full h-12 pl-10 pr-3.5 bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 focus:outline-none" id="contact-url" placeholder="https://hyperscale.com" type="url" value="https://hyperscale.com">
+</div>
+</div>
+</div>
+<!-- Target Growth Vectors (Multi-select with active visual state & checkmarks) -->
+<div class="flex flex-col gap-2 pt-1" id="group-growth-vectors">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="">Target Growth Vectors</span>
+<span class="text-secondary">*</span>
+</label>
+<span class="text-secondary text-[11px] font-label-caps uppercase tracking-wider font-bold">Select All That Apply</span>
+</div>
+<div class="flex flex-wrap gap-2 p-1.5 rounded-xl border border-transparent transition-all" id="vector-pill-group">
+<button class="vector-pill px-3 py-2 rounded-xl bg-primary text-on-primary font-bold shadow-[0_0_12px_rgba(208,188,255,0.35)] font-label-sm text-label-sm flex items-center gap-1.5 transition-all active:scale-95" data-val="Meta Ads (FB &amp; IG)" type="button">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+<span class="">Meta Ads (FB &amp; IG)</span>
+</button>
+<button class="vector-pill px-3 py-2 rounded-xl bg-primary text-on-primary font-bold shadow-[0_0_12px_rgba(208,188,255,0.35)] font-label-sm text-label-sm flex items-center gap-1.5 transition-all active:scale-95" data-val="SEO &amp; Local Search" type="button">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+<span class="">SEO &amp; Local Search</span>
+</button>
+<button class="vector-pill px-3 py-2 rounded-xl bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5 border border-surface-container hover:bg-surface-container transition-all active:scale-95" data-val="Google Business (GBP)" type="button">
+<span class="material-symbols-outlined text-[15px] opacity-40">add_circle</span>
+<span class="">Google Business (GBP)</span>
+</button>
+<button class="vector-pill px-3 py-2 rounded-xl bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5 border border-surface-container hover:bg-surface-container transition-all active:scale-95" data-val="Website Dev" type="button">
+<span class="material-symbols-outlined text-[15px] opacity-40">add_circle</span>
+<span class="">Website Dev</span>
+</button>
+<button class="vector-pill px-3 py-2 rounded-xl bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5 border border-surface-container hover:bg-surface-container transition-all active:scale-95" data-val="Social Media Marketing" type="button">
+<span class="material-symbols-outlined text-[15px] opacity-40">add_circle</span>
+<span class="">Social Media Marketing</span>
+</button>
+<button class="vector-pill px-3 py-2 rounded-xl bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5 border border-surface-container hover:bg-surface-container transition-all active:scale-95" data-val="AI Video &amp; Generative" type="button">
+<span class="material-symbols-outlined text-[15px] opacity-40">add_circle</span>
+<span class="">AI Video &amp; Generative</span>
+</button>
+</div>
+<div class="hidden items-center gap-1.5 px-2 py-1 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 font-label-sm text-[11px]" id="error-growth-vectors">
+<span class="material-symbols-outlined text-[14px] text-rose-400 shrink-0">error</span>
+<span class="">Select at least one growth vector to tailor your audit</span>
+</div>
+</div>
+<!-- Monthly Media / Growth Budget Segmented Selector -->
+<div class="flex flex-col gap-2 pt-1">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center justify-between">
+<span class="">Monthly Media / Growth Budget</span>
+<span class="text-outline text-[11px]">Select target tier</span>
+</label>
+<div class="grid grid-cols-2 gap-2" id="budget-pill-group">
+<button class="budget-pill h-11 px-3 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm text-center border border-surface-container transition-all active:scale-95" data-budget="Under $2.5k" type="button">Under $2.5k</button>
+<button class="budget-pill h-11 px-3 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm text-center border border-surface-container transition-all active:scale-95" data-budget="$2.5k - $5k" type="button">$2.5k - $5k</button>
+<button class="budget-pill h-11 px-3 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm text-center font-bold shadow-[0_0_14px_rgba(208,188,255,0.4)] border border-primary" data-budget="$5k - $15k" type="button">$5k - $15k</button>
+<button class="budget-pill h-11 px-3 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm text-center border border-surface-container transition-all active:scale-95" data-budget="$15k+" type="button">$15k+</button>
+<button class="budget-pill col-span-2 h-11 px-3 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm text-center border border-surface-container transition-all active:scale-95" data-budget="Enterprise" type="button">Enterprise ($30k+/mo)</button>
+</div>
+</div>
+<!-- Bottlenecks & Growth Objectives -->
+<div class="flex flex-col gap-1.5 pt-1" id="group-contact-bottlenecks">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1" for="contact-bottlenecks">
+<span class="">Bottlenecks &amp; Objectives</span>
+<span class="text-secondary text-[14px]">*</span>
+</label>
+<span class="text-outline text-[11px]">e.g. Scaling past $20k, CAC spike</span>
+</div>
+<div class="relative flex flex-col rounded-xl bg-surface-container-lowest/80 border border-surface-container focus-within:border-secondary focus-within:ring-1 focus-within:ring-secondary/40 transition-all" id="wrap-contact-bottlenecks">
+<textarea class="w-full p-3.5 bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-outline/60 focus:outline-none resize-none" id="contact-bottlenecks" placeholder="Tell us what is capping your CAC, conversion rate, or pipeline right now..." required="" rows="3">Currently spending $8,500/mo on Meta &amp; Google, but CAC increased by 38% after Q4. Looking to diversify into SEO and optimize conversion funnels.</textarea>
+</div>
+<div class="hidden items-center gap-1.5 px-2 py-1 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 font-label-sm text-[11px] mt-0.5" id="error-contact-bottlenecks">
+<span class="material-symbols-outlined text-[14px] text-rose-400 shrink-0">error</span>
+<span class="">Please share your growth bottlenecks and goals</span>
+</div>
+</div>
+<!-- Preferred Strategic Channel Selection -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold">Preferred Strategic Channel</label>
+<span class="text-secondary text-[11px] font-label-caps uppercase">Audited Delivery</span>
+</div>
+<div class="grid grid-cols-2 gap-2" id="channel-pill-group">
+<button class="channel-pill h-12 flex items-center justify-center gap-2 rounded-xl bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-[0_0_12px_rgba(76,215,246,0.35)] border border-secondary transition-all active:scale-95" data-channel="WhatsApp" type="button">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+<span class="">WhatsApp</span>
+</button>
+<button class="channel-pill h-12 flex items-center justify-center gap-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm border border-surface-container transition-all active:scale-95" data-channel="Email Dispatch" type="button">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span class="">Email Dispatch</span>
+</button>
+<button class="channel-pill h-12 flex items-center justify-center gap-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm border border-surface-container transition-all active:scale-95" data-channel="Google Meet" type="button">
+<span class="material-symbols-outlined text-[18px]">video_call</span>
+<span class="">Google Meet</span>
+</button>
+<button class="channel-pill h-12 flex items-center justify-center gap-2 rounded-xl bg-surface-container-high text-on-surface font-label-sm text-label-sm border border-surface-container transition-all active:scale-95" data-channel="Direct Call" type="button">
+<span class="material-symbols-outlined text-[18px]">phone_enabled</span>
+<span class="">Direct Call</span>
+</button>
+</div>
+</div>
+<!-- Validation Summary Callout Banner -->
+<div class="hidden flex items-center gap-2.5 p-3 rounded-xl bg-rose-500/15 border border-rose-500/40 text-rose-300 font-label-sm text-[12px] shadow-[0_0_18px_rgba(244,63,94,0.18)]" id="form-error-callout" role="alert">
+<span class="material-symbols-outlined text-[18px] text-rose-400 shrink-0">report</span>
+<span class="">Please review and resolve the highlighted errors before submitting.</span>
+</div>
+<!-- Submit CTA Button -->
+<button class="w-full h-14 mt-2 rounded-xl bg-gradient-to-r from-primary-container via-primary to-secondary text-on-primary font-label-md text-label-md font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_4px_28px_rgba(160,120,255,0.4)] active:scale-[0.98] transition-all hover:shadow-[0_0_24px_rgba(76,215,246,0.5)]" id="submit-btn" type="submit">
+<span class="">GET FREE CONSULTATION</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Form Status Feedback Banner (Prepped for state change) -->
+<div class="hidden rounded-xl p-3.5 text-center font-label-sm text-label-sm transition-all" id="form-feedback"></div>
+<!-- Trust Guarantee Micro-Bar -->
+<div class="grid grid-cols-3 gap-1 pt-1 border-t border-surface-container">
+<div class="flex flex-col items-center text-center p-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px] mb-0.5">bolt</span>
+<span class="font-label-caps text-[10px] text-on-surface font-semibold">48h Turnaround</span>
+<span class="text-[9px] text-outline">Direct Blueprint</span>
+</div>
+<div class="flex flex-col items-center text-center p-1.5 border-x border-surface-container">
+<span class="material-symbols-outlined text-primary text-[16px] mb-0.5">lock</span>
+<span class="font-label-caps text-[10px] text-on-surface font-semibold">100% NDA</span>
+<span class="text-[9px] text-outline">Cryptographic</span>
+</div>
+<div class="flex flex-col items-center text-center p-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px] mb-0.5">verified_user</span>
+<span class="font-label-caps text-[10px] text-on-surface font-semibold">Zero Spam</span>
+<span class="text-[9px] text-outline">No Sales Reps</span>
+</div>
+</div>
+</form>
+</div></section>
+<!-- Section 4: What Happens Next? (3-Step Journey) -->
+<section class="px-margin flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest text-[11px]">Audit Trajectory</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">What Happens Next?</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Here is exactly how our pod analyzes your growth within 48 hours.</p>
+</div>
+<!-- Step Cards Mosaic -->
+<div class="flex flex-col gap-3">
+<!-- Step 01 -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-4 flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm font-extrabold text-secondary">01</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface text-[17px]">Funnel &amp; SERP Pre-Audit</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] leading-relaxed">
+            Within 12 hours of dispatch, we reverse-engineer your competitors' ad copy libraries, backlink velocity, and organic search gaps.
+          </p>
+<div class="flex items-center gap-1.5 mt-1 text-secondary font-label-sm text-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+<span class="">Turnaround: 12 Hours</span>
+</div>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-4 flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm font-extrabold text-primary">02</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface text-[17px]">30-Min Strategy Deep Dive</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] leading-relaxed">
+            1-on-1 walkthrough with a Growth Architect. We break down ad spend leakages, creative fatigue cycles, and attribution traps.
+          </p>
+<div class="flex items-center gap-1.5 mt-1 text-primary font-label-sm text-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px]">person_pin</span>
+<span class="">Zero Junior Staffing</span>
+</div>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-low p-4 flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm font-extrabold text-secondary">03</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface text-[17px]">Actionable Growth Blueprint</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[13px] leading-relaxed">
+            You receive a comprehensive PDF dossier outlining sprint milestones, target ROAS projections, and high-impact unit targets.
+          </p>
+<div class="flex items-center gap-1.5 mt-1 text-secondary font-label-sm text-label-sm text-[11px]">
+<span class="material-symbols-outlined text-[14px]">picture_as_pdf</span>
+<span class="">Yours to Keep Regardless</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Global Executive Desks & Office Footprint -->
+<section class="px-margin flex flex-col gap-3">
+<div class="rounded-2xl bg-surface-container-low/90 p-5 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest text-[10px]">Global Operations</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Executive Desks</h3>
+</div>
+<div class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">public</span>
+</div>
+</div>
+<!-- Contact Metadata Clustered -->
+<div class="flex flex-col gap-2.5">
+<a class="flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all" href="mailto:contact@digitalmarketing.agency">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px]">alternate_email</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline text-[11px]">Direct Email</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">contact@digitalmarketing.agency</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">north_east</span>
+</a>
+<div class="flex items-center justify-between p-3 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all"><a class="flex items-center gap-2.5 flex-1" href="tel:+919305856475"><span class="material-symbols-outlined text-secondary text-[18px]">phone</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-outline text-[11px]">Voice Dispatch</span><span class="font-body-sm text-body-sm text-on-surface font-semibold">+91 9305856475</span></div></a><div class="flex items-center gap-1.5 shrink-0"><button aria-label="Copy WhatsApp number" class="w-8 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container border border-surface-container-high text-secondary hover:text-on-surface flex items-center justify-center transition-all active:scale-90 relative" onclick="(function(btn){navigator.clipboard.writeText('+91 9305856475').then(function(){const icon=btn.querySelector('.copy-icon-desk');const tip=btn.querySelector('.copy-tip-desk');if(icon)icon.textContent='check';btn.classList.add('border-secondary/40','bg-secondary/15');if(tip){tip.classList.remove('opacity-0','pointer-events-none');tip.classList.add('opacity-100');}setTimeout(function(){if(icon)icon.textContent='content_copy';btn.classList.remove('border-secondary/40','bg-secondary/15');if(tip){tip.classList.remove('opacity-100');tip.classList.add('opacity-0','pointer-events-none');}},2000);});})(this);" type="button"><span class="material-symbols-outlined text-[16px] copy-icon-desk">content_copy</span><span class="copy-tip-desk absolute -top-8 right-0 bg-surface-container-high border border-secondary/30 text-secondary text-[10px] font-label-caps px-2 py-0.5 rounded shadow-lg pointer-events-none opacity-0 transition-opacity duration-200 whitespace-nowrap">Copied!</span></button><a aria-label="Call Voice Dispatch" class="w-8 h-8 rounded-lg flex items-center justify-center text-outline hover:text-on-surface transition-colors" href="tel:+919305856475"><span class="material-symbols-outlined text-[18px]">north_east</span></a></div></div>
+</div>
+<!-- Timezone Nodes -->
+<div class="pt-2 flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline text-[12px] uppercase tracking-wider font-semibold">Synchronized Hubs (24/7 Coverage)</span>
+<div class="grid grid-cols-2 gap-2 text-center">
+<div class="p-2.5 rounded-xl bg-surface-container-lowest/80 flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">London</span>
+<span class="font-label-sm text-label-sm text-outline text-[11px]">GMT Pod</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest/80 flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Dubai</span>
+<span class="font-label-sm text-label-sm text-outline text-[11px]">GST Pod</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest/80 flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Singapore</span>
+<span class="font-label-sm text-label-sm text-outline text-[11px]">SGT Pod</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-lowest/80 flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Bangalore</span>
+<span class="font-label-sm text-label-sm text-outline text-[11px]">IST Hub</span>
+</div>
+</div>
+</div>
+<!-- Socials Strip -->
+<div class="pt-2 flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-outline text-[12px]">Direct Channels:</span>
+<div class="flex items-center gap-2">
+<a aria-label="Instagram" class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</a>
+<a aria-label="LinkedIn" class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a aria-label="X" class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">tag</span>
+</a>
+<a aria-label="YouTube" class="w-9 h-9 rounded-xl bg-surface-container flex items-center justify-center text-on-surface hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">smart_display</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Frequently Asked Questions (Touch Accordion) -->
+<section class="px-margin flex flex-col gap-3">
+<div class="flex flex-col gap-1">
+<div class="inline-flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest text-[11px]">Answers &amp; Clarity</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">Strategic FAQs</h2>
+</div>
+<!-- Accordion Items -->
+<div class="flex flex-col gap-2.5" id="faq-accordion-group">
+<!-- FAQ Item 1 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
+<button class="faq-toggle w-full px-4 py-3.5 flex items-center justify-between text-left gap-3" type="button">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Is the initial consultation really 100% free?</span>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-4 pb-4 pt-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Yes. There are zero obligations, no credit cards required, and zero retainers pre-billed. We analyze your ad accounts and organic visibility to demonstrate our mathematical edge before you spend a single dollar.
+          </p>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
+<button class="faq-toggle w-full px-4 py-3.5 flex items-center justify-between text-left gap-3" type="button">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Do you require long-term retainer contracts?</span>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-4 pb-4 pt-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Never. We operate in agile 30, 60, and 90-day growth sprints. We earn our right to manage your pipeline on a rolling cycle based on explicit ROAS and CPA thresholds agreed upon beforehand.
+          </p>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="faq-item rounded-xl bg-surface-container-low overflow-hidden transition-all duration-200">
+<button class="faq-toggle w-full px-4 py-3.5 flex items-center justify-between text-left gap-3" type="button">
+<span class="font-label-md text-label-md font-semibold text-on-surface">How fast can we launch live campaigns?</span>
+<span class="material-symbols-outlined text-outline text-[20px] transition-transform duration-200 faq-icon">expand_more</span>
+</button>
+<div class="faq-content hidden px-4 pb-4 pt-1">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Once onboarding credentials and ad asset access are configured, our generative copy and tracking infrastructure launch within 48 to 72 hours.
+          </p>
+</div>
+</div>
+</div>
+<!-- Informal Exploratory Chat Card -->
+<div class="mt-2 p-4 rounded-xl bg-gradient-to-r from-surface-container to-surface-container-high flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface">Prefer an informal chat?</span>
+<span class="font-body-sm text-body-sm text-outline text-[12px]">Direct message an executive now.</span>
+</div>
+<a class="px-3.5 py-2 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1.5 shrink-0 active:scale-95 transition-all" href="https://wa.me/919305856475" target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span class="">Open WhatsApp</span>
+</a>
+</div>
+</section>
+<!-- Section 7: Mobile Footer Branding -->
+<footer class="px-margin pt-4 flex flex-col items-center gap-3 text-center">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-extrabold text-on-surface">DIGITAL</span>
+<span class="font-headline-sm text-headline-sm font-extrabold text-secondary drop-shadow-[0_0_12px_rgba(76,215,246,0.6)]">MARKETING</span>
+</div>
+<span class="font-label-caps text-label-caps text-outline text-[10px] tracking-widest uppercase">Obsidian Kinetic Architecture • Enterprise Scale</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">
+      © 2026 DIGITAL MARKETING AGENCY. All global rights reserved.
+    </p>
+</footer>
+</div>
+<script>
+  // Validation Elements & Field Handlers
+  const nameInput = document.getElementById('contact-name');
+  const wrapName = document.getElementById('wrap-contact-name');
+  const errName = document.getElementById('error-contact-name');
+
+  const emailInput = document.getElementById('contact-email');
+  const wrapEmail = document.getElementById('wrap-contact-email');
+  const errEmail = document.getElementById('error-contact-email');
+
+  const phoneInput = document.getElementById('contact-phone');
+  const wrapPhone = document.getElementById('wrap-contact-phone');
+  const errPhone = document.getElementById('error-contact-phone');
+
+  const vectorGroup = document.getElementById('vector-pill-group');
+  const errVectors = document.getElementById('error-growth-vectors');
+
+  const bottlenecksInput = document.getElementById('contact-bottlenecks');
+  const wrapBottlenecks = document.getElementById('wrap-contact-bottlenecks');
+  const errBottlenecks = document.getElementById('error-contact-bottlenecks');
+
+  const errorCallout = document.getElementById('form-error-callout');
+
+  function validateName(showVisual = false) {
+    const val = nameInput ? nameInput.value.trim() : '';
+    const isValid = val.length >= 2;
+    if (!isValid && showVisual) {
+      wrapName.classList.add('input-field-error');
+      errName.classList.remove('hidden');
+      errName.classList.add('flex');
+    } else if (isValid) {
+      wrapName.classList.remove('input-field-error');
+      errName.classList.add('hidden');
+      errName.classList.remove('flex');
+    }
+    return isValid;
+  }
+
+  function validateEmail(showVisual = false) {
+    const val = emailInput ? emailInput.value.trim() : '';
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    const isValid = emailRegex.test(val);
+    if (!isValid && showVisual) {
+      wrapEmail.classList.add('input-field-error');
+      errEmail.classList.remove('hidden');
+      errEmail.classList.add('flex');
+    } else if (isValid) {
+      wrapEmail.classList.remove('input-field-error');
+      errEmail.classList.add('hidden');
+      errEmail.classList.remove('flex');
+    }
+    return isValid;
+  }
+
+  function validatePhone(showVisual = false) {
+    const val = phoneInput ? phoneInput.value.replace(/\D/g, '') : '';
+    const isValid = val.length >= 7;
+    if (!isValid && showVisual) {
+      wrapPhone.classList.add('input-field-error');
+      errPhone.classList.remove('hidden');
+      errPhone.classList.add('flex');
+    } else if (isValid) {
+      wrapPhone.classList.remove('input-field-error');
+      errPhone.classList.add('hidden');
+      errPhone.classList.remove('flex');
+    }
+    return isValid;
+  }
+
+  function validateVectors(showVisual = false) {
+    const selected = document.querySelectorAll('.vector-pill.bg-primary');
+    const isValid = selected.length > 0;
+    if (!isValid && showVisual) {
+      vectorGroup.classList.add('border-rose-500/80', 'shadow-[0_0_16px_rgba(244,63,94,0.25)]');
+      errVectors.classList.remove('hidden');
+      errVectors.classList.add('flex');
+    } else if (isValid) {
+      vectorGroup.classList.remove('border-rose-500/80', 'shadow-[0_0_16px_rgba(244,63,94,0.25)]');
+      errVectors.classList.add('hidden');
+      errVectors.classList.remove('flex');
+    }
+    return isValid;
+  }
+
+  function validateBottlenecks(showVisual = false) {
+    const val = bottlenecksInput ? bottlenecksInput.value.trim() : '';
+    const isValid = val.length > 0;
+    if (!isValid && showVisual) {
+      wrapBottlenecks.classList.add('input-field-error');
+      errBottlenecks.classList.remove('hidden');
+      errBottlenecks.classList.add('flex');
+    } else if (isValid) {
+      wrapBottlenecks.classList.remove('input-field-error');
+      errBottlenecks.classList.add('hidden');
+      errBottlenecks.classList.remove('flex');
+    }
+    return isValid;
+  }
+
+  // Real-time error clearing & blur validation
+  if (nameInput) {
+    nameInput.addEventListener('input', () => {
+      validateName(false);
+      checkOverallValiditySilent();
+    });
+    nameInput.addEventListener('blur', () => validateName(true));
+  }
+
+  if (emailInput) {
+    emailInput.addEventListener('input', () => {
+      validateEmail(false);
+      checkOverallValiditySilent();
+    });
+    emailInput.addEventListener('blur', () => validateEmail(true));
+  }
+
+  if (phoneInput) {
+    phoneInput.addEventListener('input', () => {
+      validatePhone(false);
+      checkOverallValiditySilent();
+    });
+    phoneInput.addEventListener('blur', () => validatePhone(true));
+  }
+
+  if (bottlenecksInput) {
+    bottlenecksInput.addEventListener('input', () => {
+      validateBottlenecks(false);
+      checkOverallValiditySilent();
+    });
+    bottlenecksInput.addEventListener('blur', () => validateBottlenecks(true));
+  }
+
+  function checkOverallValiditySilent() {
+    const valid = validateName(false) && validateEmail(false) && validatePhone(false) && validateVectors(false) && validateBottlenecks(false);
+    if (valid && errorCallout) {
+      errorCallout.classList.add('hidden');
+    }
+  }
+
+  // Vector Pills Multi-Select Logic
+  const vectorPills = document.querySelectorAll('.vector-pill');
+  vectorPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const isSelected = pill.classList.contains('bg-primary');
+      const icon = pill.querySelector('.material-symbols-outlined');
+      if (isSelected) {
+        pill.classList.remove('bg-primary', 'text-on-primary', 'font-bold', 'shadow-[0_0_12px_rgba(208,188,255,0.35)]');
+        pill.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        if (icon) {
+          icon.textContent = 'add_circle';
+          icon.classList.add('opacity-40');
+        }
+      } else {
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        pill.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-[0_0_12px_rgba(208,188,255,0.35)]');
+        if (icon) {
+          icon.textContent = 'check_circle';
+          icon.classList.remove('opacity-40');
+        }
+      }
+      validateVectors(true);
+      checkOverallValiditySilent();
+    });
+  });
+
+  // Budget Pills Single-Select Logic
+  const budgetPills = document.querySelectorAll('.budget-pill');
+  budgetPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      budgetPills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'font-bold', 'shadow-[0_0_14px_rgba(208,188,255,0.4)]');
+        p.classList.add('bg-surface-container-high', 'text-on-surface');
+      });
+      pill.classList.remove('bg-surface-container-high');
+      pill.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-[0_0_14px_rgba(208,188,255,0.4)]');
+    });
+  });
+
+  // Channel Pills Single-Select Logic
+  const channelPills = document.querySelectorAll('.channel-pill');
+  channelPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      channelPills.forEach(p => {
+        p.classList.remove('bg-secondary', 'text-on-secondary', 'font-bold', 'shadow-[0_0_12px_rgba(76,215,246,0.35)]');
+        p.classList.add('bg-surface-container-high', 'text-on-surface');
+      });
+      pill.classList.remove('bg-surface-container-high');
+      pill.classList.add('bg-secondary', 'text-on-secondary', 'font-bold', 'shadow-[0_0_12px_rgba(76,215,246,0.35)]');
+    });
+  });
+
+  // Accordion Logic
+  const faqToggles = document.querySelectorAll('.faq-toggle');
+  faqToggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.nextElementSibling;
+      const icon = toggle.querySelector('.faq-icon');
+      const isHidden = content.classList.contains('hidden');
+      
+      // Close all other FAQs
+      document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+
+  // Interactive Toast Controller
+  let toastTimer = null;
+  const toast = document.getElementById('submission-toast');
+  const toastProgressBar = document.getElementById('toast-progress-bar');
+  const toastDismissBtn = document.getElementById('toast-dismiss-btn');
+  const toastTargetEmail = document.getElementById('toast-target-email');
+  const toastStatusBtn = document.getElementById('toast-status-btn');
+
+  function showToast(email) {
+    if (toastTimer) {
+      clearTimeout(toastTimer);
+    }
+
+    if (toastTargetEmail) {
+      toastTargetEmail.textContent = email || 'elena@enterprise.io';
+    }
+
+    // Reset progress bar animation
+    toastProgressBar.classList.remove('toast-timer-bar');
+    void toastProgressBar.offsetWidth; // Trigger reflow
+    toastProgressBar.classList.add('toast-timer-bar');
+
+    // Make visible and slide down
+    toast.classList.remove('invisible', '-translate-y-6', 'opacity-0', 'scale-95');
+    toast.classList.add('translate-y-0', 'opacity-100', 'scale-100');
+
+    // Auto-dismiss after 6000ms
+    toastTimer = setTimeout(() => {
+      hideToast();
+    }, 6000);
+  }
+
+  function hideToast() {
+    if (toastTimer) {
+      clearTimeout(toastTimer);
+      toastTimer = null;
+    }
+    toast.classList.remove('translate-y-0', 'opacity-100', 'scale-100');
+    toast.classList.add('-translate-y-6', 'opacity-0', 'scale-95');
+    setTimeout(() => {
+      if (toast.classList.contains('opacity-0')) {
+        toast.classList.add('invisible');
+      }
+    }, 300);
+  }
+
+  if (toastDismissBtn) {
+    toastDismissBtn.addEventListener('click', hideToast);
+  }
+
+  if (toastStatusBtn) {
+    toastStatusBtn.addEventListener('click', () => {
+      const feedback = document.getElementById('form-feedback');
+      if (feedback) {
+        feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      hideToast();
+    });
+  }
+
+  // Form submission simulated UX with complete validation
+  function handleConsultationSubmit() {
+    const isNameValid = validateName(true);
+    const isEmailValid = validateEmail(true);
+    const isPhoneValid = validatePhone(true);
+    const isVectorsValid = validateVectors(true);
+    const isBottlenecksValid = validateBottlenecks(true);
+
+    const isAllValid = isNameValid && isEmailValid && isPhoneValid && isVectorsValid && isBottlenecksValid;
+
+    if (!isAllValid) {
+      if (errorCallout) {
+        errorCallout.classList.remove('hidden');
+      }
+      // Focus or scroll to the first invalid field
+      let firstInvalidEl = null;
+      if (!isNameValid) firstInvalidEl = nameInput;
+      else if (!isEmailValid) firstInvalidEl = emailInput;
+      else if (!isPhoneValid) firstInvalidEl = phoneInput;
+      else if (!isVectorsValid) firstInvalidEl = vectorGroup;
+      else if (!isBottlenecksValid) firstInvalidEl = bottlenecksInput;
+
+      if (firstInvalidEl) {
+        firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (typeof firstInvalidEl.focus === 'function') {
+          firstInvalidEl.focus();
+        }
+      }
+      return false;
+    }
+
+    // Hide error summary if all valid
+    if (errorCallout) {
+      errorCallout.classList.add('hidden');
+    }
+
+    const btn = document.getElementById('submit-btn');
+    const feedback = document.getElementById('form-feedback');
+    const enteredEmail = emailInput ? emailInput.value : 'elena@enterprise.io';
+
+    btn.disabled = true;
+    btn.innerHTML = `
+      <span class="inline-block animate-spin material-symbols-outlined text-[20px]">autorenew</span>
+      <span>Encrypting & Transmitting Audit Dossier...</span>
+    `;
+
+    setTimeout(() => {
+      // In-form success state banner
+      feedback.classList.remove('hidden', 'bg-error-container', 'text-on-error-container');
+      feedback.classList.add('bg-secondary/15', 'text-secondary', 'border', 'border-secondary/30');
+      feedback.innerHTML = `
+        <div class="flex items-center justify-center gap-2 mb-1">
+          <span class="material-symbols-outlined text-[18px]">verified</span>
+          <span class="font-bold">Growth Dossier Dispatched!</span>
+        </div>
+        <p class="text-[12px] opacity-90">Thank you, ${nameInput.value || 'Partner'}. A senior growth architect is preparing your 48-hour blueprint for ${enteredEmail}.</p>
+      `;
+
+      btn.disabled = false;
+      btn.innerHTML = `
+        <span>SUBMITTED SUCCESSFULLY</span>
+        <span class="material-symbols-outlined text-[20px]">check_circle</span>
+      `;
+      btn.classList.remove('from-primary-container', 'via-primary', 'to-secondary');
+      btn.classList.add('bg-surface-container-high', 'text-secondary');
+
+      // Trigger glassmorphic Obsidian confirmation toast notification
+      showToast(enteredEmail);
+    }, 1200);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_16px_rgba(0,0,0,0.4)]" data-active-classes="text-secondary"><div class="flex justify-around items-center h-20 px-2"><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">hub</span><span class="font-label-sm text-label-sm">Services</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="our-creative-work" href="#"><span class="material-symbols-outlined text-[22px]">work</span><span class="font-label-sm text-label-sm">Work</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="our-results" href="#"><span class="material-symbols-outlined text-[22px]">monitoring</span><span class="font-label-sm text-label-sm">Results</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="insights" href="#"><span class="material-symbols-outlined text-[22px]">newspaper</span><span class="font-label-sm text-label-sm">Insights</span></a></div></nav><script>const openBtn=document.getElementById('menu-open');const closeBtn=document.getElementById('menu-close');const drawer=document.getElementById('drawer');const backdrop=document.getElementById('drawer-backdrop');const panel=document.getElementById('drawer-panel');function toggleDrawer(open){if(open){drawer.classList.remove('pointer-events-none','opacity-0');drawer.classList.add('pointer-events-auto','opacity-100');panel.classList.remove('-translate-x-full');panel.classList.add('translate-x-0');}else{drawer.classList.add('pointer-events-none','opacity-0');drawer.classList.remove('pointer-events-auto','opacity-100');panel.classList.remove('-translate-x-full');panel.classList.remove('translate-x-0');}}if(openBtn)openBtn.addEventListener('click',()=>toggleDrawer(true));if(closeBtn)closeBtn.addEventListener('click',()=>toggleDrawer(false));if(backdrop)backdrop.addEventListener('click',()=>toggleDrawer(false));</script>
+
+
+</body></html>

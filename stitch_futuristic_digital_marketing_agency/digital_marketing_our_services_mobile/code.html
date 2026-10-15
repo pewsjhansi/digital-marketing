@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#11131d;color:#e1e1f1;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error-container":"#ffdad6","on-primary-fixed":"#23005c","outline":"#958ea0","inverse-surface":"#e1e1f1","on-primary":"#3c0091","outline-variant":"#494454","inverse-on-surface":"#2e303b","surface":"#11131d","on-tertiary-fixed":"#001a42","on-primary-fixed-variant":"#5516be","surface-container-highest":"#323440","primary":"#d0bcff","secondary-fixed-dim":"#4cd7f6","background":"#11131d","tertiary":"#adc6ff","on-background":"#e1e1f1","tertiary-fixed":"#d8e2ff","on-error":"#690005","surface-tint":"#d0bcff","error":"#ffb4ab","surface-bright":"#373944","inverse-primary":"#6d3bd7","surface-dim":"#11131d","primary-fixed-dim":"#d0bcff","on-primary-container":"#340080","primary-fixed":"#e9ddff","on-secondary-container":"#00424e","on-tertiary":"#002e6a","surface-variant":"#323440","on-tertiary-fixed-variant":"#004395","secondary":"#4cd7f6","secondary-fixed":"#acedff","on-secondary":"#003640","tertiary-container":"#4d8eff","secondary-container":"#03b5d3","surface-container":"#1d1f2a","surface-container-high":"#272935","tertiary-fixed-dim":"#adc6ff","surface-container-low":"#191b26","on-tertiary-container":"#00285d","on-surface-variant":"#cbc3d7","primary-container":"#a078ff","error-container":"#93000a","on-secondary-fixed-variant":"#004e5c","on-surface":"#e1e1f1","on-secondary-fixed":"#001f26","surface-container-lowest":"#0b0e18"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xs":"0.25rem","margin-desktop":"5rem","space-md":"1rem","gutter-desktop":"2.5rem",gutter:"1.5rem","space-lg":"1.75rem","space-sm":"0.5rem",margin:"1.25rem","space-xl":"3rem","margin-tablet":"2.5rem"},fontFamily:{"headline-md":["Syne"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Space Grotesk"],"headline-xl-mobile":["Syne"],"headline-lg-mobile":["Syne"],"body-sm":["Plus Jakarta Sans"],"display-hero-mobile":["Syne"],"headline-xl":["Syne"],"body-md":["Plus Jakarta Sans"],"label-caps":["Space Grotesk"],"display-hero":["Syne"],"headline-sm":["Syne"],"body-xl":["Plus Jakarta Sans"],"label-md":["Space Grotesk"],"headline-lg":["Syne"]},fontSize:{"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["18px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"400"}],"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.03em",fontWeight:"500"}],"headline-xl-mobile":["32px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-sm":["14px",{lineHeight:"20px",letterSpacing:"0.005em",fontWeight:"400"}],"display-hero-mobile":["40px",{lineHeight:"46px",letterSpacing:"-0.02em",fontWeight:"800"}],"headline-xl":["48px",{lineHeight:"56px",letterSpacing:"-0.025em",fontWeight:"700"}],"body-md":["16px",{lineHeight:"24px",letterSpacing:"0em",fontWeight:"400"}],"label-caps":["12px",{lineHeight:"16px",letterSpacing:"0.12em",fontWeight:"600"}],"display-hero":["72px",{lineHeight:"80px",letterSpacing:"-0.03em",fontWeight:"800"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.005em",fontWeight:"600"}],"body-xl":["20px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"400"}],"label-md":["14px",{lineHeight:"18px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}]}}}};</script></head><body class="bg-surface text-on-surface antialiased flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_12px_rgba(0,0,0,0.4)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Open Menu" class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container-low text-on-surface active:scale-95 transition-all" id="menu-open"><span class="material-symbols-outlined text-[22px]">menu</span></button><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm tracking-tight font-extrabold text-on-surface">DIGITAL</span><span class="font-headline-sm text-headline-sm tracking-tight font-extrabold text-secondary drop-shadow-[0_0_12px_rgba(76,215,246,0.6)]">MARKETING</span></div><span class="text-[9px] font-label-caps text-on-surface-variant tracking-widest uppercase">Growth Architecture</span></div></div><div class="flex items-center gap-space-sm"><a class="h-9 px-3.5 flex items-center justify-center rounded-full bg-gradient-to-r from-primary-container to-secondary-container text-on-primary font-label-sm text-label-sm font-bold shadow-[0_0_16px_rgba(160,120,255,0.4)] active:scale-95 transition-all" data-path="contact" href="#">Let's Talk</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><div class="fixed inset-0 z-50 pointer-events-none transition-all duration-300 opacity-0" id="drawer"><div class="absolute inset-0 bg-surface-container-lowest/80 backdrop-blur-md" id="drawer-backdrop"></div><div class="absolute top-0 left-0 bottom-0 w-4/5 max-w-xs bg-surface-container-low p-margin flex flex-col justify-between overflow-y-auto transform -translate-x-full transition-transform duration-300 shadow-[0_0_40px_rgba(0,0,0,0.8)]" id="drawer-panel"><div class="flex flex-col gap-space-lg"><div class="flex items-center justify-between pt-safe"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-on-surface">DIGITAL <span class="text-secondary">MKTG</span></span><span class="text-[10px] font-label-caps text-on-surface-variant uppercase tracking-wider">Navigation Node</span></div><button class="w-11 h-11 flex items-center justify-center rounded-xl bg-surface-container text-on-surface" id="menu-close"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="flex flex-col gap-space-xs"><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">home</span><span class="font-label-md text-label-md">Home</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="services" href="#"><span class="material-symbols-outlined text-primary text-[20px]">hub</span><span class="font-label-md text-label-md">Services</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="our-creative-work" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">palette</span><span class="font-label-md text-label-md">Our Creative Work</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="our-results" href="#"><span class="material-symbols-outlined text-primary text-[20px]">trending_up</span><span class="font-label-md text-label-md">Our Results</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="about-us" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">corporate_fare</span><span class="font-label-md text-label-md">About Us</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="insights" href="#"><span class="material-symbols-outlined text-primary text-[20px]">insights</span><span class="font-label-md text-label-md">Insights</span></a><a class="flex items-center gap-3 px-3 py-3 rounded-xl text-on-surface hover:bg-surface-container transition-all" data-path="contact" href="#"><span class="material-symbols-outlined text-secondary text-[20px]">chat</span><span class="font-label-md text-label-md">Contact</span></a></div></div><div class="flex flex-col gap-space-sm pt-space-lg pb-safe"><a class="h-12 w-full flex items-center justify-center gap-2 rounded-xl bg-surface-container-high text-secondary font-label-md text-label-md shadow-[0_0_20px_rgba(76,215,246,0.15)]" href="https://wa.me/919305856475" target="_blank"><span class="material-symbols-outlined text-[20px]">forum</span>WhatsApp: +91 9305856475</a><span class="text-[11px] font-label-sm text-outline text-center">We turn vision into digital growth.</span></div></div></div><main class="flex flex-col relative w-full pt-16 bg-surface min-h-[calc(100vh-5rem)]"><div class="hidden">Services</div><div class="flex flex-col w-full">
+<!-- Dynamic Atmospheric Glow Top -->
+<div class="relative w-full overflow-hidden px-margin pt-space-md pb-space-lg">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-44 bg-gradient-to-br from-primary-container/25 via-secondary-container/20 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<div class="relative flex flex-col gap-space-xs z-10">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase">Proprietary Growth Engines</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile font-extrabold text-on-surface tracking-tight">
+        OUR <span class="bg-gradient-to-r from-primary via-secondary to-secondary-fixed bg-clip-text text-transparent">SERVICES</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+        Smart digital solutions engineered to scale client revenue through algorithmic dominance and cinematic creative.
+      </p>
+<!-- Live ROI Metric Bar -->
+<div class="mt-space-sm p-space-sm bg-surface-container-low rounded-xl flex items-center justify-between shadow-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline uppercase">Target ROAS</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary">4.8x+ Avg</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline uppercase">Active Ad Spend</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">₹3.2Cr/Mo</span>
+</div>
+<div class="h-8 w-px bg-surface-container-highest"></div>
+<div class="flex flex-col items-end">
+<span class="font-label-caps text-label-caps text-outline uppercase">Retention</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary-fixed">94.2%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter / Segmented Selector (Mobile Touch Friendly) -->
+<div class="px-margin mb-space-md overflow-x-auto no-scrollbar flex items-center gap-space-xs">
+<button class="filter-chip active-filter px-4 py-2 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold whitespace-nowrap shadow-sm transition-all" data-category="all">
+      All Capabilities (6)
+    </button>
+<button class="filter-chip px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium whitespace-nowrap shadow-sm transition-all" data-category="paid">
+      Paid Media
+    </button>
+<button class="filter-chip px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium whitespace-nowrap shadow-sm transition-all" data-category="organic">
+      SEO &amp; Visibility
+    </button>
+<button class="filter-chip px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-medium whitespace-nowrap shadow-sm transition-all" data-category="creative">
+      AI &amp; Creative
+    </button>
+</div>
+<!-- 6 Service Cards Accordion / Touch Cards -->
+<div class="px-margin flex flex-col gap-space-md" id="services-grid">
+<!-- CARD 1: Meta Ads -->
+<div class="service-card group relative bg-surface-container-low rounded-xl p-space-md shadow-md transition-all duration-300" data-cat="paid">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(76,215,246,0.3)]">
+<span class="material-symbols-outlined text-[28px]">ads_click</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-caps text-label-caps">
+          High Intent CAPI
+        </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">
+        Meta Ads
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        Facebook &amp; Instagram advertising engineered for hyper-targeted customer acquisition and maximized pixel conversion.
+      </p>
+<!-- Visual Preview Graphic -->
+<div class="relative w-full h-32 rounded-lg overflow-hidden mb-space-sm bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-85" data-alt="A glowing holographic Facebook and Instagram analytics dashboard displaying multi-tiered audience retargeting funnels, illuminated in futuristic neon cyan and ultraviolet violet accents inside a high-tech dark studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCweOw7daljN06gbG3MsqbhK1Z_ZBLrG8VPb5fhoibUwBL6tAdJpkiO-7XJla6XT9vDw0MpIW4_GJjEmoQWubotevnfwn5_0w47OKYQI9liyfynjMEOPqS7GnOa0s6QVFauPwxtDb75V1WLqrs7HKJUGFgxV-72YAWNc-KN9ExXlpUdYxyN2TjDnKKT09QNjaL2B7VMgB2BptUWNpKYCSZKsAB5ZXDPFwWWIfMxHZjluls8sj5WQzp4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface/80 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="text-[10px] font-label-sm text-on-surface">CAPI Synced · 99.8% Match Rate</span>
+</div>
+</div>
+<!-- Concise Mobile Bullets -->
+<div class="space-y-1.5 mb-space-md bg-surface-container/60 p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">AI Predictive Audience Clustering</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Full Funnel Dynamic Product Retargeting</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Server-side Conversions API (CAPI)</span>
+</div>
+</div>
+<!-- Interactive Micro Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<button class="details-toggle text-primary flex items-center gap-1 font-label-sm text-label-sm font-semibold active:opacity-75">
+<span>Technical Architecture</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="flex items-center gap-2">
+<a class="px-3.5 py-2 rounded-xl bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1.5 active:scale-95 shadow-[0_0_16px_rgba(76,215,246,0.35)] transition-all" href="https://wa.me/919305856475?text=Hi,%20I%20am%20interested%20in%20Meta%20Ads%20Growth%20Services." target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Get Quote</span>
+</a>
+</div>
+</div>
+<!-- Expandable Detail Drawer -->
+<div class="card-drawer hidden pt-space-sm mt-space-sm bg-surface-container rounded-lg p-3 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2">
+<p class="text-on-surface">Includes custom creative testing matrices (iterating 20+ hooks weekly), automated budget shifting algorithms, and iOS 14.5+ attribution rebalancing.</p>
+<span class="text-[11px] font-label-caps text-secondary uppercase">Average Delivery: Sprint Setup within 72 Hours</span>
+</div>
+</div>
+<!-- CARD 2: SEO & Local SEO -->
+<div class="service-card group relative bg-surface-container-low rounded-xl p-space-md shadow-md transition-all duration-300" data-cat="organic">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shadow-[0_0_20px_rgba(208,188,255,0.3)]">
+<span class="material-symbols-outlined text-[28px]">query_stats</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps">
+          Top 3 Keyword Lock
+        </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">
+        SEO &amp; Local SEO
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        Dominating organic search results and local maps via structural code audits, semantic keyword mapping, and authority backlink building.
+      </p>
+<!-- Inline Telemetry Chart SVG -->
+<div class="p-3 bg-surface-container rounded-lg mb-space-sm">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Organic Impressions Velocity</span>
+<span class="font-label-caps text-label-caps text-secondary font-bold">+312% YoY</span>
+</div>
+<div class="w-full h-12 flex items-end gap-1.5">
+<div class="flex-1 bg-surface-container-highest rounded-t h-[20%]"></div>
+<div class="flex-1 bg-surface-container-highest rounded-t h-[28%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t h-[45%]"></div>
+<div class="flex-1 bg-primary/60 rounded-t h-[60%]"></div>
+<div class="flex-1 bg-secondary rounded-t h-[82%] shadow-[0_0_10px_rgba(76,215,246,0.5)]"></div>
+<div class="flex-1 bg-gradient-to-t from-primary to-secondary rounded-t h-[100%]"></div>
+</div>
+</div>
+<!-- Concise Mobile Bullets -->
+<div class="space-y-1.5 mb-space-md bg-surface-container/60 p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Core Web Vitals sub-second tuning</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Semantic JSON-LD Entity Graphing</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Local Citation Geo-Fencing Networks</span>
+</div>
+</div>
+<!-- Interactive Micro Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<button class="details-toggle text-secondary flex items-center gap-1 font-label-sm text-label-sm font-semibold active:opacity-75">
+<span>Search Deliverables</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="flex items-center gap-2">
+<a class="px-3.5 py-2 rounded-xl bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1.5 active:scale-95 shadow-[0_0_16px_rgba(160,120,255,0.3)] transition-all" href="https://wa.me/919305856475?text=Hi,%20I%20want%20to%20rank%20#1%20on%20Google%20via%20SEO." target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Get Quote</span>
+</a>
+</div>
+</div>
+<!-- Expandable Detail Drawer -->
+<div class="card-drawer hidden pt-space-sm mt-space-sm bg-surface-container rounded-lg p-3 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2">
+<p class="text-on-surface">Full-service technical crawl fixations, white-hat editorial authority syndication, and weekly rank tracking reports delivered directly through WhatsApp &amp; client portal.</p>
+<span class="text-[11px] font-label-caps text-primary uppercase">Guaranteed Ranking Milestones Contracted</span>
+</div>
+</div>
+<!-- CARD 3: Google Business Profile -->
+<div class="service-card group relative bg-surface-container-low rounded-xl p-space-md shadow-md transition-all duration-300" data-cat="organic">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(76,215,246,0.3)]">
+<span class="material-symbols-outlined text-[28px]">storefront</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-caps text-label-caps">
+          Local 3-Pack
+        </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">
+        Google Business Profile
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        Claiming unmatched proximity superiority in Google Maps. Boost call actions, physical visits, and automated 5-star review velocity.
+      </p>
+<!-- Visual Metric Element -->
+<div class="p-3 bg-surface-container rounded-lg mb-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">pin_drop</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Map Pack Proximity</span>
+<span class="text-[11px] font-body-sm text-on-surface-variant">Radius reach +15km</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-caps text-label-caps">#1 Rank</span>
+</div>
+<!-- Concise Mobile Bullets -->
+<div class="space-y-1.5 mb-space-md bg-surface-container/60 p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Automated Review Generation SMS/Email Engine</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Weekly Geo-Tagged Image Posting Protocol</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Competitor Spam De-indexing &amp; Flagging</span>
+</div>
+</div>
+<!-- Interactive Micro Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<button class="details-toggle text-primary flex items-center gap-1 font-label-sm text-label-sm font-semibold active:opacity-75">
+<span>Map Strategy</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="flex items-center gap-2">
+<a class="px-3.5 py-2 rounded-xl bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1.5 active:scale-95 shadow-[0_0_16px_rgba(76,215,246,0.35)] transition-all" href="https://wa.me/919305856475?text=Hi,%20I%20want%20to%20rank%20my%20business%20in%20Google%20Maps%203-pack." target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Get Quote</span>
+</a>
+</div>
+</div>
+<!-- Expandable Detail Drawer -->
+<div class="card-drawer hidden pt-space-sm mt-space-sm bg-surface-container rounded-lg p-3 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2">
+<p class="text-on-surface">We synchronize your NAP (Name, Address, Phone) across 80+ global directories, ensuring Google recognizes your business as the unassailable regional category authority.</p>
+<span class="text-[11px] font-label-caps text-secondary uppercase">Average +180% More Direct Phone Calls</span>
+</div>
+</div>
+<!-- CARD 4: Website Development -->
+<div class="service-card group relative bg-surface-container-low rounded-xl p-space-md shadow-md transition-all duration-300" data-cat="creative">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shadow-[0_0_20px_rgba(208,188,255,0.3)]">
+<span class="material-symbols-outlined text-[28px]">code</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps">
+          Conversion Engine
+        </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">
+        Website Development
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        Sub-second load speeds, modern glassmorphic responsive designs, and frictionless checkout architectures calibrated to turn clicks into buyers.
+      </p>
+<!-- Visual Preview Graphic -->
+<div class="relative w-full h-32 rounded-lg overflow-hidden mb-space-sm bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-85" data-alt="A smartphone showcasing an ultra-modern dark UI e-commerce store with glowing neon purple buttons, crisp dynamic typography, and fluid user interface layout on dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpXKqzZ7hQpmOZ875Yh1wjWJSlvMuqMa2bN9OJDnk1P1Vh0J4jONXdz_jEpPJ4JLMUjp6ub66e1mz9j7iJaTqVxm6TV--u-QDQhsPYijeMkQLN0pCLiz6O_lTIDF_OdHHWvWAj5Y9SVCmRZ2KRzzvJY5aRmq5I_d71VdOKo7PYFqlMqE-C_6Ow_rOEDFrEUQ3U07ddWeIYXN4yaeyPmOrKtfB2diID9VqMBUlUR3VoXGgnofnTOSye"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface/80 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="text-[10px] font-label-sm text-on-surface">99/100 Google PageSpeed</span>
+</div>
+</div>
+<!-- Concise Mobile Bullets -->
+<div class="space-y-1.5 mb-space-md bg-surface-container/60 p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Tailored Next.js / Headless or Shopify Builds</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Built-in Tracking (GA4, CAPI, Clarity Heatmaps)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Psychological CRO Landing Page Frameworks</span>
+</div>
+</div>
+<!-- Interactive Micro Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<button class="details-toggle text-secondary flex items-center gap-1 font-label-sm text-label-sm font-semibold active:opacity-75">
+<span>Tech Stack</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="flex items-center gap-2">
+<a class="px-3.5 py-2 rounded-xl bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1.5 active:scale-95 shadow-[0_0_16px_rgba(160,120,255,0.3)] transition-all" href="https://wa.me/919305856475?text=Hi,%20I%20need%20a%20high-converting%20modern%20website%20developed." target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Get Quote</span>
+</a>
+</div>
+</div>
+<!-- Expandable Detail Drawer -->
+<div class="card-drawer hidden pt-space-sm mt-space-sm bg-surface-container rounded-lg p-3 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2">
+<p class="text-on-surface">Every page undergoes automated Lighthouse regression testing. Zero bloat, instant mobile interactivity, and seamless payment gateway integrations.</p>
+<span class="text-[11px] font-label-caps text-primary uppercase">Average Delivery: 10 - 14 Business Days</span>
+</div>
+</div>
+<!-- CARD 5: Social Media Marketing -->
+<div class="service-card group relative bg-surface-container-low rounded-xl p-space-md shadow-md transition-all duration-300" data-cat="paid">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(76,215,246,0.3)]">
+<span class="material-symbols-outlined text-[28px]">hub</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-caps text-label-caps">
+          Viral Retention
+        </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">
+        Social Media Marketing
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        End-to-end editorial narrative control. Engaging high-retention content, hook rate engineering, and community monetization.
+      </p>
+<!-- Concise Mobile Bullets -->
+<div class="space-y-1.5 mb-space-md bg-surface-container/60 p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">First-3-Second Hook Rate Optimization</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Multi-Channel Cadence (IG, LinkedIn, YouTube)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Direct-Response Carousel &amp; Static Ads</span>
+</div>
+</div>
+<!-- Interactive Micro Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<button class="details-toggle text-primary flex items-center gap-1 font-label-sm text-label-sm font-semibold active:opacity-75">
+<span>Execution Details</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="flex items-center gap-2">
+<a class="px-3.5 py-2 rounded-xl bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1.5 active:scale-95 shadow-[0_0_16px_rgba(76,215,246,0.35)] transition-all" href="https://wa.me/919305856475?text=Hi,%20I%20am%20interested%20in%20Social%20Media%20Marketing%20growth." target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Get Quote</span>
+</a>
+</div>
+</div>
+<!-- Expandable Detail Drawer -->
+<div class="card-drawer hidden pt-space-sm mt-space-sm bg-surface-container rounded-lg p-3 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2">
+<p class="text-on-surface">Includes monthly creative asset calendars, automated comment response bots, influencer collaboration outreach, and weekly KPI digest calls.</p>
+<span class="text-[11px] font-label-caps text-secondary uppercase">Complete Creative Suite Included</span>
+</div>
+</div>
+<!-- CARD 6: AI Video Creation -->
+<div class="service-card group relative bg-surface-container-low rounded-xl p-space-md shadow-md transition-all duration-300" data-cat="creative">
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary shadow-[0_0_20px_rgba(208,188,255,0.3)]">
+<span class="material-symbols-outlined text-[28px]">movie_filter</span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-primary font-label-caps text-label-caps">
+          GenAI 9:16 Ads
+        </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface mb-1">
+        AI Video Creation
+      </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">
+        Hyper-realistic AI avatars, synthetic UGC product demos, and algorithmic 9:16 reels delivered at 10x the speed of standard production.
+      </p>
+<!-- Visual Preview Graphic -->
+<div class="relative w-full h-32 rounded-lg overflow-hidden mb-space-sm bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-85" data-alt="A futuristic AI digital human persona speaking on camera against a dark neon violet futuristic set, stylized cinematic 4k short form video production frame." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCEDRGtw11tu-EgHbeM4agEFlTez60H34cYXacEdS2xDSKupmSznfDQJ403fFid3lD1azCeGyfueaNR56MpaS-oDSE1ZcVzqFXIJEiIDGXQ7vq3-XJfbWkIbTICeN3A7LCKGOtQrRJorsxMm3v8bJMpVUMtvXbif3GsHt9TR4lcS_QLA5bj303snh2qQjEYwgMu_gNdeUvsm696oUR7ZmfUFGKt6BuAeygXk7rgZNM2HmXdN9HhPpl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface/80 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-[10px] font-label-sm text-on-surface">Multi-lingual AI Voice Cloning</span>
+</div>
+</div>
+<!-- Concise Mobile Bullets -->
+<div class="space-y-1.5 mb-space-md bg-surface-container/60 p-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Photorealistic AI UGC Customer Testimonials</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Automated Dynamic B-roll &amp; Sound Design</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Local Language Dubbing (Hindi, English, Regional)</span>
+</div>
+</div>
+<!-- Interactive Micro Actions -->
+<div class="flex items-center justify-between pt-space-xs">
+<button class="details-toggle text-secondary flex items-center gap-1 font-label-sm text-label-sm font-semibold active:opacity-75">
+<span>AI Pipeline</span>
+<span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+</button>
+<div class="flex items-center gap-2">
+<a class="px-3.5 py-2 rounded-xl bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold flex items-center gap-1.5 active:scale-95 shadow-[0_0_16px_rgba(160,120,255,0.3)] transition-all" href="https://wa.me/919305856475?text=Hi,%20I%20am%20interested%20in%20AI%20Video%20Creation%20for%20my%20brand." target="_blank">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Get Quote</span>
+</a>
+</div>
+</div>
+<!-- Expandable Detail Drawer -->
+<div class="card-drawer hidden pt-space-sm mt-space-sm bg-surface-container rounded-lg p-3 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-2">
+<p class="text-on-surface">Reduce production cost by up to 75% while scaling ad variations endlessly. Ideal for DTC e-commerce, real estate, and B2B SaaS video campaigns.</p>
+<span class="text-[11px] font-label-caps text-secondary uppercase">Batch Output: 25+ Reels/Month</span>
+</div>
+</div>
+</div>
+<!-- Mobile Process Summary (Sprint Timeline) -->
+<div class="px-margin pt-space-xl pb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">How We Deliver</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        Our 4-Phase Scale Engine
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        From intake to compounding monthly returns with total transparency.
+      </p>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Step 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-start gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-headline-sm text-headline-sm font-bold shrink-0">
+          1
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Deep Audit &amp; Blueprint</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Day 1–3: Forensic analysis of current ad spend, search health, and competitor gaps.</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-start gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-sm text-headline-sm font-bold shrink-0">
+          2
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Creative &amp; Technical Build</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Day 4–7: High-converting hooks, video edits, landing page optimization, and CAPI setup.</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-start gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center font-headline-sm text-headline-sm font-bold shrink-0">
+          3
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Aggressive Deployment</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Day 8+: Controlled algorithmic budget ramps, live A/B variant testing, and rank climbing.</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-space-sm bg-surface-container-low rounded-xl flex items-start gap-space-sm shadow-sm">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-sm text-headline-sm font-bold shrink-0">
+          4
+        </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Automated Scale &amp; Moat</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Continuous iteration, margin preservation, and dominating category share.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Why Choose Us Value Pillars -->
+<div class="px-margin py-space-lg bg-surface-container-lowest flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-wider">The Unfair Advantage</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+        Why Scaled Brands Trust Us
+      </h2>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">speed</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Velocity First</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px] leading-tight">Fast turnaround sprints without weeks of corporate lag.</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">ROI Transparent</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px] leading-tight">Live dashboards tracking net revenue, not vanity vanity metrics.</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">psychology</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">AI Synthesis</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px] leading-tight">Cutting-edge generative tech to outpace competitor costs.</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-xl flex flex-col gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">forum</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Direct Access</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[13px] leading-tight">Direct WhatsApp war-room with senior growth strategists.</span>
+</div>
+</div>
+</div>
+<!-- Primary Mobile Conversion Hero Box -->
+<div class="px-margin pt-space-xl pb-space-lg">
+<div class="relative bg-gradient-to-br from-surface-container via-surface-container-low to-surface-container-high p-space-lg rounded-2xl shadow-xl overflow-hidden flex flex-col items-center text-center gap-space-md">
+<!-- Background Ambient Glow -->
+<div class="absolute -top-10 -right-10 w-44 h-44 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-10 -left-10 w-44 h-44 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<div class="relative z-10 w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-secondary shadow-[0_0_24px_rgba(76,215,246,0.4)]">
+<span class="material-symbols-outlined text-[32px]">rocket_launch</span>
+</div>
+<div class="relative z-10 flex flex-col gap-1 max-w-xs">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">
+          Ready to Multiply Your Revenue?
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Book a 1-on-1 strategy teardown. We will analyze your funnel and present a 90-day growth roadmap.
+        </p>
+</div>
+<!-- Action Stack -->
+<div class="relative z-10 w-full flex flex-col gap-space-sm pt-space-xs">
+<a class="w-full h-13 py-3.5 px-4 rounded-xl bg-gradient-to-r from-secondary-container to-secondary text-on-secondary font-label-md text-label-md font-bold flex items-center justify-center gap-2 shadow-[0_0_24px_rgba(76,215,246,0.45)] active:scale-95 transition-all" href="https://wa.me/919305856475?text=Hello%20Digital%20Marketing!%20I%20would%20like%20to%20claim%20my%20free%20growth%20consultation." target="_blank">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+<span>Consult on WhatsApp (+91 9305856475)</span>
+</a>
+<a class="w-full h-12 py-3 px-4 rounded-xl bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-2 hover:bg-surface-bright active:scale-95 transition-all" data-path="contact" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span>
+<span>Claim Free Audit Call</span>
+</a>
+</div>
+<div class="relative z-10 flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Zero Obligation · 30-Min High Impact Session</span>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript for Filters & Drawers -->
+<script>
+    (function initServicesInteractions() {
+      // Toggle Drawers for each service card
+      const toggleButtons = document.querySelectorAll('.details-toggle');
+      toggleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const card = btn.closest('.service-card');
+          const drawer = card.querySelector('.card-drawer');
+          const icon = btn.querySelector('.material-symbols-outlined');
+          
+          if (drawer.classList.contains('hidden')) {
+            drawer.classList.remove('hidden');
+            icon.style.transform = 'rotate(180deg)';
+          } else {
+            drawer.classList.add('hidden');
+            icon.style.transform = 'rotate(0deg)';
+          }
+        });
+      });
+
+      // Filter Chips
+      const filterChips = document.querySelectorAll('.filter-chip');
+      const serviceCards = document.querySelectorAll('.service-card');
+
+      filterChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          // Update active styles
+          filterChips.forEach(c => {
+            c.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+            c.classList.add('bg-surface-container', 'text-on-surface-variant', 'font-medium');
+          });
+          chip.classList.remove('bg-surface-container', 'text-on-surface-variant', 'font-medium');
+          chip.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+
+          const category = chip.getAttribute('data-category');
+
+          serviceCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-cat') === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</div><footer class="w-full bg-surface-container-lowest px-margin pt-space-xl pb-32 flex flex-col gap-space-lg mt-space-xl"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-1"><span class="font-headline-md text-headline-md font-bold text-on-surface">DIGITAL</span><span class="font-headline-md text-headline-md font-bold text-secondary drop-shadow-[0_0_8px_rgba(76,215,246,0.4)]">MARKETING</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">We turn your vision into digital growth. Engineering luminous conversion-focused growth systems for exponential brands.</p></div><div class="grid grid-cols-2 gap-space-md"><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps text-secondary uppercase">Quick Nav</span><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="home" href="#">Home</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="our-creative-work" href="#">Creative Work</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="our-results" href="#">Results</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="about-us" href="#">About Us</a><a class="font-body-sm text-body-sm text-outline hover:text-on-surface" data-path="insights" href="#">Insights</a></div><div class="flex flex-col gap-space-xs"><span class="font-label-caps text-label-caps text-primary uppercase">Services</span><span class="font-body-sm text-body-sm text-outline">Paid Acquisition</span><span class="font-body-sm text-body-sm text-outline">SEO Dominance</span><span class="font-body-sm text-body-sm text-outline">Creative Strategy</span><span class="font-body-sm text-body-sm text-outline">Growth Funnels</span><span class="font-body-sm text-body-sm text-outline">Lifecycle &amp; CRM</span></div></div><div class="flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps text-on-surface uppercase">Direct Connection</span><a class="flex items-center gap-2 text-secondary font-label-md text-label-md" href="https://wa.me/919305856475" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span>WhatsApp: +91 9305856475</a><a class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md" href="tel:+919305856475"><span class="material-symbols-outlined text-[18px]">call</span>+91 9305856475</a><a class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md" href="mailto:growth@digitalmarketing.ai"><span class="material-symbols-outlined text-[18px]">mail</span>growth@digitalmarketing.ai</a><a class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md" href="https://instagram.com" target="_blank"><span class="material-symbols-outlined text-[18px]">photo_camera</span>@digitalmarketing.growth</a></div><div class="pt-space-md flex flex-col gap-1"><span class="font-label-sm text-label-sm text-outline">© 2025 DIGITAL MARKETING Inc. All rights reserved.</span><span class="text-[11px] font-label-sm text-outline-variant">Architected for digital velocity &amp; hyper-scale.</span></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-1px_16px_rgba(0,0,0,0.4)]" data-active-classes="text-secondary"><div class="flex justify-around items-center h-20 px-2"><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-16 transition-all text-secondary" data-path="services" href="#"><span class="material-symbols-outlined text-[22px]">hub</span><span class="font-label-sm text-label-sm">Services</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="our-creative-work" href="#"><span class="material-symbols-outlined text-[22px]">work</span><span class="font-label-sm text-label-sm">Work</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="our-results" href="#"><span class="material-symbols-outlined text-[22px]">monitoring</span><span class="font-label-sm text-label-sm">Results</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-16 text-outline hover:text-on-surface transition-all" data-path="insights" href="#"><span class="material-symbols-outlined text-[22px]">newspaper</span><span class="font-label-sm text-label-sm">Insights</span></a></div></nav><script>const openBtn=document.getElementById('menu-open');const closeBtn=document.getElementById('menu-close');const drawer=document.getElementById('drawer');const backdrop=document.getElementById('drawer-backdrop');const panel=document.getElementById('drawer-panel');function toggleDrawer(open){if(open){drawer.classList.remove('pointer-events-none','opacity-0');drawer.classList.add('pointer-events-auto','opacity-100');panel.classList.remove('-translate-x-full');panel.classList.add('translate-x-0');}else{drawer.classList.add('pointer-events-none','opacity-0');drawer.classList.remove('pointer-events-auto','opacity-100');panel.classList.add('-translate-x-full');panel.classList.remove('translate-x-0');}}if(openBtn)openBtn.addEventListener('click',()=>toggleDrawer(true));if(closeBtn)closeBtn.addEventListener('click',()=>toggleDrawer(false));if(backdrop)backdrop.addEventListener('click',()=>toggleDrawer(false));</script></body></html>

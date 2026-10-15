@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "surface": "#11131d",
+        "surface-dim": "#11131d",
+        "surface-bright": "#373944",
+        "surface-container-lowest": "#0b0e18",
+        "surface-container-low": "#191b26",
+        "surface-container": "#1d1f2a",
+        "surface-container-high": "#272935",
+        "surface-container-highest": "#323440",
+        "background": "#11131d",
+        "on-background": "#e1e1f1",
+        "on-surface": "#e1e1f1",
+        "on-surface-variant": "#cbc3d7",
+        "outline": "#958ea0",
+        "outline-variant": "#494454",
+        "primary": "#d0bcff",
+        "primary-container": "#8b5cf6",
+        "on-primary": "#3c0091",
+        "on-primary-container": "#ffffff",
+        "secondary": "#4cd7f6",
+        "secondary-container": "#03b5d3",
+        "on-secondary": "#003640",
+        "on-secondary-container": "#00424e",
+        "tertiary": "#adc6ff",
+        "tertiary-container": "#4d8eff",
+        "error": "#ffb4ab",
+        "error-container": "#93000a"
+      },
+      fontFamily: {
+        "display": ["Syne", "sans-serif"],
+        "headline": ["Syne", "sans-serif"],
+        "body": ["Plus Jakarta Sans", "sans-serif"],
+        "label": ["Space Grotesk", "sans-serif"],
+        "mono": ["monospace"]
+      }
+    }
+  }
+}
+</script>
+</head>
+<body class="bg-background font-body text-on-surface antialiased min-h-screen relative overflow-x-hidden selection:bg-primary selection:text-on-primary">
+
+<!-- Global Ambient Lighting Glows -->
+<div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+  <div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.15)_0%,_rgba(76,215,246,0.06)_40%,_transparent_75%)] blur-[90px]"></div>
+  <div class="absolute bottom-10 right-0 w-[600px] h-[500px] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.12)_0%,_transparent_70%)] blur-[100px]"></div>
+</div>
+
+<!-- Global Shared Navigation Header -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-2xl border-b border-outline-variant/30">
+  <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <a class="flex items-center gap-3 focus:outline-none" href="#">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-container to-secondary flex items-center justify-center shadow-[0_0_15px_rgba(139,92,246,0.5)]">
+          <span class="material-symbols-outlined text-[20px] text-white">hub</span>
+        </div>
+        <span class="font-headline font-bold text-xl tracking-tight text-on-surface uppercase">DIGITAL MARKETING</span>
+      </a>
+    </div>
+
+    <!-- Persistent Nav Links with active state on Insights -->
+    <nav class="hidden xl:flex items-center gap-6">
+      <a class="text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">Home</a>
+      <a class="text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">Services</a>
+      <a class="text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">Our Creative Work</a>
+      <a class="text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">Our Results</a>
+      <a class="text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">About Us</a>
+      <a class="text-sm font-semibold text-secondary bg-surface-container px-3.5 py-1.5 rounded-full border border-secondary/30 shadow-[0_0_12px_rgba(76,215,246,0.2)]" href="#">Insights</a>
+      <a class="text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <!-- WhatsApp Direct Action -->
+      <a aria-label="Connect on WhatsApp" class="h-10 w-10 rounded-full bg-surface-container-high hover:bg-surface-variant flex items-center justify-center text-secondary hover:text-on-surface transition-all border border-outline-variant/30 shadow-[0_0_15px_rgba(76,215,246,0.15)]" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+      </a>
+      <a class="hidden sm:inline-flex items-center justify-center px-5 py-2 rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-surface-container-lowest font-label text-sm font-bold tracking-tight shadow-[0_0_25px_rgba(139,92,246,0.4)] hover:shadow-[0_0_35px_rgba(76,215,246,0.6)] hover:scale-105 active:scale-95 transition-all" href="#">
+        Let's Talk
+      </a>
+      <button aria-label="Toggle Mobile Menu" class="xl:hidden h-10 w-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:text-primary transition-colors focus:outline-none" id="mobile-nav-toggle">
+        <span class="material-symbols-outlined text-[24px]">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="hidden xl:hidden w-full bg-surface-container-lowest/95 backdrop-blur-2xl border-b border-outline-variant/30 px-6 py-4" id="mobile-menu">
+    <div class="flex flex-col gap-2">
+      <a class="px-3 py-2 text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" href="#">Home</a>
+      <a class="px-3 py-2 text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" href="#">Services</a>
+      <a class="px-3 py-2 text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" href="#">Our Creative Work</a>
+      <a class="px-3 py-2 text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" href="#">Our Results</a>
+      <a class="px-3 py-2 text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" href="#">About Us</a>
+      <a class="px-3 py-2 text-sm text-secondary font-semibold bg-surface-container-high rounded-lg transition-colors" href="#">Insights</a>
+      <a class="px-3 py-2 text-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" href="#">Contact</a>
+      <div class="pt-3 border-t border-outline-variant/20 flex flex-col gap-2">
+        <a class="w-full text-center py-2.5 rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-surface-container-lowest font-label text-sm font-bold" href="#">Let's Talk</a>
+        <a class="w-full flex items-center justify-center gap-2 py-2.5 rounded-full bg-surface-container-high border border-outline-variant/30 text-secondary font-label text-sm" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[18px]">chat</span> WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="w-full pt-28 pb-20 relative z-10">
+
+  <!-- 1. Editorial Header & Search / Filter Hub -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-16">
+    <div class="flex flex-col">
+      <!-- Eyebrow Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container border border-outline-variant/40 text-secondary w-fit mb-5 shadow-[0_0_15px_rgba(76,215,246,0.1)]">
+        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+        <span class="font-label text-xs tracking-widest uppercase font-semibold">AGENCY INTELLIGENCE & RESEARCH • 2026 EDITION</span>
+      </div>
+
+      <!-- Headline & Subtitle -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10">
+        <div class="lg:col-span-8">
+          <h1 class="font-headline text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase tracking-tight text-on-surface leading-tight">
+            ALGORITHMIC INSIGHTS & <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-container to-secondary">GROWTH RESEARCH</span>
+          </h1>
+        </div>
+        <div class="lg:col-span-4">
+          <p class="font-body text-base text-on-surface-variant leading-relaxed">
+            Deep-dives into algorithmic media buying, AI cinematic video generation, first-party CAPI telemetry, and technical SEO architecture. Written by our growth strategists.
+          </p>
+        </div>
+      </div>
+
+      <!-- Live Search Bar -->
+      <div class="relative w-full max-w-3xl mb-6">
+        <div class="relative flex items-center bg-surface-container-low rounded-xl border border-outline-variant/40 px-4 py-3.5 focus-within:border-secondary focus-within:shadow-[0_0_25px_rgba(76,215,246,0.2)] transition-all">
+          <span class="material-symbols-outlined text-outline mr-3 text-[22px]">search</span>
+          <input class="w-full bg-transparent text-on-surface placeholder:text-outline font-body text-base focus:outline-none" id="search-input" placeholder="Search research, tactical playbooks, or algorithms..." type="text"/>
+          <span class="font-label text-xs text-outline hidden sm:inline-block px-2 py-1 rounded bg-surface-container text-on-surface-variant">14 Articles</span>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills (Exact PRD Categories) -->
+      <div class="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none" id="filter-pills">
+        <button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label text-xs sm:text-sm font-semibold transition-all duration-200 bg-primary-container text-white shadow-[0_0_15px_rgba(139,92,246,0.4)]" data-cat="all">
+          All Dispatches (14)
+        </button>
+        <button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label text-xs sm:text-sm font-medium transition-all duration-200 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-outline-variant/30" data-cat="meta">
+          Meta Ads (Advantage+ & CAPI)
+        </button>
+        <button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label text-xs sm:text-sm font-medium transition-all duration-200 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-outline-variant/30" data-cat="seo">
+          SEO & Local SEO (Semantic & Entity Indexing)
+        </button>
+        <button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label text-xs sm:text-sm font-medium transition-all duration-200 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-outline-variant/30" data-cat="gbp">
+          Google Business Profile (Map Pack Signals)
+        </button>
+        <button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label text-xs sm:text-sm font-medium transition-all duration-200 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-outline-variant/30" data-cat="web">
+          Website Development (Core Web Vitals & Tech)
+        </button>
+        <button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label text-xs sm:text-sm font-medium transition-all duration-200 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-outline-variant/30" data-cat="smm">
+          Social Media Marketing (Attention Economics)
+        </button>
+        <button class="filter-pill whitespace-nowrap px-4 py-2 rounded-full font-label text-xs sm:text-sm font-medium transition-all duration-200 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface border border-outline-variant/30" data-cat="ai">
+          AI Video Creation (Runway Gen-3 & Neural)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Featured Lead Article / Flagship Deep-Dive -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-20">
+    <div class="relative rounded-2xl bg-gradient-to-b from-surface-container-high/90 to-surface-container/70 border border-outline-variant/40 p-6 md:p-10 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+      <!-- Glow Accent Line -->
+      <div class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <!-- Left Narrative Column -->
+        <div class="lg:col-span-7 flex flex-col justify-between">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary font-label text-xs uppercase mb-4">
+              <span class="material-symbols-outlined text-[15px]">local_fire_department</span>
+              <span>FEATURED DEEP DIVE • 12 MIN READ • META ADS & ATTRIBUTION</span>
+            </div>
+            
+            <h2 class="font-headline text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface hover:text-secondary transition-colors cursor-pointer mb-4 leading-snug">
+              The Death of Cookie Tracking: Why Meta CAPI v4 + Cloudflare Edge Workers Yield 38% Higher Attributed ROAS
+            </h2>
+            
+            <p class="font-body text-base text-on-surface-variant mb-6 leading-relaxed">
+              Third-party cookies and mobile browser signal loss have rendered traditional pixel setups obsolete. Here is our step-by-step cryptographic implementation for zero-loss server-side event tracking across iOS and Android.
+            </p>
+          </div>
+
+          <!-- Author Info & Action Button -->
+          <div class="pt-6 border-t border-outline-variant/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary-container to-secondary flex items-center justify-center font-headline text-sm text-surface-container-lowest font-bold">
+                PE
+              </div>
+              <div class="flex flex-col">
+                <span class="font-label text-sm text-on-surface font-semibold">Performance Engineering Pod</span>
+                <span class="font-body text-xs text-outline">Published Oct 2024 • Verified 2026 Core</span>
+              </div>
+            </div>
+
+            <a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-surface-container-lowest font-label text-sm font-bold shadow-[0_0_20px_rgba(76,215,246,0.3)] hover:scale-105 transition-all" href="#article-reader-section">
+              <span>Read Research Dossier</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Tags Cluster -->
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="font-label text-xs text-on-surface-variant bg-surface-container-lowest px-2.5 py-1 rounded-md border border-outline-variant/30">#MetaAds</span>
+            <span class="font-label text-xs text-on-surface-variant bg-surface-container-lowest px-2.5 py-1 rounded-md border border-outline-variant/30">#ServerSideCAPI</span>
+            <span class="font-label text-xs text-on-surface-variant bg-surface-container-lowest px-2.5 py-1 rounded-md border border-outline-variant/30">#Attribution</span>
+            <span class="font-label text-xs text-on-surface-variant bg-surface-container-lowest px-2.5 py-1 rounded-md border border-outline-variant/30">#UnitEconomics</span>
+          </div>
+        </div>
+
+        <!-- Right Architectural Code & Telemetry Column -->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <div class="w-full bg-surface-container-lowest rounded-xl border border-outline-variant/40 p-4 shadow-2xl relative overflow-hidden">
+            <div class="flex items-center justify-between pb-3 border-b border-outline-variant/20 mb-3">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-error inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary-container inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span>
+                <span class="font-mono text-xs text-outline ml-2">EDGE-CAPI-V4.TS</span>
+              </div>
+              <span class="font-label text-xs text-secondary flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span> 99.8% Match Rate
+              </span>
+            </div>
+
+            <!-- Code Snippet -->
+            <pre class="font-mono text-xs leading-5 text-on-surface-variant overflow-x-auto"><code class="text-tertiary">export default async</code> {
+  <span class="text-primary">async fetch</span>(req, env) {
+    <span class="text-outline">// Cryptographic SHA-256 PII Normalize</span>
+    <span class="text-tertiary">const</span> payload = <span class="text-secondary">await</span> req.json();
+    <span class="text-tertiary">const</span> hashedUser = <span class="text-secondary">await</span> sha256(payload.email);
+    
+    <span class="text-outline">// Dispatch Server-Side to Meta Graph API</span>
+    <span class="text-secondary">return</span> <span class="text-primary">dispatchCAPI</span>({
+      event_name: <span class="text-secondary">"Purchase"</span>,
+      event_id: payload.txn_id,
+      action_source: <span class="text-secondary">"website"</span>,
+      user_data: { em: hashedUser }
+    });
+  }
+};</pre>
+
+            <!-- Telemetry Comparison Box -->
+            <div class="mt-4 pt-3 border-t border-outline-variant/20 grid grid-cols-2 gap-3">
+              <div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant/20">
+                <span class="font-label text-[11px] text-outline block mb-1">Standard Pixel ROAS</span>
+                <span class="font-headline text-lg text-on-surface-variant font-bold">2.14x</span>
+                <span class="font-body text-xs text-error block mt-0.5">-24% Signal Loss</span>
+              </div>
+              <div class="bg-surface-container p-3 rounded-lg border border-secondary/30 shadow-[0_0_15px_rgba(76,215,246,0.1)]">
+                <span class="font-label text-[11px] text-secondary block mb-1 font-semibold">Cloudflare Edge CAPI</span>
+                <span class="font-headline text-lg text-secondary font-bold">2.96x</span>
+                <span class="font-body text-xs text-secondary block mt-0.5">+38% Attributed Gain</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Core Article Grid (Categorized & Verified Educational Content) -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+      <div>
+        <span class="font-label text-xs text-secondary uppercase tracking-wider font-semibold block mb-2">ENGINEERING DOSSIERS</span>
+        <h2 class="font-headline text-3xl sm:text-4xl font-bold text-on-surface uppercase">Latest Research & Tactical Blueprints</h2>
+      </div>
+      <p class="font-body text-sm text-outline mt-2 md:mt-0">
+        Strictly peer-verified benchmarks • Zero hypothetical fluff
+      </p>
+    </div>
+
+    <!-- 6 Categorized Articles Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8" id="articles-container">
+
+      <!-- Card 1: AI Video Creation -->
+      <article class="article-card flex flex-col justify-between rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(139,92,246,0.15)] overflow-hidden" data-cat="ai">
+        <div>
+          <div class="p-6 pb-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-secondary/15 font-label text-xs text-secondary font-semibold border border-secondary/30">
+                AI VIDEO CREATION
+              </span>
+              <span class="font-label text-xs text-outline">8 MIN READ</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-on-surface hover:text-primary transition-colors mb-3 leading-snug">
+              Engineering 3.0s Thumb-Stops: The Neuro-Visual Blueprint for Generative Video Reels
+            </h3>
+            <p class="font-body text-sm text-on-surface-variant line-clamp-3 leading-relaxed mb-4">
+              How pairing Runway Gen-3 text-to-video with custom Topaz 60fps frame interpolation and synthetic acoustic pacing drives 4.8x longer retention in high-velocity social feeds.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 py-4 border-t border-outline-variant/20 flex items-center justify-between bg-surface-container-lowest/50">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-label text-xs">
+              AV
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-medium">AI Cinema Pod</span>
+              <span class="font-body text-[10px] text-outline">Feb 2026</span>
+            </div>
+          </div>
+          <a class="text-secondary hover:text-primary transition-colors flex items-center gap-1 font-label text-xs font-semibold" href="#article-reader-section">
+            <span>Read</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 2: SEO & Local SEO -->
+      <article class="article-card flex flex-col justify-between rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(139,92,246,0.15)] overflow-hidden" data-cat="seo">
+        <div>
+          <div class="p-6 pb-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-primary/15 font-label text-xs text-primary font-semibold border border-primary/30">
+                SEO & LOCAL SEO
+              </span>
+              <span class="font-label text-xs text-outline">10 MIN READ</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-on-surface hover:text-primary transition-colors mb-3 leading-snug">
+              Semantic Knowledge Graphs vs. Traditional Keyword Stuffing: How Google Gemini Ranks Entity Authority
+            </h3>
+            <p class="font-body text-sm text-on-surface-variant line-clamp-3 leading-relaxed mb-4">
+              Google’s Search Generative Experience prioritizes verified entity triples and schema embeddings over mechanical word counts. Here is our ontology restructuring methodology.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 py-4 border-t border-outline-variant/20 flex items-center justify-between bg-surface-container-lowest/50">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-secondary/20 text-secondary font-bold flex items-center justify-center font-label text-xs">
+              OS
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-medium">Search Architecture Pod</span>
+              <span class="font-body text-[10px] text-outline">Jan 2026</span>
+            </div>
+          </div>
+          <a class="text-secondary hover:text-primary transition-colors flex items-center gap-1 font-label text-xs font-semibold" href="#article-reader-section">
+            <span>Read</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 3: Google Business Profile -->
+      <article class="article-card flex flex-col justify-between rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(139,92,246,0.15)] overflow-hidden" data-cat="gbp">
+        <div>
+          <div class="p-6 pb-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-secondary/15 font-label text-xs text-secondary font-semibold border border-secondary/30">
+                GOOGLE BUSINESS PROFILE
+              </span>
+              <span class="font-label text-xs text-outline">6 MIN READ</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-on-surface hover:text-primary transition-colors mb-3 leading-snug">
+              Local Pack Dominance: Algorithmic Proximity, Review Velocity, and Geotagged Entity Optimization
+            </h3>
+            <p class="font-body text-sm text-on-surface-variant line-clamp-3 leading-relaxed mb-4">
+              Analyzing 12,000 multi-location map pins to reverse-engineer Google’s geo-radius ranking algorithms, photo EXIF prominence, and customer sentiment cadence.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 py-4 border-t border-outline-variant/20 flex items-center justify-between bg-surface-container-lowest/50">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-label text-xs">
+              LG
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-medium">Local Growth Pod</span>
+              <span class="font-body text-[10px] text-outline">Jan 2026</span>
+            </div>
+          </div>
+          <a class="text-secondary hover:text-primary transition-colors flex items-center gap-1 font-label text-xs font-semibold" href="#article-reader-section">
+            <span>Read</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 4: Website Development -->
+      <article class="article-card flex flex-col justify-between rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(139,92,246,0.15)] overflow-hidden" data-cat="web">
+        <div>
+          <div class="p-6 pb-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-tertiary/15 font-label text-xs text-tertiary font-semibold border border-tertiary/30">
+                WEBSITE DEVELOPMENT
+              </span>
+              <span class="font-label text-xs text-outline">9 MIN READ</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-on-surface hover:text-primary transition-colors mb-3 leading-snug">
+              Sub-800ms Time-to-Interactive: Building Ultra-High-Converting Web Experiences with Server Components
+            </h3>
+            <p class="font-body text-sm text-on-surface-variant line-clamp-3 leading-relaxed mb-4">
+              Why eliminating client-side bundle bloat via Next.js RSC and edge streaming directly correlates to 2.4x higher checkout rates on high-intent conversion pages.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 py-4 border-t border-outline-variant/20 flex items-center justify-between bg-surface-container-lowest/50">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-tertiary/20 text-tertiary font-bold flex items-center justify-center font-label text-xs">
+              FS
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-medium">Full-Stack Web Pod</span>
+              <span class="font-body text-[10px] text-outline">Dec 2025</span>
+            </div>
+          </div>
+          <a class="text-secondary hover:text-primary transition-colors flex items-center gap-1 font-label text-xs font-semibold" href="#article-reader-section">
+            <span>Read</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 5: Social Media Marketing -->
+      <article class="article-card flex flex-col justify-between rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(139,92,246,0.15)] overflow-hidden" data-cat="smm">
+        <div>
+          <div class="p-6 pb-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-secondary/15 font-label text-xs text-secondary font-semibold border border-secondary/30">
+                SOCIAL MEDIA MARKETING
+              </span>
+              <span class="font-label text-xs text-outline">7 MIN READ</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-on-surface hover:text-primary transition-colors mb-3 leading-snug">
+              The 1.8-Second Hook Decay: How Modern Feed Algorithms Score Viewer Retention and Scale Impressions
+            </h3>
+            <p class="font-body text-sm text-on-surface-variant line-clamp-3 leading-relaxed mb-4">
+              Analyzing algorithmic velocity metrics on Instagram and TikTok: how pattern interrupts and auditory triggers overcome viewer cognitive fatigue in under two seconds.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 py-4 border-t border-outline-variant/20 flex items-center justify-between bg-surface-container-lowest/50">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-primary/20 text-primary font-bold flex items-center justify-center font-label text-xs">
+              CS
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-medium">Creative Strategy Pod</span>
+              <span class="font-body text-[10px] text-outline">Dec 2025</span>
+            </div>
+          </div>
+          <a class="text-secondary hover:text-primary transition-colors flex items-center gap-1 font-label text-xs font-semibold" href="#article-reader-section">
+            <span>Read</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Card 6: Meta Ads -->
+      <article class="article-card flex flex-col justify-between rounded-xl bg-surface-container-low border border-outline-variant/30 hover:border-primary/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(139,92,246,0.15)] overflow-hidden" data-cat="meta">
+        <div>
+          <div class="p-6 pb-4">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-primary/15 font-label text-xs text-primary font-semibold border border-primary/30">
+                META ADS
+              </span>
+              <span class="font-label text-xs text-outline">11 MIN READ</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold text-on-surface hover:text-primary transition-colors mb-3 leading-snug">
+              Predictive Bidding & Advantage+ Budget Scaling: Mathematical Frameworks for Scaling Past $50k/Day
+            </h3>
+            <p class="font-body text-sm text-on-surface-variant line-clamp-3 leading-relaxed mb-4">
+              Why automated learning phases fail during rapid liquidity spikes and how programmatic bid capping stabilizes target blended MER without audience fatigue.
+            </p>
+          </div>
+        </div>
+
+        <div class="px-6 py-4 border-t border-outline-variant/20 flex items-center justify-between bg-surface-container-lowest/50">
+          <div class="flex items-center gap-2.5">
+            <div class="w-7 h-7 rounded-full bg-secondary/20 text-secondary font-bold flex items-center justify-center font-label text-xs">
+              MS
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-medium">Media Science Pod</span>
+              <span class="font-body text-[10px] text-outline">Nov 2025</span>
+            </div>
+          </div>
+          <a class="text-secondary hover:text-primary transition-colors flex items-center gap-1 font-label text-xs font-semibold" href="#article-reader-section">
+            <span>Read</span>
+            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 4. Interactive Article Detail Layout Preview -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-20" id="article-reader-section">
+    <div class="rounded-2xl bg-surface-container border border-outline-variant/35 overflow-hidden shadow-2xl">
+      <!-- Article Header Bar -->
+      <div class="bg-surface-container-high px-6 py-4 border-b border-outline-variant/25 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+          <span class="font-label text-xs uppercase tracking-wider text-on-surface font-semibold">INTERACTIVE ARTICLE DETAIL PREVIEW</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="font-label text-xs text-outline">Category: Meta Ads & Tracking</span>
+          <span class="font-label text-xs text-secondary bg-surface-container px-2.5 py-1 rounded-md border border-secondary/30">Reading Time: 12m</span>
+        </div>
+      </div>
+
+      <!-- Main Article Reader Body -->
+      <div class="p-6 md:p-10 lg:p-12">
+        <div class="max-w-4xl mx-auto">
+          <!-- Article Title & Metadata -->
+          <h2 class="font-headline text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface mb-4 leading-tight">
+            The Death of Cookie Tracking: Why Meta CAPI v4 + Cloudflare Edge Workers Yield 38% Higher Attributed ROAS
+          </h2>
+          <div class="flex flex-wrap items-center gap-4 text-xs font-label text-outline pb-6 border-b border-outline-variant/20 mb-8">
+            <span class="text-on-surface font-semibold">Author: Performance Engineering Pod</span>
+            <span>•</span>
+            <span>Published: October 2024 (Updated for 2026 Core)</span>
+            <span>•</span>
+            <span class="text-secondary">Audited Architecture Dossier</span>
+          </div>
+
+          <!-- Editorial Callout Box: Key Takeaways -->
+          <div class="p-6 rounded-xl bg-surface-container-low border border-primary/30 mb-8 shadow-[0_0_20px_rgba(139,92,246,0.1)]">
+            <h4 class="font-headline text-base font-bold text-primary flex items-center gap-2 mb-3">
+              <span class="material-symbols-outlined text-[20px]">lightbulb</span>
+              Executive Takeaways
+            </h4>
+            <ul class="font-body text-sm text-on-surface-variant space-y-2">
+              <li class="flex items-start gap-2">
+                <span class="text-secondary font-bold font-mono">01.</span>
+                <span>Browser ITP and ad-blockers drop between 22% and 34% of client-side JavaScript pixel events before they reach Meta's servers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-secondary font-bold font-mono">02.</span>
+                <span>Deploying Cloudflare Edge Workers normalizes customer PII into SHA-256 hashes directly in edge runtime memory before payload dispatch.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-secondary font-bold font-mono">03.</span>
+                <span>Meta CAPI Event Match Quality (EMQ) scores jump from 4.8/10 to 9.2/10, unlocking aggressive algorithmic optimization and eliminating ad fatigue.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Article Content Body -->
+          <div class="font-body text-base text-on-surface-variant leading-relaxed space-y-6">
+            <p>
+              When Apple introduced App Tracking Transparency (ATT) in iOS 14.5 and browsers aggressively phased out third-party cookies via Intelligent Tracking Prevention (ITP), traditional ad buying underwent an irreversible shift. Marketers who previously relied on client-side pixel tags experienced catastrophic signal loss, leading ad algorithms to falsely assume campaigns were failing.
+            </p>
+            <h3 class="font-headline text-xl font-bold text-on-surface text-primary pt-2">
+              The Architecture of Zero-Loss Server-Side CAPI
+            </h3>
+            <p>
+              Rather than executing tracking code in the user's browser, our edge architecture captures webhook events directly at the DNS proxy layer. By running lightweight Cloudflare Workers distributed across 300+ global edge nodes, transactions are validated server-to-server with sub-5ms overhead.
+            </p>
+          </div>
+
+          <!-- Educational Telemetry Benchmark Notice -->
+          <div class="mt-8 pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div class="flex items-center gap-2 text-xs font-label text-outline">
+              <span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+              <span>VERIFIED BENCHMARK • SIMULATED DATA FOR EDUCATIONAL METHODOLOGY</span>
+            </div>
+            <a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-high border border-outline-variant/30 text-secondary hover:text-on-surface text-xs font-label font-bold transition-all" href="#">
+              <span class="material-symbols-outlined text-[16px]">file_download</span> Download Full PDF Dossier
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Newsletter & Research Dispatch Subscription Box -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-20">
+    <div class="rounded-2xl bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-high border border-outline-variant/40 p-8 md:p-12 text-center relative overflow-hidden shadow-2xl">
+      <div class="max-w-2xl mx-auto relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/15 text-secondary font-label text-xs uppercase mb-4 border border-secondary/30">
+          <span class="material-symbols-outlined text-[16px]">mail</span>
+          <span>BI-WEEKLY INTELLIGENCE BRIEFING</span>
+        </div>
+        
+        <h2 class="font-headline text-3xl sm:text-4xl font-bold text-on-surface uppercase mb-3">
+          THE ALGORITHMIC ADVANTAGE
+        </h2>
+        
+        <p class="font-body text-base text-on-surface-variant mb-8 leading-relaxed">
+          Join 14,000+ founders, CMOs, and growth engineers receiving our bi-weekly breakdown of ad platform algorithm updates, open-source AI pipelines, and paid acquisition teardowns.
+        </p>
+
+        <!-- Subscription Form -->
+        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4" onsubmit="event.preventDefault(); alert('Subscribed to Digital Marketing Intelligence Dispatches!');">
+          <input class="flex-1 bg-surface-container-lowest border border-outline-variant/40 rounded-xl px-4 py-3 text-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary" placeholder="Enter your work email..." required="" type="email"/>
+          <button class="px-6 py-3 rounded-xl bg-gradient-to-r from-primary-container to-secondary text-surface-container-lowest font-label text-sm font-bold shadow-[0_0_20px_rgba(76,215,246,0.3)] hover:scale-105 transition-all" type="submit">
+            Subscribe
+          </button>
+        </form>
+
+        <p class="font-body text-xs text-outline">
+          No spam. Pure mathematical craft and actionable growth tactics. Unsubscribe anytime.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Final High-Impact Conversion Banner -->
+  <section class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="rounded-2xl bg-surface-container-lowest border border-outline-variant/40 p-8 md:p-14 text-center relative overflow-hidden shadow-2xl">
+      <!-- Glow ambient backdrop -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.18)_0%,_transparent_70%)] pointer-events-none"></div>
+
+      <div class="max-w-3xl mx-auto relative z-10">
+        <span class="font-label text-xs uppercase text-secondary tracking-widest font-semibold block mb-3">
+          GROWTH ARCHITECTURE AUDIT
+        </span>
+        
+        <h2 class="font-headline text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase text-on-surface mb-4 leading-tight">
+          READY TO APPLY THESE STRATEGIES TO YOUR BRAND?
+        </h2>
+        
+        <p class="font-body text-base text-on-surface-variant mb-8 leading-relaxed max-w-2xl mx-auto">
+          Skip the trial-and-error. Let our growth architects audit your funnels, diagnose attribution leaks, and engineer high-velocity creative built for algorithmic dominance.
+        </p>
+
+        <!-- Direct CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <a class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-surface-container-lowest font-label text-sm font-bold shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:scale-105 active:scale-95 transition-all" href="#">
+            Book a Free Consultation
+          </a>
+          <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-surface-container-high border border-outline-variant/40 text-secondary hover:text-on-surface font-label text-sm font-semibold transition-all hover:bg-surface-variant" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span>Chat on WhatsApp (+91 9305856475)</span>
+          </a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs font-label text-outline pt-6 border-t border-outline-variant/20">
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+            <span>Zero Long-Term Lock-In</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+            <span>100% Transparent Telemetry</span>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+            <span>48-Hour Blueprint Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Global Shared Footer -->
+<footer class="w-full relative z-10 bg-surface-container-lowest border-t border-outline-variant/25 pt-16 pb-12">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
+      <!-- Col 1: Brand Info -->
+      <div class="lg:col-span-4 flex flex-col items-start">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-primary-container to-secondary flex items-center justify-center shadow-[0_0_12px_rgba(139,92,246,0.5)]">
+            <span class="material-symbols-outlined text-[18px] text-white">hub</span>
+          </div>
+          <span class="font-headline font-bold text-lg tracking-tight text-on-surface uppercase">DIGITAL MARKETING</span>
+        </div>
+        <p class="font-body text-sm text-on-surface-variant max-w-sm mb-6 leading-relaxed">
+          We turn your vision into digital growth through high-velocity performance, bespoke algorithmic creative, and engineered brand dominance.
+        </p>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container border border-outline-variant/30 text-secondary font-label text-xs">
+          <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          <span>Global Digital Growth Engine</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Navigation -->
+      <div class="lg:col-span-2 flex flex-col">
+        <span class="font-label text-xs text-primary uppercase font-bold tracking-wider mb-4">Navigation</span>
+        <ul class="flex flex-col gap-2.5 font-body text-sm text-on-surface-variant">
+          <li><a class="hover:text-on-surface transition-colors" href="#">Home</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Services</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Our Creative Work</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Our Results</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">About Us</a></li>
+          <li><a class="text-secondary font-semibold hover:text-on-surface transition-colors" href="#">Insights</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services -->
+      <div class="lg:col-span-2 flex flex-col">
+        <span class="font-label text-xs text-primary uppercase font-bold tracking-wider mb-4">Services</span>
+        <ul class="flex flex-col gap-2.5 font-body text-sm text-on-surface-variant">
+          <li><a class="hover:text-on-surface transition-colors" href="#">Meta Ads</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">SEO & Local SEO</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Google Business Profile</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Website Development</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Social Media Marketing</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">AI Video Creation</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Portfolio & Legal -->
+      <div class="lg:col-span-2 flex flex-col">
+        <span class="font-label text-xs text-primary uppercase font-bold tracking-wider mb-4">Portfolio & Legal</span>
+        <ul class="flex flex-col gap-2.5 font-body text-sm text-on-surface-variant">
+          <li><a class="hover:text-on-surface transition-colors" href="#">Case Studies</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Verified Results</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Privacy Policy</a></li>
+          <li><a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Direct Contact -->
+      <div class="lg:col-span-2 flex flex-col">
+        <span class="font-label text-xs text-primary uppercase font-bold tracking-wider mb-4">Direct Contact</span>
+        <p class="font-body text-xs text-on-surface-variant mb-2">Schedule a free consultation or chat live:</p>
+        <a class="font-label text-xs text-on-surface hover:text-primary transition-colors mb-3 break-all" href="mailto:contact@digitalmarketing.agency">
+          contact@digitalmarketing.agency
+        </a>
+        <a aria-label="WhatsApp +91 9305856475" class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container border border-outline-variant/30 text-secondary hover:border-secondary hover:bg-surface-container-high transition-all mb-3 text-xs font-label" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">chat</span>
+          <span>+91 9305856475</span>
+        </a>
+        <a aria-label="Official Instagram Account" class="inline-flex items-center gap-2 font-label text-xs text-on-surface-variant hover:text-secondary transition-colors" href="https://instagram.com/digitalmarketing.agency" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">photo_camera</span>
+          <span>@digitalmarketing.agency</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="pt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-body text-outline">
+      <p>© 2026 DIGITAL MARKETING. All rights reserved.</p>
+      <div class="flex items-center gap-2">
+        <span class="font-label text-[11px] uppercase tracking-wider">Consultation Desk Online</span>
+        <div class="w-2 h-2 rounded-full bg-secondary"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Interactive Scripts for Search & Filters -->
+<script>
+  // Mobile Nav Toggle
+  const toggleBtn = document.getElementById('mobile-nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Interactive Category Filter Pills
+  const pills = document.querySelectorAll('.filter-pill');
+  const cards = document.querySelectorAll('.article-card');
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const cat = pill.getAttribute('data-cat');
+      
+      // Update Active Pill Styles
+      pills.forEach(p => {
+        p.classList.remove('bg-primary-container', 'text-white', 'shadow-[0_0_15px_rgba(139,92,246,0.4)]');
+        p.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'border', 'border-outline-variant/30');
+      });
+      pill.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'border');
+      pill.classList.add('bg-primary-container', 'text-white', 'shadow-[0_0_15px_rgba(139,92,246,0.4)]');
+
+      // Filter Cards
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Interactive Live Search
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase();
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

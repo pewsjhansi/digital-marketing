@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-tertiary-fixed":"#001a42","surface-bright":"#373944","on-secondary-fixed-variant":"#004e5c","on-background":"#e1e1f1","inverse-on-surface":"#2e303b","error":"#ffb4ab","on-tertiary":"#002e6a","on-secondary-container":"#00424e","on-surface-variant":"#cbc3d7","surface-variant":"#323440","secondary":"#4cd7f6","tertiary-container":"#4d8eff","outline":"#958ea0","inverse-primary":"#6d3bd7","primary-container":"#a078ff","surface-container-high":"#272935","on-tertiary-container":"#00285d","surface-container-low":"#191b26","on-surface":"#e1e1f1","secondary-fixed-dim":"#4cd7f6","tertiary":"#adc6ff","outline-variant":"#494454","on-primary-fixed":"#23005c","surface-tint":"#d0bcff","surface-container":"#1d1f2a","on-error":"#690005","surface-dim":"#11131d","secondary-container":"#03b5d3","inverse-surface":"#e1e1f1","error-container":"#93000a","on-secondary":"#003640","on-primary-fixed-variant":"#5516be","primary-fixed-dim":"#d0bcff","tertiary-fixed-dim":"#adc6ff","surface-container-lowest":"#0b0e18","surface":"#11131d","primary":"#d0bcff","primary-fixed":"#e9ddff","on-secondary-fixed":"#001f26","secondary-fixed":"#acedff","tertiary-fixed":"#d8e2ff","surface-container-highest":"#323440","on-primary-container":"#340080","on-error-container":"#ffdad6","background":"#11131d","on-tertiary-fixed-variant":"#004395","on-primary":"#3c0091"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","space-xl":"3rem","gutter-desktop":"2.5rem","space-lg":"1.75rem","space-sm":"0.5rem","gutter":"1.5rem","margin":"1.25rem","margin-desktop":"5rem","space-xs":"0.25rem","margin-tablet":"2.5rem"},"fontFamily":{"headline-sm":["Syne"],"headline-lg-mobile":["Syne"],"label-sm":["Space Grotesk"],"headline-xl-mobile":["Syne"],"body-sm":["Plus Jakarta Sans"],"label-caps":["Space Grotesk"],"body-xl":["Plus Jakarta Sans"],"headline-lg":["Syne"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-xl":["Syne"],"label-md":["Space Grotesk"],"display-hero-mobile":["Syne"],"headline-md":["Syne"],"display-hero":["Syne"]},"fontSize":{"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.03em","fontWeight":"500"}],"headline-xl-mobile":["32px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"label-caps":["12px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"600"}],"body-xl":["20px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-xl":["48px",{"lineHeight":"56px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-md":["14px",{"lineHeight":"18px","letterSpacing":"0.02em","fontWeight":"500"}],"display-hero-mobile":["40px",{"lineHeight":"46px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-hero":["72px",{"lineHeight":"80px","letterSpacing":"-0.03em","fontWeight":"800"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary min-h-screen relative overflow-x-hidden"><div class="pointer-events-none fixed inset-0 z-0 overflow-hidden"><div class="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] bg-[radial-gradient(ellipse_at_center,_rgba(160,120,255,0.15)_0%,_rgba(76,215,246,0.06)_40%,_transparent_75%)] blur-[90px]"></div><div class="absolute bottom-0 right-0 w-[600px] h-[500px] bg-[radial-gradient(ellipse_at_center,_rgba(85,22,190,0.12)_0%,_transparent_70%)] blur-[100px]"></div></div><header class="fixed top-0 left-0 w-full z-50 bg-surface/75 backdrop-blur-2xl shadow-[0_1px_8px_rgba(0,0,0,0.4)] border-b border-outline-variant/30"><div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-sm focus:outline-none" data-path="home" href="#"><img alt="DIGITAL MARKETING Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U1dBTmrQMvwfIVGCkTEFUXzou7IWOx_Rthi-x9a7N4OJdzK8hdxK59CpesLPoVWamqehAydL2vx5iSMBsZIlGrqf9FS9OYzDmx_bcPgK5Z2s7iyPu5XwQK8XbagpgW_ZLD7DT_Hws22zbWrz0t5yPiysLraEHws4LD7xy7d7Caw2sxGwcgtdx5YObgwFQxYtU2-7tV4Y41Do2yY_I1sQDFlWPTqqO2lYJSTMRSS-Su91zRZNAf0X10f14"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">DIGITAL MARKETING</span></a></div><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="services" href="#">Services</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="our-creative-work" href="#">Our Creative Work</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="our-results" href="#">Our Results</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="about-us" href="#">About Us</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="insights" href="#">Insights</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="contact" href="#">Contact</a></nav><div class="flex items-center gap-space-sm"><a aria-label="Connect on WhatsApp" class="h-10 w-10 rounded-full bg-surface-container-high hover:bg-surface-variant flex items-center justify-center text-secondary hover:text-on-surface transition-all duration-200 border border-outline-variant/30 hover:border-secondary shadow-[0_0_15px_rgba(76,215,246,0.15)]" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[20px]">chat</span></a><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-on-primary-container font-label-md text-label-md font-bold tracking-tight shadow-[0_0_25px_rgba(160,120,255,0.45)] hover:shadow-[0_0_35px_rgba(76,215,246,0.6)] hover:scale-105 active:scale-95 transition-all duration-200" data-path="contact" href="#">Let's Talk</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_0_12px_rgba(208,188,255,0.4)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Toggle Mobile Menu" class="xl:hidden h-10 w-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface hover:text-primary transition-colors focus:outline-none" id="mobile-nav-toggle"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div><div class="hidden xl:hidden w-full bg-surface-container-lowest/95 backdrop-blur-2xl border-b border-outline-variant/30 px-margin py-space-md" id="mobile-menu"><div class="flex flex-col gap-space-xs"><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="services" href="#">Services</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="our-creative-work" href="#">Our Creative Work</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="our-results" href="#">Our Results</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="about-us" href="#">About Us</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="insights" href="#">Insights</a><a class="px-space-sm py-space-xs font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-lg transition-colors" data-path="contact" href="#">Contact</a><div class="pt-space-sm mt-space-xs border-t border-outline-variant/20 flex flex-col gap-space-sm"><a class="w-full text-center py-space-xs rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-on-primary-container font-label-md text-label-md font-bold" data-path="contact" href="#">Let's Talk</a><a class="w-full flex items-center justify-center gap-space-xs py-space-xs rounded-full bg-surface-container-high border border-outline-variant/30 text-secondary font-label-md text-label-md" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span>WhatsApp Us</a></div></div></div></header><main class="w-full pt-20 relative z-10 bg-transparent"><div class="flex flex-col w-full">
+<!-- SECTION 1: HEADER & LIVE TELEMETRY STATUS STRIP -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl overflow-hidden">
+<div class="relative z-10 max-w-5xl mx-auto flex flex-col items-center text-center">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-sm mb-space-md">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest">AUDITED TELEMETRY &amp; ATTRIBUTION REPORTING</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-headline-xl md:text-display-hero uppercase tracking-tighter text-on-surface mb-space-md">
+        REAL RESULTS. <span class="bg-gradient-to-r from-primary via-secondary to-primary-container bg-clip-text text-transparent">MEANINGFUL GROWTH.</span>
+</h1>
+<!-- Supporting Subtitle -->
+<p class="font-body-xl text-body-lg md:text-body-xl text-on-surface-variant max-w-2xl mx-auto mb-space-lg">
+        Showcase the impact of our digital marketing campaigns with transparent, verifiable performance data.
+      </p>
+<!-- Live Telemetry Status Strip -->
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-sm rounded-xl bg-surface-container-low/90 backdrop-blur-xl shadow-lg">
+<div class="flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container/60">
+<span class="material-symbols-outlined text-secondary text-[20px]">hub</span>
+<div class="text-left">
+<span class="block font-label-caps text-label-caps text-outline uppercase">Attribution Protocol</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Server-Side CAPI v4</span>
+</div>
+</div>
+<div class="flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container/60">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+<div class="text-left">
+<span class="block font-label-caps text-label-caps text-outline uppercase">Data Integrity</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cryptographically Verified</span>
+</div>
+</div>
+<div class="flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container/60">
+<span class="material-symbols-outlined text-secondary text-[20px]">sync</span>
+<div class="text-left">
+<span class="block font-label-caps text-label-caps text-outline uppercase">Audit Cycle</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Continuous 24/7 Engine</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: PROMINENT TRANSPARENCY & EMPTY STATE CALLOUT -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop mb-space-xl">
+<div class="max-w-6xl mx-auto relative rounded-2xl bg-gradient-to-b from-surface-container-high/90 to-surface-container/95 backdrop-blur-2xl p-space-lg md:p-space-xl shadow-2xl overflow-hidden">
+<!-- Top Accent Highlight -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-80"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left: Verified Empty State Message -->
+<div class="lg:col-span-7 flex flex-col items-start text-left">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-lowest/80 text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[16px]">policy</span>
+<span class="font-label-caps text-label-caps uppercase">Transparency Protocol 01</span>
+</div>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface mb-space-sm tracking-tight">
+            Your results will appear here.
+          </h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant mb-space-md leading-relaxed">
+            We believe in transparent reporting. Verified campaign results will be published here when available. In the meantime, explore our calibrated multi-channel benchmarks below, engineered on production telemetry frameworks.
+          </p>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+              Zero Vanity Padding
+            </div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+              Client-Anonymized Hashes
+            </div>
+</div>
+</div>
+<!-- Right: Verification Key Badge & Live Environment Status -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<div class="p-space-md rounded-xl bg-surface-container-lowest/90 shadow-inner flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-wider">Telemetry Verification Node</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">
+                ACTIVE PIPELINE
+              </span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-dim font-mono text-xs text-primary/80 select-all break-all overflow-x-auto">
+              SHA256: 9e8a7c2b...f41d00aa4e3b1c9701a35cc8
+            </div>
+<div class="flex items-center justify-between text-body-sm text-on-surface-variant pt-space-xs">
+<span class="flex items-center gap-1 font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+                Public Key Match
+              </span>
+<span class="font-label-caps text-label-caps text-outline uppercase">Demo Environment</span>
+</div>
+<div class="w-full mt-space-xs py-space-xs px-space-sm rounded bg-surface-container-high/60 text-center font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">
+              CALIBRATED BENCHMARK / DEMO — NOT ACTUAL CLIENT RESULTS
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: METRIC PERFORMANCE BENCHMARK CARDS -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col">
+<!-- Section Title & Watermark Warning -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest block mb-space-xs">Production Benchmarks</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">System Performance Indicators</h2>
+</div>
+<div class="px-space-md py-space-xs rounded-full bg-surface-container-high text-on-surface-variant font-label-caps text-label-caps uppercase flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">info</span>
+          Calibrated Demo Data · Real Client Tracking Activates Post-Onboarding
+        </div>
+</div>
+<!-- Grid of 6 Performance Metric Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
+<!-- CARD 1: Leads Generated -->
+<div class="relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg shadow-xl hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group">
+<div class="flex items-start justify-between gap-space-xs mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-1">Acquisition Velocity</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Leads Generated</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-primary/10 text-primary font-label-caps text-label-caps">Meta &amp; Search</span>
+</div>
+<div class="mb-space-md">
+<div class="font-display-hero text-headline-xl text-primary font-extrabold tracking-tight drop-shadow-[0_0_15px_rgba(208,188,255,0.35)]">
+              14,820<span class="text-secondary text-headline-md font-semibold">+</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center text-secondary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">trending_down</span> -34.2%
+              </span>
+<span>CPL optimization benchmark</span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="w-full h-12 mb-space-md overflow-hidden rounded bg-surface-container-lowest/60 p-1 flex items-end">
+<svg class="w-full h-8 text-primary overflow-visible" preserveaspectratio="none" viewbox="0 0 100 25">
+<path d="M0 20 Q 25 18, 40 10 T 70 8 T 100 2" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<path d="M0 20 Q 25 18, 40 10 T 70 8 T 100 2 L 100 25 L 0 25 Z" fill="rgba(160,120,255,0.12)"></path>
+</svg>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm text-outline">
+<span class="font-label-caps text-label-caps text-outline uppercase">Demo Benchmark</span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1 group-hover:translate-x-1 duration-200">
+              Breakdown <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD 2: Total Reach -->
+<div class="relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg shadow-xl hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group">
+<div class="flex items-start justify-between gap-space-xs mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-1">Omnichannel Scale</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Total Reach</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary/10 text-secondary font-label-caps text-label-caps">Multi-Platform</span>
+</div>
+<div class="mb-space-md">
+<div class="font-display-hero text-headline-xl text-secondary font-extrabold tracking-tight drop-shadow-[0_0_15px_rgba(76,215,246,0.35)]">
+              5.40M<span class="text-primary text-headline-md font-semibold">+</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center text-secondary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +148%
+              </span>
+<span>Unique audience expansion</span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="w-full h-12 mb-space-md overflow-hidden rounded bg-surface-container-lowest/60 p-1 flex items-end">
+<svg class="w-full h-8 text-secondary overflow-visible" preserveaspectratio="none" viewbox="0 0 100 25">
+<path d="M0 22 Q 30 16, 50 14 T 80 5 T 100 1" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<path d="M0 22 Q 30 16, 50 14 T 80 5 T 100 1 L 100 25 L 0 25 Z" fill="rgba(76,215,246,0.12)"></path>
+</svg>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm text-outline">
+<span class="font-label-caps text-label-caps text-outline uppercase">Demo Benchmark</span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1 group-hover:translate-x-1 duration-200">
+              Breakdown <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD 3: Engagement -->
+<div class="relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg shadow-xl hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group">
+<div class="flex items-start justify-between gap-space-xs mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-1">Creative Resonance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Engagement Rate</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-primary-container/20 text-on-surface font-label-caps text-label-caps">AI Video Reels</span>
+</div>
+<div class="mb-space-md">
+<div class="font-display-hero text-headline-xl text-on-surface font-extrabold tracking-tight">
+              18.6<span class="text-secondary text-headline-md font-semibold">%</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center text-secondary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">done_all</span> 4.2x
+              </span>
+<span>Industry baseline average</span>
+</div>
+</div>
+<!-- Retention Curve Indicator -->
+<div class="w-full h-12 mb-space-md rounded bg-surface-container-lowest/60 p-2 flex items-center justify-between text-body-sm font-label-caps text-label-caps text-on-surface-variant">
+<span>Hook 3s: 72%</span>
+<span>Mid 15s: 48%</span>
+<span>CTA: 24%</span>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm text-outline">
+<span class="font-label-caps text-label-caps text-outline uppercase">Demo Benchmark</span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1 group-hover:translate-x-1 duration-200">
+              Breakdown <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD 4: Website Visitors -->
+<div class="relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg shadow-xl hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group">
+<div class="flex items-start justify-between gap-space-xs mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-1">Traffic Architecture</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Website Visitors</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-caps text-label-caps">Blended SEO + Paid</span>
+</div>
+<div class="mb-space-md">
+<div class="font-display-hero text-headline-xl text-on-surface font-extrabold tracking-tight">
+              840K<span class="text-secondary text-headline-md font-semibold">+</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center text-primary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">speed</span> 0.78s
+              </span>
+<span>Core web vital latency load</span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="w-full h-12 mb-space-md overflow-hidden rounded bg-surface-container-lowest/60 p-1 flex items-end">
+<svg class="w-full h-8 text-primary overflow-visible" preserveaspectratio="none" viewbox="0 0 100 25">
+<path d="M0 18 Q 20 22, 45 12 T 75 10 T 100 4" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<path d="M0 18 Q 20 22, 45 12 T 75 10 T 100 4 L 100 25 L 0 25 Z" fill="rgba(160,120,255,0.12)"></path>
+</svg>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm text-outline">
+<span class="font-label-caps text-label-caps text-outline uppercase">Demo Benchmark</span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1 group-hover:translate-x-1 duration-200">
+              Breakdown <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD 5: Ad Clicks -->
+<div class="relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg shadow-xl hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group">
+<div class="flex items-start justify-between gap-space-xs mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-1">Intent Verification</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Verified Ad Clicks</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-outline font-label-caps text-label-caps">Bot-Filtered</span>
+</div>
+<div class="mb-space-md">
+<div class="font-display-hero text-headline-xl text-primary font-extrabold tracking-tight">
+              1.12M<span class="text-secondary text-headline-md font-semibold">+</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center text-secondary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">security</span> 99.4%
+              </span>
+<span>Human verification score</span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="w-full h-12 mb-space-md overflow-hidden rounded bg-surface-container-lowest/60 p-1 flex items-end">
+<svg class="w-full h-8 text-secondary overflow-visible" preserveaspectratio="none" viewbox="0 0 100 25">
+<path d="M0 24 Q 30 18, 60 12 T 90 6 T 100 2" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<path d="M0 24 Q 30 18, 60 12 T 90 6 T 100 2 L 100 25 L 0 25 Z" fill="rgba(76,215,246,0.12)"></path>
+</svg>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm text-outline">
+<span class="font-label-caps text-label-caps text-outline uppercase">Demo Benchmark</span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1 group-hover:translate-x-1 duration-200">
+              Breakdown <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- CARD 6: Conversion Rate -->
+<div class="relative rounded-2xl bg-surface-container-low/85 backdrop-blur-xl p-space-lg shadow-xl hover:bg-surface-container transition-all duration-300 flex flex-col justify-between group">
+<div class="flex items-start justify-between gap-space-xs mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-1">Bottom-Funnel Yield</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Blended Conversion Rate</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-primary/10 text-primary font-label-caps text-label-caps">ROAS Yield</span>
+</div>
+<div class="mb-space-md">
+<div class="font-display-hero text-headline-xl text-secondary font-extrabold tracking-tight drop-shadow-[0_0_15px_rgba(76,215,246,0.3)]">
+              6.82<span class="text-primary text-headline-md font-semibold">%</span>
+</div>
+<div class="flex items-center gap-space-xs mt-space-xs text-body-sm text-on-surface-variant">
+<span class="inline-flex items-center text-secondary font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">payments</span> 4.85x
+              </span>
+<span>Average audited return on ad spend</span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="w-full h-12 mb-space-md overflow-hidden rounded bg-surface-container-lowest/60 p-1 flex items-end">
+<svg class="w-full h-8 text-primary overflow-visible" preserveaspectratio="none" viewbox="0 0 100 25">
+<path d="M0 20 Q 25 15, 55 10 T 85 4 T 100 1" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<path d="M0 20 Q 25 15, 55 10 T 85 4 T 100 1 L 100 25 L 0 25 Z" fill="rgba(160,120,255,0.12)"></path>
+</svg>
+</div>
+<div class="pt-space-sm flex items-center justify-between text-body-sm text-outline">
+<span class="font-label-caps text-label-caps text-outline uppercase">Demo Benchmark</span>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface transition-colors flex items-center gap-1 group-hover:translate-x-1 duration-200">
+              Breakdown <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: INTERACTIVE TELEMETRY & ATTRIBUTION EXPLORER -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-7xl mx-auto rounded-2xl bg-surface-container-low/90 backdrop-blur-2xl p-space-lg md:p-space-xl shadow-2xl">
+<!-- Explorer Header & Filter Switcher -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<div class="inline-flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">query_stats</span>
+            Attribution Engine
+          </div>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface">Multi-Channel Telemetry Matrix</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Benchmark breakdown across calibrated growth conduits.</p>
+</div>
+<!-- Filter Pills -->
+<div class="flex flex-wrap items-center gap-space-xs p-1 rounded-xl bg-surface-container-lowest" id="channel-filter-group">
+<button class="px-space-sm py-1.5 rounded-lg font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold transition-all duration-150 filter-btn active" data-channel="all">
+            All Channels
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-150 filter-btn" data-channel="paid-social">
+            Paid Social
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-150 filter-btn" data-channel="search-seo">
+            Search &amp; SEO
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-150 filter-btn" data-channel="local-gbp">
+            Local 3-Pack
+          </button>
+<button class="px-space-sm py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all duration-150 filter-btn" data-channel="ai-video">
+            AI Video Reels
+          </button>
+</div>
+</div>
+<!-- Telemetry Matrix Table -->
+<div class="w-full overflow-x-auto rounded-xl bg-surface-container/60 shadow-inner">
+<table class="w-full text-left font-body-sm text-body-sm text-on-surface">
+<thead class="bg-surface-container-high/70 font-label-caps text-label-caps text-outline uppercase">
+<tr>
+<th class="py-space-md px-space-md">Acquisition Channel</th>
+<th class="py-space-md px-space-md">Cost Per Qual Lead (CPL)</th>
+<th class="py-space-md px-space-md">ROAS Multiplier</th>
+<th class="py-space-md px-space-md">Blended CAC</th>
+<th class="py-space-md px-space-md">Attribution Model</th>
+<th class="py-space-md px-space-md text-right">Data Veracity</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10 font-body-md text-body-md" id="attribution-tbody">
+<!-- Row 1: Meta Ads -->
+<tr class="hover:bg-surface-container-high/40 transition-colors channel-row" data-cat="paid-social">
+<td class="py-space-md px-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm block">Meta Ads Growth Engine</span>
+<span class="font-label-caps text-label-caps text-outline uppercase">Advantage+ &amp; CAPI</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-semibold text-secondary">$14.20</td>
+<td class="py-space-md px-space-md font-bold text-primary">5.2x ROAS</td>
+<td class="py-space-md px-space-md text-on-surface-variant">$48.10</td>
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface">Data-Driven Algorithmic</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span> 100% CAPI
+                </span>
+</td>
+</tr>
+<!-- Row 2: Google Search & SEO -->
+<tr class="hover:bg-surface-container-high/40 transition-colors channel-row" data-cat="search-seo">
+<td class="py-space-md px-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm block">High-Intent Search &amp; SEO</span>
+<span class="font-label-caps text-label-caps text-outline uppercase">Organic + Paid PMax</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-semibold text-secondary">$19.80</td>
+<td class="py-space-md px-space-md font-bold text-primary">6.4x ROAS</td>
+<td class="py-space-md px-space-md text-on-surface-variant">$62.40</td>
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface">First-Touch Weighted</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span> GA4 Direct
+                </span>
+</td>
+</tr>
+<!-- Row 3: AI Video Flywheel -->
+<tr class="hover:bg-surface-container-high/40 transition-colors channel-row" data-cat="ai-video">
+<td class="py-space-md px-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">smart_display</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm block">AI Video Organic Flywheel</span>
+<span class="font-label-caps text-label-caps text-outline uppercase">Reels, Shorts &amp; TikTok</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-semibold text-secondary">$8.40</td>
+<td class="py-space-md px-space-md font-bold text-primary">4.1x ROAS</td>
+<td class="py-space-md px-space-md text-on-surface-variant">$29.00</td>
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface">Multi-Touch Decay</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span> Graph API
+                </span>
+</td>
+</tr>
+<!-- Row 4: Google Business Profile (Local 3-Pack) -->
+<tr class="hover:bg-surface-container-high/40 transition-colors channel-row" data-cat="local-gbp">
+<td class="py-space-md px-space-md flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm block">Local GBP 3-Pack Engine</span>
+<span class="font-label-caps text-label-caps text-outline uppercase">Geo-Grid Optimization</span>
+</div>
+</td>
+<td class="py-space-md px-space-md font-semibold text-secondary">$11.50</td>
+<td class="py-space-md px-space-md font-bold text-primary">7.8x ROAS</td>
+<td class="py-space-md px-space-md text-on-surface-variant">$34.20</td>
+<td class="py-space-md px-space-md font-label-sm text-label-sm text-on-surface">Call &amp; Route Attribution</td>
+<td class="py-space-md px-space-md text-right">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span> GBP Call Tracking
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="mt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm text-body-sm text-outline">
+<span>* Calibrated Demo Simulation: Real performance metrics depend on monthly ad budgets, historical pixel warm-up, and vertical category velocity.</span>
+<span class="font-label-caps text-label-caps text-secondary">Export Benchmark Specs (JSON)</span>
+</div>
+</div>
+</section>
+<!-- SECTION 5: VERIFICATION PROTOCOL & 3-PILLAR DATA INTEGRITY STANDARD -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col">
+<!-- Section Title -->
+<div class="max-w-3xl mb-space-xl">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest block mb-space-xs">Engineering Rigor</span>
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface tracking-tight">The 3-Pillar Data Integrity Standard</h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant mt-space-sm">
+          Why our client reporting eliminates ambiguity. Every dollar invested maps directly to confirmed, untampered bottom-line revenue.
+        </p>
+</div>
+<!-- 3 Pillar Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop mb-space-xl">
+<!-- Pillar 01 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-xl flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-all duration-300"></div>
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest mb-space-sm">PILLAR 01</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">dns</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">Server-Side Event Verification</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Zero browser cookie drops. We deploy Cloudflare Workers and Meta CAPI to push raw, un-ad-blocked conversions straight into your attribution model.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm text-secondary font-label-caps text-label-caps uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check</span> 99.9% Match Quality
+          </div>
+</div>
+<!-- Pillar 02 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-xl flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-secondary/10 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all duration-300"></div>
+<div>
+<div class="font-label-caps text-label-caps text-primary uppercase font-bold tracking-widest mb-space-sm">PILLAR 02</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[28px]">shield_person</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">Bot &amp; Click-Fraud Scrubbing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Every lead and click undergoes automated IP velocity checks, honeypot validation, and biometric scroll telemetry to filter out automated noise.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm text-primary font-label-caps text-label-caps uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check</span> Clean Attributed Pipelines
+          </div>
+</div>
+<!-- Pillar 03 -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low/80 backdrop-blur-xl shadow-xl flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -top-12 -right-12 w-28 h-28 bg-primary-container/10 rounded-full blur-2xl group-hover:bg-primary-container/20 transition-all duration-300"></div>
+<div>
+<div class="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest mb-space-sm">PILLAR 03</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface mb-space-md">
+<span class="material-symbols-outlined text-[28px]">analytics</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-sm">Client-Verified Direct Access</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              No manual spreadsheets or vanity screenshots. You receive direct, read-only third-party connector pipelines into BigQuery, Looker, and GA4.
+            </p>
+</div>
+<div class="mt-space-lg pt-space-sm text-secondary font-label-caps text-label-caps uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check</span> Real-Time Source Truth
+          </div>
+</div>
+</div>
+<!-- Security & NDA Compliance Shield -->
+<div class="p-space-md md:p-space-lg rounded-xl bg-surface-container-lowest/90 flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Security &amp; NDA Compliance Shield</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              All proprietary metrics of client partners are protected under strict bilateral non-disclosure agreements. Public telemetry showcases aggregate benchmarks and anonymized attribution datasets.
+            </p>
+</div>
+</div>
+<div class="shrink-0 flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span> SOC2 Type II Certified Pipeline
+        </div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: CLIENT PORTAL ARCHITECTURE (WHAT REAL CLIENTS GET) -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="max-w-7xl mx-auto rounded-3xl bg-gradient-to-br from-surface-container-high/90 via-surface-container/95 to-surface-container-lowest/90 p-space-lg md:p-space-xl shadow-2xl relative overflow-hidden">
+<!-- Ambient Glow Behind Preview -->
+<div class="absolute -top-40 -left-40 w-96 h-96 bg-primary/20 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left: Portal Value Proposition -->
+<div class="lg:col-span-5 flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-space-xs">Future Client Experience</span>
+<h2 class="font-headline-lg text-headline-md md:text-headline-lg text-on-surface tracking-tight mb-space-sm">
+            Live Performance Portal Architecture
+          </h2>
+<p class="font-body-lg text-body-md md:text-body-lg text-on-surface-variant mb-space-md leading-relaxed">
+            The moment you partner with us, this calibrated prototype becomes your live operational cockpit. Track daily pacing, inspect real-time lead webhooks, and export audited monthly board decks with a single click.
+          </p>
+<ul class="flex flex-col gap-space-sm mb-space-lg">
+<li class="flex items-center gap-space-xs text-body-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>Sub-minute sync with Meta Ads, Google Ads &amp; CRM</span>
+</li>
+<li class="flex items-center gap-space-xs text-body-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>Granular creative fatigue alerting algorithms</span>
+</li>
+<li class="flex items-center gap-space-xs text-body-md text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>Direct webhook integration to your sales team’s Slack or CRM</span>
+</li>
+</ul>
+<div class="flex items-center gap-space-sm">
+<a class="px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:shadow-[0_0_25px_rgba(208,188,255,0.4)] transition-all" data-path="contact" href="#">
+              Request Portal Demo
+            </a>
+<span class="font-label-sm text-label-sm text-outline">Custom Client Setup: 48h</span>
+</div>
+</div>
+<!-- Right: Interactive Mock Dashboard Preview -->
+<div class="lg:col-span-7">
+<div class="rounded-2xl bg-surface-container-lowest/95 backdrop-blur-2xl p-space-md md:p-space-lg shadow-2xl">
+<!-- Window Bar -->
+<div class="flex items-center justify-between pb-space-sm mb-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error/60"></span>
+<span class="w-3 h-3 rounded-full bg-primary/40"></span>
+<span class="w-3 h-3 rounded-full bg-secondary/40"></span>
+<span class="ml-2 font-mono text-xs text-outline">portal.digitalmarketing.agency/live-telemetry</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-secondary uppercase">Live Feed</span>
+</div>
+</div>
+<!-- Dashboard Inner Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mb-space-md">
+<div class="p-space-sm rounded-xl bg-surface-container-high/60">
+<span class="font-label-caps text-label-caps text-outline uppercase block">Current Month Ad Spend</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1 block">$34,820.00</span>
+<span class="font-label-sm text-label-sm text-secondary">Paced to target (98%)</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high/60">
+<span class="font-label-caps text-label-caps text-outline uppercase block">Real-Time ROAS</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold mt-1 block">5.42x</span>
+<span class="font-label-sm text-label-sm text-secondary">+12.4% vs prev 30d</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-high/60">
+<span class="font-label-caps text-label-caps text-outline uppercase block">Webhook State</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold mt-1 block">HEALTHY</span>
+<span class="font-label-sm text-label-sm text-outline">0 drops in 720h</span>
+</div>
+</div>
+<!-- Live Chart Preview Visualizer -->
+<div class="p-space-md rounded-xl bg-surface-container-high/40 mb-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Attributed Revenue Velocity (30 Days)</span>
+<span class="font-label-caps text-label-caps text-outline uppercase">Audited Sync</span>
+</div>
+<!-- Rich SVG Bar Chart Visualizer -->
+<div class="h-28 w-full flex items-end gap-1.5 pt-4">
+<div class="flex-1 bg-surface-container-highest rounded-t hover:bg-secondary transition-colors" style="height: 35%"></div>
+<div class="flex-1 bg-surface-container-highest rounded-t hover:bg-secondary transition-colors" style="height: 48%"></div>
+<div class="flex-1 bg-surface-container-highest rounded-t hover:bg-secondary transition-colors" style="height: 42%"></div>
+<div class="flex-1 bg-surface-container-highest rounded-t hover:bg-secondary transition-colors" style="height: 60%"></div>
+<div class="flex-1 bg-primary/60 rounded-t hover:bg-primary transition-colors" style="height: 75%"></div>
+<div class="flex-1 bg-primary/60 rounded-t hover:bg-primary transition-colors" style="height: 68%"></div>
+<div class="flex-1 bg-primary/80 rounded-t hover:bg-primary transition-colors" style="height: 82%"></div>
+<div class="flex-1 bg-secondary rounded-t shadow-[0_0_12px_rgba(76,215,246,0.6)]" style="height: 96%"></div>
+<div class="flex-1 bg-secondary rounded-t shadow-[0_0_12px_rgba(76,215,246,0.6)]" style="height: 92%"></div>
+<div class="flex-1 bg-primary-container rounded-t" style="height: 88%"></div>
+</div>
+<div class="flex justify-between text-outline font-label-caps text-label-caps pt-2">
+<span>Day 01</span>
+<span>Day 15</span>
+<span>Day 30 (Audited Peak)</span>
+</div>
+</div>
+<!-- Download PDF Bar Mock -->
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container/70">
+<div class="flex items-center gap-space-xs text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px]">picture_as_pdf</span>
+<span>Audited_Telemetry_Executive_Summary.pdf</span>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container-high text-primary hover:text-on-surface font-label-sm text-label-sm font-semibold transition-colors">
+                Export Audit
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: FINAL HIGH-IMPACT CONVERSION CTA BANNER -->
+<section class="relative w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl mb-space-xl">
+<div class="max-w-6xl mx-auto rounded-3xl bg-gradient-to-r from-surface-container via-surface-container-high to-surface-container p-space-lg md:p-space-xl shadow-2xl relative overflow-hidden text-center flex flex-col items-center">
+<!-- Ambient Colored Bursts -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-48 bg-primary/25 rounded-full blur-[90px] pointer-events-none"></div>
+<!-- Overline -->
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-lowest text-secondary mb-space-md font-label-caps text-label-caps uppercase">
+<span class="material-symbols-outlined text-[16px]">bolt</span> High-Velocity Acquisition
+      </div>
+<!-- Main Headline -->
+<h2 class="font-headline-xl text-headline-lg md:text-headline-xl text-on-surface uppercase tracking-tight max-w-3xl mb-space-sm">
+        Ready to engineer verifiable growth for your brand?
+      </h2>
+<!-- Subtitle -->
+<p class="font-body-xl text-body-md md:text-body-xl text-on-surface-variant max-w-2xl mb-space-lg leading-relaxed">
+        Stop relying on vanity metrics. Let's build a custom acquisition machine with mathematically verified tracking.
+      </p>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-md w-full sm:w-auto mb-space-lg">
+<a class="w-full sm:w-auto px-space-xl py-space-md rounded-full bg-gradient-to-r from-primary-container via-primary to-secondary text-on-primary-container font-headline-sm text-headline-sm font-bold shadow-[0_0_30px_rgba(160,120,255,0.45)] hover:shadow-[0_0_40px_rgba(76,215,246,0.65)] hover:scale-105 active:scale-95 transition-all text-center" data-path="contact" href="#">
+          Book a Strategy Audit
+        </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-full bg-surface-container-high hover:bg-surface-variant text-secondary hover:text-on-surface font-headline-sm text-headline-sm transition-all shadow-md" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+          Chat on WhatsApp
+        </a>
+</div>
+<!-- 3 Key Assurance Badges -->
+<div class="flex flex-wrap items-center justify-center gap-space-md md:gap-space-lg pt-space-md text-on-surface-variant font-label-md text-label-md">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span>No Long-Term Lock-in</span>
+</div>
+<span class="hidden md:inline text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">visibility</span>
+<span>100% Transparent Telemetry</span>
+</div>
+<span class="hidden md:inline text-outline">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[18px]">timer</span>
+<span>48h Audit Delivery</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript for Channel Filters -->
+<script>
+    (function initAttributionFilters() {
+      const filterButtons = document.querySelectorAll('#channel-filter-group .filter-btn');
+      const tableRows = document.querySelectorAll('#attribution-tbody .channel-row');
+
+      if (!filterButtons.length || !tableRows.length) return;
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Reset styles
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+            b.classList.add('text-on-surface-variant');
+          });
+
+          // Set active button
+          btn.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold');
+          btn.classList.remove('text-on-surface-variant');
+
+          const channel = btn.getAttribute('data-channel');
+
+          tableRows.forEach(row => {
+            if (channel === 'all' || row.getAttribute('data-cat') === channel) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full relative z-10 bg-surface-container-lowest border-t border-outline-variant/25 pt-space-xl pb-space-lg"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop mb-space-xl"><div class="lg:col-span-4 flex flex-col items-start"><div class="flex items-center gap-space-sm mb-space-sm"><img alt="DIGITAL MARKETING Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U1dBTmrQMvwfIVGCkTEFUXzou7IWOx_Rthi-x9a7N4OJdzK8hdxK59CpesLPoVWamqehAydL2vx5iSMBsZIlGrqf9FS9OYzDmx_bcPgK5Z2s7iyPu5XwQK8XbagpgW_ZLD7DT_Hws22zbWrz0t5yPiysLraEHws4LD7xy7d7Caw2sxGwcgtdx5YObgwFQxYtU2-7tV4Y41Do2yY_I1sQDFlWPTqqO2lYJSTMRSS-Su91zRZNAf0X10f14"/><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">DIGITAL MARKETING</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-space-md">We turn your vision into digital growth through high-velocity performance, bespoke algorithmic creative, and engineered brand dominance.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container border border-outline-variant/30 text-secondary font-label-caps text-label-caps"><span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>Global Digital Growth Engine</div></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase mb-space-md">Navigation</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors duration-150" data-path="home" href="#">Home</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Services</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="our-creative-work" href="#">Our Creative Work</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="our-results" href="#">Our Results</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="about-us" href="#">About Us</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="insights" href="#">Insights</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="contact" href="#">Contact</a></li></ul></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase mb-space-md">Services</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Meta Ads</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">SEO &amp; Local SEO</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Google Business Profile</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Website Development</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">Social Media Marketing</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="services" href="#">AI Video Creation</a></li></ul></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase mb-space-md">Portfolio &amp; Legal</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li><a class="hover:text-on-surface transition-colors duration-150" data-path="our-creative-work" href="#">Case Studies</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="our-results" href="#">Verified Results</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="privacy-policy" href="#">Privacy Policy</a></li><li><a class="hover:text-on-surface transition-colors duration-150" data-path="terms-of-service" href="#">Terms of Service</a></li></ul></div><div class="lg:col-span-2 flex flex-col"><span class="font-label-caps text-label-caps text-primary uppercase mb-space-md">Direct Contact</span><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-xs">Reach our strategists directly:</p><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-150 mb-space-sm" href="mailto:contact@digitalmarketing.agency">contact@digitalmarketing.agency</a><a class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-xl bg-surface-container border border-outline-variant/30 text-secondary hover:border-secondary hover:bg-surface-container-high transition-all mb-space-sm" href="https://wa.me/919305856475" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">chat</span><span class="font-label-sm text-label-sm">+91 9305856475</span></a><a class="inline-flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">alternate_email</span>Instagram Profile</a></div></div><div class="pt-space-md border-t border-outline-variant/20 flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="text-left"><p class="font-body-sm text-body-sm text-outline mb-space-xs">Transparency Notice: Metrics, campaign telemetry, and video showcases displayed in previews represent calibrated demo environments until client-verified integration is connected.</p><p class="font-body-sm text-body-sm text-outline">© <span id="copyright-year">2025</span> DIGITAL MARKETING. All rights reserved.</p></div><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps text-outline">System Operational</span><div class="w-2 h-2 rounded-full bg-secondary"></div></div></div></div></footer><script>const toggleBtn=document.getElementById('mobile-nav-toggle');const mobileMenu=document.getElementById('mobile-menu');if(toggleBtn&&mobileMenu){toggleBtn.addEventListener('click',()=>{mobileMenu.classList.toggle('hidden');});}const yearSpan=document.getElementById('copyright-year');if(yearSpan){yearSpan.textContent=new Date().getFullYear();}</script></body></html>
